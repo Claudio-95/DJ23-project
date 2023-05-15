@@ -3,4 +3,4 @@
 
 ## Members
 __Students__: Claudio De Martino, Martina Rossi, Giorgia Guidetti.  
-  __Teachers__: Andrea Marchetii, Angelica Lo Duca.
+  __Teachers__: Andrea Marchetti, Angelica Lo Duca.
