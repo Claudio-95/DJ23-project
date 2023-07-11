@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<title>Progetto ChatGPT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="file1.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body class="w3-light-grey w3-content">
+
+<!-- Sidebar/menu -->
+<div id="sidebar-container"> 
+  <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" id="mySidebar"><br>
+    <h3 class="w3-padding-64 w3-center"><b>Chat-GPT</b></h3>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+    <a href="#storia" onclick="w3_close()" class="w3-bar-item w3-button">La storia</a>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">DALL-E</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">Ti odio o ti amo?</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Parole e tendenze</a>
+    <a href="#utilizzi" onclick="w3_close()" class="w3-bar-item w3-button">Interazione uomo macchina</a>
+  </nav>
+
+</div>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding"><h1>CHAT GPT</h1></span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large"></div>
+
+  <!-- Photo grid -->
+  <div class="w3-row">
+    <div class="w3-third">
+      <img src="DALL·E 2023-03-24 10.58.32 - 8 bit interior of a gloomy castle with ghosts and skeletons.png" onclick="onClick(this)" alt="">
+      <img src="" onclick="onClick(this)" alt="">
+      <img src="" onclick="onClick(this)" alt="">
+    </div>
+
+    <div class="w3-third">
+      <img src="DALL·E 2023-03-25 22.36.51 - cyber punk skulls and skeletons and cats.png" onclick="onClick(this)" alt="">
+      <img src="/w3images/man_bench.jpg" onclick="onClick(this)" alt="">
+      <img src="/w3images/natureboy.jpg" onclick="onClick(this)" alt="">
+    </div>
+
+    <div class="w3-third">
+      <img src="DALL·E 2023-03-25 22.36.40 - cyber punk skulls and skeletons and cats.png" onclick="onClick(this)" alt="">
+      <img src="/w3images/girl_train.jpg" onclick="onClick(this)" alt="">
+      <img src="/w3images/closegirl.jpg" onclick="onClick(this)" alt="">
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black"><</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">></a>
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+ <!-- Storia section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="storia">
+    <h1><b>La storia</b></h1>
+    <img src="dall-e2.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
+    <div class="w3-content w3-justify">
+      <h2>Cos’è ChatGPT</h2>
+      <p>ChatGPT è un chatbot sviluppato dalla società americana OpenAI, fondata da Elon Musk, Sam Altman Greg Brockman, Ilya Sutskever, Wojciech Zaremba, and John Schulman nel 2015.</br>
+        La prima versione di Generative Pre-trained Transformer (GPT-1) é, risalente al 2018, un modello di Intelligenza Artificiale con 117 milioni di parametri addestrato su enormi quantità di materiale proveniente da diverse fonti e produzioni testuali digitali, come articoli, notizie, libri e praticamente tutto il materiale che si trova sul web. Grazie a questo training, GPT-1 ha dimostrato di essere in grado di comprendere il linguaggio naturale e di generare testi di alta qualità, anche se con alcune limitazioni legate alla comprensione del contesto e alla complessità delle produzioni.</br>
+        Con il modello GPT-2, caratterizzato da 1.5 miliardi di parametri, sono stati ottenuti significativi miglioramenti, e nel 2020 è stata rilasciata Chat GPT-3, una versione ancora più avanzata del modello, con 175 miliardi di parametri, in grado di svolgere compiti che richiedono conoscenze specialistiche. La sua sconcertante capacità di comprensione e generazione di testo la rende uno strumento adatto a svariate applicazioni, dalla traduzione in varie lingue alla produzione di articoli, storie, canzoni o poesie fino alla scrittura o alla correzione di codici di programmazione. </br>
+        “OpenAi era nata come società di ricerca aperta per produrre sistemi che andassero nella direzione di AI da mettere a disposizione pubblicamente, ma dopo qualche anno si sono resi conto che per sviluppare questi sistemi occorrevano grossi investimenti in infrastruttura che non riuscivano ad ottenere come ente no profit, quindi hanno costruito OpenAi come società" <a href="https://www.youtube.com/watch?v=ej5lEP1bmdQ"  target="_blank"> ha spiegato il professor Attardi</a>, docente di informatica all'Università di Pisa e pioniere delle tecnologie web. Ora esistono 2 enti openAi, Foundation e Società commerciale, in cui c’è un’importante partecipazione di Microsoft, che ha contribuito con 1 miliardo di risorse di calcolo e di strumenti che usa openAi per fare operazioni, e che opera a livello commerciale. Non si possono fare oggi operazioni con tecnologie di punta senza risorse di calcolo adeguate”. </p>
+
+
+      <h2>Come funziona ChatGPT</h2>
+      <p>ChatGPT è un chatbot basato su intelligenza artificiale specializzato nel dialogo uomo-macchina. È in grado di comporre, poesie, opere teatrali, testi di canzoni su un determinato tema e persino di spiegare le barzellette. Come siamo arrivati ad un modello con un livello di competenza morfosintattica così accurata e in grado di generare varie tipologie di testi in maniera veloce e tremendamente plausibile, che dimostra anche raffinate capacità di ragionamento?</br>
+        “Il Natural Language Processing ha visto miglioramenti senza precedenti nel corso degli ultimi anni, e i progressi sono avvenuti con la sostituzione dei cosiddetti sistemi di apprendimento tradizionali (modelli statistici, basati su sistemi di machine learning) a modelli di algoritmi deep learning" <a href="https://alemiaschi.github.io/files/Seminario_LABCD_8_marzo_2023.pdf"  target="_blank">ha spiegato Alessio Miaschi</a>, ricercatore del CNR, durante un <a href="http://www.labcd.unipi.it/seminari/le-risorse-linguistiche-al-tempo-delle-reti-neurali/" target="_blank"> seminario di cultura digitale</a> all'Università di Pisa.</br>
+        "In passato, dopo una lunga catena di preprocessing e annotazione linguistica, si passava alla fase di modeling, ovvero l’estrazione di una serie di caratteristiche e features da testi linguisticamente annotati, che venivano poi usate come caratteristiche in input per un modello di apprendimento usato per svolgere vari compiti di NLP, entity recognition etc.</br>
+        Adesso, con i modelli deep learning, dopo una piccola parte di preprocessing, il testo viene dato in pasto alla rete neurale che apprende, si addestra, e in maniera automatica va ad estrarre le caratteristiche e le competenze per andare a svolgere un determinato task.</br>
+        Dagli anni 90, caratterizzati dall’utilizzo di modelli statistici, siamo passati allo sviluppo dei neural language model.
+        Nel 2003 viene pubblicato un articolo scientifico, “A Neural probabilistic language model”, in cui per la prima volta viene usato quel termine, ma si tratta di esperimenti che esistevano già da qualche anno prima.</br>
+        Un neural language model è una rete neurale che viene addestrata per approssimare (ovvero risolvere) una funzione di language modeling: la rete neurale si modifica e si addestra in base alla funzione obiettivo che deve risolvere. Nel caso dei neural language model, la funzione obiettivo è di modellazione del linguaggio naturale. Ancora prima dell’avvento di questi utimi, avevamo i modelli di linguaggio probabilistici, che definiscono la funzione di language modeling come il calcolare la probabilità di una frase. Data una frase come insieme di parole, possiamo definire la probabilità della frase come la produttoria della probabilità di ogni singola parola date le parole precedenti. Questa probabilità è la funzione obiettivo.</br>
+        Nel 2003 Youshua Benjo e altri hanno proposto per la prima volta un modello in grado di risolvere tale funzione ricorrendo all’architettura di una rete neurale, quindi addestrando una rete neurale, da qui la definizione neural probabilistic language model.</br>
+        Dal 2003 in poi ci sono stati tanti avanzamenti, nel 2013 l’introduzione di word2vec, pochi anni fa l’introduzione di transformer, l’architettura più utilizzata per lo sviluppo di modelli neurali del linguaggio allo stato dell’arte: un modello che sfrutta il meccanismo dell’attention per creare rappresentazioni contestuali delle parole e imparare le relazioni tra di esse. Quando una sequenza di input viene processata, si crea una rappresentazione che non tenga informazione solo della parola in questione, ma anche di quelle circostanti che riguardano il contesto. Per ogni token della frase influiscono nella rappresentazione anche gli altri, con pesi diversi.
+        Queste nuove tecnologie hanno portato allo sviluppo dei modelli contestuali del linguaggio".</p>
+
+
+
+
+      <h2>ChatGPT è realmente in grado di capire?</h2>
+      <p>I large language models come ChatGPT sono talmente grandi e complessi da suscitare sorprese inaspettate: hanno iniziato a mostrare comportamenti sorprendenti, che non erano stati previsti. </br>
+       “Sono sorpreso dalle capacità che questi modelli hanno sviluppato” <a href="https://www.quantamagazine.org/the-unpredictable-abilities-emerging-from-large-ai-models-20230316/" target="_blank"> ha dichiarato Ethan Dyer</a>, computer scientist di Google Research che lavora da anni nel campo dell’AI. “È sorprendente perché questi modelli in teoria hanno una sola direttiva: prendere in input una stringa di testo e predire cosa verrà dopo, ripetutamente, su basi puramente statistiche. Gli esperti nel settore avevano previsto che con l’aumentare della dimensione dei dati sarebbero migliorate le performance su task già noti, ma non si aspettavano che i modelli all’improvviso sarebbero stati in grado di svolgere così tante nuove (e imprevedibili) attività”.</p>
+       <h2>Proprietà emergenti</h2>
+      <p>A quanto pare i LLMs sembrano sviluppare centinaia di attività emergenti - dai calcoli matematici alla produzione di testi e di codici, fino al riconoscimento dei titoli di film tramite emoji (come in un esperimento condotto dal team di Dyer).</br>
+      I modelli linguistici odierni sono stati dimensionati principalmente in base a tre fattori: quantità di calcolo, numero di parametri e dimensione del set di dati di addestramento. Un'abilità è considerata "emergente" se non è presente nei modelli più piccoli ma lo è in quelli più grandi. In generale, si può considerare l'emergere di nuove proprietà come una funzione di molte variabili correlate, la scala in cui si osserva per la prima volta l'emergere di un'abilità dipende da una serie di fattori e non è una proprietà immutabile, le prestazioni sembrano migliorare notevolmente oltre un certo ordine di grandezza dei parametri.
+      “I fenomeni complessi possono essere ricondotti a una semplice legge probabilistica, nel caso di un language model si tratta di predire la prossima parola" ha dichiarato il professor Attardi in <a href= "https://www.youtube.com/watch?v=ej5lEP1bmdQ" target="_blank">un'intervista online</a> in cui ci si interroga sullo sviluppo delle AI. </br>
+      "Emerge un comportamento sorprendente perché la nostra mente non è capace di capire un sistema complesso. GPT 4 ha superato una trentina di test per ammissione - a medicina, giurisprudenza, scienze infermieristiche, li supera tutti. 
+      Possiamo dire che non capisce? Non usa il nostro metodo di ragionare, ma dire che non capisce è un salto logico non garantito.</br>
+      Effettivamente non sappiamo spiegare il loro comportamento, non sappiamo come sono fatti, sappiamo che usano una semplice legge di probabilità, ma con tantissime parole e processi ora sanno rispondere anche a domande complicate […] Il sistema apprende il significato delle parole nel contesto, quante più parole o frasi gli vengono sottoposte tanto più è dettagliata la rappresentazione delle parole che esso produce.
+      Il comportamento emergente non è al momento spiegabile, nemmeno gli stessi ricercatori che lo stanno osservando sono in grado di spiegarlo, ha sorpreso tutti. Ci sono degli studi. Alcuni sostengono che questi sistemi non abbiano  capacità di fare ragionamenti matematici o logici, nessuno ha mai insegnato loro a fare conti, eppure in certi casi riesce a fare anche ragionamenti complessi. </br>
+      In genere i sistemi di apprendimento automatico arrivano ad un certo plateau, la cosa sorprendente è che nel caso dei language model questo non è avvenuto, non si vede ancora la curva rallentare la crescita, con l’aggiunta di nuovi dati la curva continua a crescere. Ci sono  risultati più stupefacenti: più si aumentano i dati, più avviene fenomeno chiamato delle capacità emergenti: il sistema diventa in grado di fare cose che non sapeva fare, che non erano previste. Spuntano fuori, c’è una specie di salto quantico che avviene a certo momento con la crescita della dimensione dei sistemi”.</br>
+      
+      "Nessuno ha insegnato a GPT-3, o GPT-4, a fare i calcoli. Questo comportamento viene fuori dall’addestramento su una grande quantità di dati utilizzando miliardi di parametri" <a href="http://www.labcd.unipi.it/seminari/le-risorse-linguistiche-al-tempo-delle-reti-neurali/"  target="_blank">ha spiegato il professor Dell’Orletta</a>, docente di inguistica computazionale all'Università di Pisa e ricercatore al CNR, duarante il seminario citato sopra. "I parametri sono variabili, memorizzarne 2 miliardi vuol dire avere un’infinità di server. Ogni volta che usiamo ChatGPT bruciamo 3 foreste. Per ora abbiamo dei super computer che nessuno può gestire, a parte 2 o 3 aziende che hanno decomposto tutto il web in micro parti di informazione che in qualche modo ricollegano tramite la rete neurale in maniera intelligente, ovvero attraverso un qualche tipo di comportamento che non è casuale. </br>
+      ChatGPT riorganizza l’informazione e la riutilizza in maniera da permettere di risolvere dei task anche quando questi task non sono conosciuti. Questa cosa è intelligenza? No, è un comportamento emergente che viene fuori da una simulazione del dato umano. Quando un modello in qualche modo simulerà al 100% un comportamento che tu consideri intelligente, sta a te definirlo intelligente oppure no, però sta simulando un comportamento, e da questa simulazione verranno fuori tanti altri comportamenti. 
+      È vero che il dato linguistico manca di correlazione con la concretezza del mondo reale, però contiene tanta informazione. Non è un caso che questi comportamenti emergenti si siano visti la prima volta sui testi, gli stessi algoritmi sono stati applicati anche alle immagini, ma non è  emerso lo stesso comportamento intelligente. Lo abbiamo potuto osservare sul testo. Non è una casualità che le parole, che la capacità del linguaggio, siano forse ciò che più ci distingue dagli altri animali. </br>
+      Non è la vista, la forza o la velocità, è il linguaggio, e il sistema ha fatto emergere questa competenza sul linguaggio. Credo che quello che abbiamo visto oggi sul testo è un qualcosa che ci ha sorpreso tutti, forse qualcuno se lo immaginava, ma non in così poco tempo. Chiamarla intelligenza oppure no è un modo per definire le cose. Sicuramente funziona in maniera diversa da un essere umano. C’è ragionamento o non c’é, sicuramente non c’è quello umano, però c’è una simulazione di quel comportamento. Quando la simulazione è al 100% poi decidi tu se chiamarla A o chiamarla B.</br>
+      C’è stato uno scandalo perché tantissimi Kenyani sono stati sfruttati per creare dei Corpus Gold (annotati in maniera corretta) per addestrare ChatGPT. Questo vuol dire che di dati linguistici annotati ne abbiamo bisogno ancora tanto,  quindi il passaggio ad una macchina in grado di fare tutto senza una supervisione umana è ancora molto distante.
+      Possiamo fidarci che siano stati utilizzati solo i dati del web? Comunicazioni coi cellulari, interazioni uomo macchina, davanti alla tv o con Amazon Alexa, potrebbero essere tutti dati che vengono utilizzati. Non possiamo saperlo con esattezza perché sono fatti da aziende private, e questo è un altro grande problema. </br>
+      Come ha ricordato il prfossor Attardi nell'intervista citata sopra “Non ha senso dare la colpa alla tecnologia, i danni sono dovuti alle aziende che sfruttano in maniera distorta la tecnologia. Bisogna distinguere tra tecnologia e uso malevolo e deleterio di essa. L’etica è una caratteristica umana, che non ha a che fare con la tecnologia, assumiamo che le persone abbiano libero arbitrio e puniamo le loro azioni, non gli strumenti che utilizzano”.
+    </p>
+    </div>
+  </div>
+
+  <!-- Sentiment analysis section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+    <h1><b>Ti odio o ti amo?</b></h1>
+    <img src="dall-e3.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
+    <div class="w3-content w3-justify">
+      <h2>Sentiment analysis</h2>
+      <p>Al fine di determinare come le persone hanno recepito questa nuova tecnologia sono stati recuperati post dai social media Reddit e Twitter, in lingua inglese e italiana, in modo da avere dati più variati e affidabili.
+         Per effettuare la Sentiment Analysis sono stati utilizzati 2 strumenti diversi, NLTK e Textblob, 2 librerie Python che permettono di eseguire operazioni di Natural Language Processing su testi.</br>
+     
+      </p>
+      <h2>Sentiment analysis sui dataset in italiano e inglese</h2>
+      <hr class="w3-opacity">
+      <h4 class="w3-padding-16">Risultati NLTK su dataset più piccolo inglese</h4>
+      <p class="w3-wide">Positivi</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-green" style="width:95%">95%</div>
+      </div>
+      <p class="w3-wide">Negativi</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-green" style="width:85%">85%</div>
+      </div>
+      <p class="w3-wide">Neutri</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-green" style="width:80%">80%</div>
+      </div>
+      </br>
+      <h2>Sentiment analysis sui dataset in italiano e inglese e nel tempo</h2>
+      <p>
+        qua ci vanno le analisi nel tempo
+      </p>
+
+    </div>
+  </div>
+  <div id="vis"></div>
+      <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "legend": {"orient": "top"}}, "data": {"name": "data-d69843700579cf5951076d689e27809b"}, "mark": {"type": "line"}, "encoding": {"color": {"field": "Sentiment", "legend": {"orient": "right"}, "scale": {"domain": ["pos", "neg", "neu"], "range": ["green", "red", "blue"]}, "title": "Sentiment", "type": "nominal"}, "opacity": {"value": 0.9}, "x": {"axis": {"format": "%B %Y", "tickCount": 12, "title": "Month"}, "field": "date", "type": "temporal"}, "y": {"axis": {"title": "Value"}, "field": "Value", "type": "quantitative"}}, "height": 500, "title": {"text": "Twitter's sentiment values over months", "subtitle": "Visualizing sentiment values over months in the Twitter dataset"}, "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-d69843700579cf5951076d689e27809b": [{"date": "September 2022", "Sentiment": "neg", "Value": 64}, {"date": "October 2022", "Sentiment": "neg", "Value": 103}, {"date": "December 2022", "Sentiment": "neg", "Value": 12890}, {"date": "January 2023", "Sentiment": "neg", "Value": 21900}, {"date": "February 2023", "Sentiment": "neg", "Value": 6205}, {"date": "March 2023", "Sentiment": "neg", "Value": 3109}, {"date": "April 2023", "Sentiment": "neg", "Value": 2138}, {"date": "May 2023", "Sentiment": "neg", "Value": 1901}, {"date": "June 2023", "Sentiment": "neg", "Value": 999}, {"date": "September 2022", "Sentiment": "neu", "Value": 101}, {"date": "October 2022", "Sentiment": "neu", "Value": 75}, {"date": "December 2022", "Sentiment": "neu", "Value": 26609}, {"date": "January 2023", "Sentiment": "neu", "Value": 44188}, {"date": "February 2023", "Sentiment": "neu", "Value": 11888}, {"date": "March 2023", "Sentiment": "neu", "Value": 4615}, {"date": "April 2023", "Sentiment": "neu", "Value": 3418}, {"date": "May 2023", "Sentiment": "neu", "Value": 3131}, {"date": "June 2023", "Sentiment": "neu", "Value": 1545}, {"date": "September 2022", "Sentiment": "pos", "Value": 114}, {"date": "October 2022", "Sentiment": "pos", "Value": 104}, {"date": "December 2022", "Sentiment": "pos", "Value": 37278}, {"date": "January 2023", "Sentiment": "pos", "Value": 67973}, {"date": "February 2023", "Sentiment": "pos", "Value": 17068}, {"date": "March 2023", "Sentiment": "pos", "Value": 7458}, {"date": "April 2023", "Sentiment": "pos", "Value": 5070}, {"date": "May 2023", "Sentiment": "pos", "Value": 4859}, {"date": "June 2023", "Sentiment": "pos", "Value": 2506}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+
+  <!-- Parole e tendenze section -->
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content">
+      <h4 class="w3-center"><b>Parole e tendenze</b></h4>
+      <p>Token e ngrams</p>
+    </div>
+  </div>
+
+  <!-- Utilizzi section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="utilizzi">
+    <h4><b>Utilizzi di ChatGPT</b></h4>
+    <img src="/w3images/avatar_hat.jpg" alt="" class="w3-image w3-padding-32" width="600" height="650">
+    <div class="w3-content w3-justify">
+      <h4>Utilizzi</h4>
+      <p>Usi di ChatGPT.
+      </p>
+
+      <hr class="w3-opacity">
+
+      <h4 class="w3-padding-16">How much I charge</h4>
+      <div class="w3-row-padding">
+        <div class="w3-half w3-margin-bottom">
+          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+            <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+            <li class="w3-padding-16">Web Design</li>
+            <li class="w3-padding-16">Photography</li>
+            <li class="w3-padding-16">5GB Storage</li>
+            <li class="w3-padding-16">Mail Support</li>
+            <li class="w3-padding-16">
+              <h2>$ 10</h2>
+              <span class="w3-opacity">per month</span>
+            </li>
+            <li class="w3-light-grey w3-padding-24">
+              <button class="w3-button w3-white w3-padding-large">Sign Up</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="w3-half">
+          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+            <li class="w3-black w3-xlarge w3-padding-32">Pro</li>
+            <li class="w3-padding-16">Web Design</li>
+            <li class="w3-padding-16">Photography</li>
+            <li class="w3-padding-16">50GB Storage</li>
+            <li class="w3-padding-16">Endless Support</li>
+            <li class="w3-padding-16">
+              <h2>$ 25</h2>
+              <span class="w3-opacity">per month</span>
+            </li>
+            <li class="w3-light-grey w3-padding-24">
+              <button class="w3-button w3-white w3-padding-large">Sign Up</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey">
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>Progetto</h3>
+        <p>Ambito del progetto.</p>
+      </div>
+
+      <div class="w3-third">
+        <h3>Ringraziamenti</h3>
+        <p>Ringraziamenti.</p>
+      </div>
+
+      <div class="w3-third">
+        <h3>Autori</h3>
+        <p>Nome, cognome e contatto.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24"> </div>
+
+<!-- End page content -->
+</div>
+
+</body>
+</html>
