@@ -8,9 +8,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 <body class="w3-light-grey w3-content">
 
@@ -47,19 +47,19 @@
   <!-- Photo grid -->
   <div class="w3-row">
     <div class="w3-third">
-      <img src="dall-e7.png" onclick="onClick(this)" alt="">
+      <img src="img/dall-e7.png" onclick="onClick(this)" alt="">
       <img src="" onclick="onClick(this)" alt="">
       <img src="" onclick="onClick(this)" alt="">
     </div>
 
     <div class="w3-third">
-      <img src="dall-e8.png" onclick="onClick(this)" alt="">
+      <img src="img/dall-e8.png" onclick="onClick(this)" alt="">
       <img src="" onclick="onClick(this)" alt="">
       <img src="" onclick="onClick(this)" alt="">
     </div>
 
     <div class="w3-third">
-      <img src="dall-e9.png" onclick="onClick(this)" alt="">
+      <img src="img/dall-e9.png" onclick="onClick(this)" alt="">
       <img src="" onclick="onClick(this)" alt="">
       <img src="" onclick="onClick(this)" alt="">
     </div>
@@ -88,7 +88,7 @@
  <!-- Storia section -->
   <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="storia">
     <h1><b>La storia</b></h1>
-    <img src="dall-e1.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
+    <img src="img/dall-e1.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
     <div class="w3-content w3-justify">
       <h2>Cos’è ChatGPT</h2>
       <p>ChatGPT è un chatbot sviluppato dalla società americana OpenAI, fondata da Elon Musk, Sam Altman Greg Brockman, Ilya Sutskever, Wojciech Zaremba, and John Schulman nel 2015.</br>
@@ -114,7 +114,7 @@
   <!-- Sentiment analysis section -->
   <div class="w3-container w3-light-grey w3-center w3-padding-32" id="about">
     <h1><b>Ti odio o ti amo?</b></h1>
-    <img src="dall-e3.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
+    <img src="img/dall-e3.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
     <div class="w3-content w3-justify">
       <h2>Sentiment analysis</h2>
       <p>Al fine di determinare come le persone hanno recepito questa nuova tecnologia sono stati recuperati post dai social media Reddit e Twitter, in lingua inglese e italiana, in modo da avere dati più variati e affidabili.
@@ -146,7 +146,7 @@
   <div id="vis"></div>
       <script>
     (function(vegaEmbed) {
-      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "legend": {"orient": "top"}}, "data": {"name": "data-d69843700579cf5951076d689e27809b"}, "mark": {"type": "line"}, "encoding": {"color": {"field": "Sentiment", "legend": {"orient": "right"}, "scale": {"domain": ["pos", "neg", "neu"], "range": ["green", "red", "blue"]}, "title": "Sentiment", "type": "nominal"}, "opacity": {"value": 0.9}, "x": {"axis": {"format": "%B %Y", "tickCount": 12, "title": "Month"}, "field": "date", "type": "temporal"}, "y": {"axis": {"title": "Value"}, "field": "Value", "type": "quantitative"}}, "height": 500, "title": {"text": "Twitter's sentiment values over months", "subtitle": "Visualizing sentiment values over months in the Twitter dataset"}, "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-d69843700579cf5951076d689e27809b": [{"date": "September 2022", "Sentiment": "neg", "Value": 64}, {"date": "October 2022", "Sentiment": "neg", "Value": 103}, {"date": "December 2022", "Sentiment": "neg", "Value": 12890}, {"date": "January 2023", "Sentiment": "neg", "Value": 21900}, {"date": "February 2023", "Sentiment": "neg", "Value": 6205}, {"date": "March 2023", "Sentiment": "neg", "Value": 3109}, {"date": "April 2023", "Sentiment": "neg", "Value": 2138}, {"date": "May 2023", "Sentiment": "neg", "Value": 1901}, {"date": "June 2023", "Sentiment": "neg", "Value": 999}, {"date": "September 2022", "Sentiment": "neu", "Value": 101}, {"date": "October 2022", "Sentiment": "neu", "Value": 75}, {"date": "December 2022", "Sentiment": "neu", "Value": 26609}, {"date": "January 2023", "Sentiment": "neu", "Value": 44188}, {"date": "February 2023", "Sentiment": "neu", "Value": 11888}, {"date": "March 2023", "Sentiment": "neu", "Value": 4615}, {"date": "April 2023", "Sentiment": "neu", "Value": 3418}, {"date": "May 2023", "Sentiment": "neu", "Value": 3131}, {"date": "June 2023", "Sentiment": "neu", "Value": 1545}, {"date": "September 2022", "Sentiment": "pos", "Value": 114}, {"date": "October 2022", "Sentiment": "pos", "Value": 104}, {"date": "December 2022", "Sentiment": "pos", "Value": 37278}, {"date": "January 2023", "Sentiment": "pos", "Value": 67973}, {"date": "February 2023", "Sentiment": "pos", "Value": 17068}, {"date": "March 2023", "Sentiment": "pos", "Value": 7458}, {"date": "April 2023", "Sentiment": "pos", "Value": 5070}, {"date": "May 2023", "Sentiment": "pos", "Value": 4859}, {"date": "June 2023", "Sentiment": "pos", "Value": 2506}]}};
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"grid": false}, "legend": {"orient": "top"}}, "data": {"name": "data-f5aa40d221b8f095fd9ec2a8cf953d4d"}, "mark": {"type": "area", "opacity": 0.1}, "encoding": {"color": {"field": "sentiment_complete", "legend": {"orient": "right"}, "scale": {"domain": ["Positivo", "Negativo", "Neutrale"], "range": ["#ADFC92", "#F44E3F", "#788BFF"]}, "title": "Sentimento registrato", "type": "nominal"}, "opacity": {"value": 0.9}, "x": {"axis": {"format": "%B %Y", "tickCount": 12, "title": "Periodo"}, "field": "date", "type": "temporal"}, "y": {"axis": {"title": "Numero di tweets"}, "field": "Value", "type": "quantitative"}}, "height": 600, "title": {"text": "Evoluzione del sentimento verso Chat GPT nell'arco dei mesi", "subtitle": "Visualizzazione dei valori relativi al dataset di Tweets"}, "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-f5aa40d221b8f095fd9ec2a8cf953d4d": [{"date": "September 2022", "sentiment_complete": "Negativo", "Value": 64}, {"date": "October 2022", "sentiment_complete": "Negativo", "Value": 103}, {"date": "December 2022", "sentiment_complete": "Negativo", "Value": 12890}, {"date": "January 2023", "sentiment_complete": "Negativo", "Value": 21900}, {"date": "February 2023", "sentiment_complete": "Negativo", "Value": 6205}, {"date": "March 2023", "sentiment_complete": "Negativo", "Value": 3109}, {"date": "April 2023", "sentiment_complete": "Negativo", "Value": 2138}, {"date": "May 2023", "sentiment_complete": "Negativo", "Value": 1901}, {"date": "June 2023", "sentiment_complete": "Negativo", "Value": 999}, {"date": "September 2022", "sentiment_complete": "Neutrale", "Value": 101}, {"date": "October 2022", "sentiment_complete": "Neutrale", "Value": 75}, {"date": "December 2022", "sentiment_complete": "Neutrale", "Value": 26609}, {"date": "January 2023", "sentiment_complete": "Neutrale", "Value": 44188}, {"date": "February 2023", "sentiment_complete": "Neutrale", "Value": 11888}, {"date": "March 2023", "sentiment_complete": "Neutrale", "Value": 4615}, {"date": "April 2023", "sentiment_complete": "Neutrale", "Value": 3418}, {"date": "May 2023", "sentiment_complete": "Neutrale", "Value": 3131}, {"date": "June 2023", "sentiment_complete": "Neutrale", "Value": 1545}, {"date": "September 2022", "sentiment_complete": "Positivo", "Value": 114}, {"date": "October 2022", "sentiment_complete": "Positivo", "Value": 104}, {"date": "December 2022", "sentiment_complete": "Positivo", "Value": 37278}, {"date": "January 2023", "sentiment_complete": "Positivo", "Value": 67973}, {"date": "February 2023", "sentiment_complete": "Positivo", "Value": 17068}, {"date": "March 2023", "sentiment_complete": "Positivo", "Value": 7458}, {"date": "April 2023", "sentiment_complete": "Positivo", "Value": 5070}, {"date": "May 2023", "sentiment_complete": "Positivo", "Value": 4859}, {"date": "June 2023", "sentiment_complete": "Positivo", "Value": 2506}]}};
       var embedOpt = {"mode": "vega-lite"};
 
       function showError(el, error){
@@ -161,21 +161,24 @@
       vegaEmbed("#vis", spec, embedOpt)
         .catch(error => showError(el, error));
     })(vegaEmbed);
-
   </script>
 
   <!-- Parole e tendenze section -->
   <div class="w3-container w3-dark-grey w3-padding-32 w3-text-light-grey w3-padding-large" id="contact">
     <div class="w3-content">
       <h1 class="w3-center"><b>Parole e tendenze</b></h1>
-      <h2>Token e ngrams</h2>
+      <img src="img/dall-e11.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
+      <h2>Parole più frequenti su Twitter in Inglese</h2>
+      <img src="img/WordcloudENG.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
+      <h2>Parole più frequenti su Twitter in Italiano</h2>
+      <img src="img/WordcloudITA.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
     </div>
   </div>
 
   <!-- Utilizzi section -->
   <div class="w3-container w3-light-grey w3-center w3-padding-32" id="utilizzi">
     <h1><b>Interazione Uomo Macchina</b></h1>
-    <img src="dall-e5.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
+    <img src="img/dall-e5.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
     <div class="w3-content w3-justify">
       <h2>Utilizzi di ChatGPT</h2>
       <p>Usi di ChatGPT.
@@ -226,7 +229,7 @@
   <div class="w3-container w3-dark-grey w3-padding-32 w3-text-light-grey w3-padding-large" id="intelligenza">
     <div class="w3-content">
       <h1 class="w3-center"><b>Intelligenza Artificiale</b></h1>
-      <img src="dall-e4.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
+      <img src="img/dall-e4.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
       <h2>ChatGPT è realmente in grado di capire?</h2>
       <p>I large language models come ChatGPT sono talmente grandi e complessi da suscitare sorprese inaspettate: hanno iniziato a mostrare comportamenti sorprendenti, che non erano stati previsti. </br>
        “Sono sorpreso dalle capacità che questi modelli hanno sviluppato” <a href="https://www.quantamagazine.org/the-unpredictable-abilities-emerging-from-large-ai-models-20230316/" target="_blank"> ha dichiarato Ethan Dyer</a>, computer scientist di Google Research che lavora da anni nel campo dell’AI. “È sorprendente perché questi modelli in teoria hanno una sola direttiva: prendere in input una stringa di testo e predire cosa verrà dopo, ripetutamente, su basi puramente statistiche. Gli esperti nel settore avevano previsto che con l’aumentare della dimensione dei dati sarebbero migliorate le performance su task già noti, ma non si aspettavano che i modelli all’improvviso sarebbero stati in grado di svolgere così tante nuove (e imprevedibili) attività”.</p>
@@ -255,7 +258,7 @@
     <div class="w3-row-padding">
       <div class="w3-third">
         <h3>Progetto per l'esame di </br>Data Journalism</h3>
-        <p>ALuglio 2023</p>
+        <p>Luglio 2023</p>
       </div>
 
       <div class="w3-third">
