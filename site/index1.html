@@ -268,7 +268,24 @@
       <p>
       Dopo alcune ricerche il nostro gruppo ha selezionato la libreria VADER e la libreria TextBlob per l'indagine sulla percezione di ChatGPT da parte di un pubblico di utenti di Twitter e Reddit. 
       </p>
+      <h3>Perché condurre una <i>sentiment analysis</i>?</h3>
+      <p>
+        Nel giro di poche settimane dall'uscita di Chat-GPT hanno iniziato a comparire numerosi articoli, meme, commenti e interviste riguardo l'uso e l'abuso dell'intelligenza artificiale.
+      <i>Perché tanto rumore?</i>
+      </p>
+      <p>
+        Come già detto, era inevitabile che uno strumento del genere avesse un impatto notevole sull'opinione pubblica, soprattutto perché la libertà di accesso lo rende qualcosa di estremamente popolare.
+        Per questo ci è sembrato legittimo andare ad indagare cosa ne pensassero le persone, raccogliendo dati che provenissero dai social network, così che si potesse avere
+        una panoramica ampia sul sentimento delle persone.
+      </p>
+      <p>
+        <i>Cosa si raccoglie?</i>
+        Prendere dati da Twitter, Reddit o altre piattaforme libere porta con sé il problema del tipo di contenuti che si ottengono: da un lato si ha la possibilità di ascoltare
+        opinioni provenienti da chiunque (qualsiasi range di età ad esempio), dall'altro spesso si ottengono testi di poco conto. Per fronteggiare questa disparità si è puntato sulla
+        selezione di alcune parole chiave di riferimento.
+      </p>
       <h2 id="sez6">Sentiment analysis sui dataset in italiano e inglese</h2>
+      <h3>Configurazione della ricerca</h3>
       <p>L'analisi condotta dal nostro gruppo si è articolata in tre fasi:
         <ul>
           <li>Ricerca dei dati (scraping)</li>
@@ -276,15 +293,27 @@
           <li>Realizzazione dei grafici per <i>visualizzare</i> i risultati ottenuti</li>
         </ul>
       </p>
-      <button id="visualization-btn">Sentiment Analysis sul dataset di Tweets in lingua inglese</button>
-      <div id="visualization-container">
-         <!-- Placeholder for the visualizations -->
-        <div id="visualization1" class="visualization"><div id="vis"></div></div>
-      </div>
-      <h2 id="sez6">Risultati sull'analisi</h2>
-      <p>
-        qua ci vanno le analisi nel tempo
+      <p>La ricerca dei dati è stata condotta attraverso la configurazione di strumenti di scraping. Per quanto riguarda Twitter, abbiamo utilizzato tweepy ed snsscrape.
+
       </p>
+      <p>Tweepy è un pacchetto open source utilizzabile tramite Python che consente l'accesso alle API di Twitter a seguito della configurazione di <i>access keys</i> da un profilo di tipo <i>developer</i>.
+      A seconda del tipo di piano selezionato è possibile scaricare milioni di Tweets. Nella versione free presenta una limitazione: ovvero il periodo massimo di scraping non può superare i sette giorni precedenti la data di esecuzione del codice.</p>
+      <p>A questo proposito ci siamo serviti anche di <b>Snsnscrape</b>. Snsscrape è un <i>social network service scraper</i>
+      che permette di raccogliere tweets in maniera legale, ma senza la limitazione sulla data di riferimento.
+      </p>
+      <h2 id="sez6">Cosa si vede dai grafici</h2>
+      <p>
+
+      </p>
+        <button id="visualization-btn">Sentiment Analysis sul dataset di Tweets in lingua inglese</button>
+        <div id="visualization-container">
+         <!-- Placeholder for the visualizations -->
+         <div id="visualization1" class="visualization"><div id="vis"></div></div>
+        </div>
+        <h2 id="sez7">Risultati sull'analisi</h2>
+        <p>
+          qua ci vanno le analisi nel tempo
+        </p>
 
     </div>
   </div>
