@@ -141,6 +141,14 @@ body.w3-light-grey w3-content{
 #about{
     background-color: #E1E1E1!important;
 }
+.visualization {
+    display: none; /* Hide all visualizations by default */
+  }
+  
+  .visualization.active {
+    display: block; /* Show the active visualization */
+  }
+
 @media (max-width: 600px) {
   #sidebar-container {
     display: none;
@@ -241,12 +249,12 @@ div.w3-third img{
 }
 /* Stile per grafici importato da codice di Giorgia*/
  #vis.vega-embed {
-      width: 75%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      padding:8%;
-    }
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
 
     #vis.vega-embed details,
     #vis.vega-embed details summary {
