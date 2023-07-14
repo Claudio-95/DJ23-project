@@ -104,6 +104,15 @@ div.w3-third img{
     width: 100%;
 }
 
+#img01 {
+  margin: auto;
+  display: block;
+  width: 80%;
+}
+
+#caption{
+  
+}
 /* Stile per grafici importato da codice di Giorgia*/
  #vis.vega-embed {
       width: 80%;
@@ -116,4 +125,9 @@ div.w3-third img{
     #vis.vega-embed details summary {
       position: relative;
     }
-
+  
+  @media (max-width: 600px) {
+  #vis {
+    width: 50%;
+  }
+}
