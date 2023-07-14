@@ -8,7 +8,7 @@ h2 {
     font-family: 'Belanosima', sans-serif;
     color: #49485B;
 }
-p { 
+p {
     font-size: large;
     font-family: Georgia,'Georgia W01 Regular','serif';
     font-size: 18px;
@@ -138,7 +138,14 @@ body.w3-light-grey w3-content{
     width: 1px;
     z-index: -2;
 }
-.visualization.active {
+#about{
+    background-color: #E1E1E1!important;
+}
+.visualization {
+    display: none; /* Hide all visualizations by default */
+  }
+
+  .visualization.active {
     display: block; /* Show the active visualization */
   }
 
@@ -164,6 +171,11 @@ body.w3-light-grey w3-content{
 .w3-third img:hover{
     opacity: 1;
 }
+
+button {
+    border-radius: 5px;
+}
+
 #mySidebar{
     z-index: 3;
     width: 300px;
@@ -182,17 +194,10 @@ div.w3-hide-large{
     margin-top: 83px;
 }
 
-div.w3-content w3-justify{
-    max-width: 600px;
-}
-
 div.w3-row-padding{
     margin: 0 -16px;
 }
 
-div.w3-content w3-justify{
-    max-width: 600px;
-}
 
 div.w3-container w3-padding-small w3-center w3-grey{
     width: 95%;
@@ -210,13 +215,13 @@ div.w3-row-padding{
     margin: 0 -16px;
 }
 
-div.w3-content{
+/*div.w3-content{
     max-width: 600px;
 }
 
 div.w3-content w3-justify{
     max-width: 600px;
-}
+}*/
 
 div.w3-row-padding{
     margin: 0 -16px;
@@ -233,10 +238,10 @@ div.w3-third img{
 }
 
 #caption{
-  
+
 }
 /* Stile per grafici importato da codice di Giorgia*/
- #vis.vega-embed {
+ .vis.vega-embed {
     width: 100%;
     display: block;
     margin-left: auto;
@@ -244,22 +249,27 @@ div.w3-third img{
     padding: 1%;
 }
 
-    #vis.vega-embed details,
-    #vis.vega-embed details summary {
+    .vis.vega-embed details,
+    .vis.vega-embed details summary {
       position: relative;
+      display: none;
     }
-  
+
   @media (max-width: 600px) {
-  #vis {
+  vis {
     width: 50%;
+      overflow: hidden;
   }
+      vis.vega-embed details summary {
+          display: none;
+      }
 }
 
-//modifiche
-ul {
-    font-size: 18px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
+/*modifiche*/
+  ul {
+      font-size: 18px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+  }
 button {
     cursor: pointer;
     border-radius: 5px;
@@ -269,4 +279,4 @@ button {
 }
 .visualization {
     display: none; /* Hide all visualizations by default */
-  }
+}
