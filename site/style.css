@@ -249,6 +249,10 @@ div.w3-third img{
     padding: 1%;
 }
 
+.vega-embed summary {
+    display: none;
+}
+
     .vis.vega-embed details,
     .vis.vega-embed details summary {
       position: relative;
@@ -260,9 +264,6 @@ div.w3-third img{
     width: 50%;
       overflow: hidden;
   }
-      vis.vega-embed details summary {
-          display: none;
-      }
 }
 
 /*modifiche*/

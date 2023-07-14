@@ -1,17 +1,18 @@
 {
   "config": {
     "view": {"continuousWidth": 300, "continuousHeight": 300},
-    "axis": {"grid": false}
+    "axis": {"grid": false},
+    "legend": {"orient": "top"}
   },
   "data": {"name": "data-800eee6c893eaac0f5534d5c99f91252"},
-  "mark": {"type": "line", "opacity": 0.1},
+  "mark": {"type": "area", "opacity": 0.1},
   "encoding": {
     "color": {
       "field": "sentiment_complete",
       "legend": {"orient": "right"},
       "scale": {
-        "domain": ["Positivo", "Neutrale", "Negativo"],
-        "range": ["#ADFC92", "#788BFF", "#F44E3F"]
+        "domain": ["Positivo", "Negativo", "Neutrale"],
+        "range": ["#ADFC92", "#F44E3F", "#788BFF"]
       },
       "title": "Sentimento registrato",
       "type": "nominal"
@@ -20,7 +21,7 @@
     "tooltip": {"field": "sentiment_complete", "type": "nominal"},
     "x": {
       "axis": {"format": "%B %Y", "tickCount": 12, "title": "Periodo"},
-      "field": "date",
+      "field": "Comment date",
       "type": "temporal"
     },
     "y": {
@@ -32,14 +33,14 @@
   "height": 600,
   "params": [
     {
-      "name": "param_1",
+      "name": "param_28",
       "select": {"type": "interval", "encodings": ["x", "y"]},
       "bind": "scales"
     }
   ],
   "title": {
     "text": "Evoluzione del sentimento verso Chat-GPT nell'arco dei mesi",
-    "subtitle": "Visualizzazione dei valori relativi al dataset di Reddit"
+    "subtitle": "Visualizzazione dei valori relativi al dataset di Commenti"
   },
   "width": 800,
   "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",

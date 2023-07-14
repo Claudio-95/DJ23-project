@@ -1,0 +1,377 @@
+{
+  "config": {
+    "view": {"continuousWidth": 300, "continuousHeight": 300},
+    "axisX": {"labelAlign": "left", "labelAngle": 45, "labelPadding": 15},
+    "facet": {"spacing": 10},
+    "legend": {"orient": "right"},
+    "title": {"fontSize": 16, "fontWeight": "bold"}
+  },
+  "data": {"name": "data-9e349e3cb92a4b6e508775e139ef8f39"},
+  "mark": {"type": "bar", "opacity": 0.7},
+  "encoding": {
+    "color": {
+      "field": "social",
+      "scale": {
+        "domain": ["Twitter", "Reddit"],
+        "range": ["#1DA1F2", "#F44E3F"]
+      },
+      "title": "Social di riferimento",
+      "type": "nominal"
+    },
+    "column": {
+      "field": "Topic",
+      "header": {"orient": "bottom"},
+      "sort": {"field": "Topic", "order": "descending"},
+      "title": "Topic",
+      "type": "ordinal"
+    },
+    "tooltip": [
+      {"field": "Topic", "type": "nominal"},
+      {"field": "Sentiment", "type": "quantitative"},
+      {"field": "Source", "type": "nominal"}
+    ],
+    "x": {
+      "axis": {"labels": false, "ticks": false},
+      "field": "social",
+      "title": "",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "Sentiment",
+      "title": "Sentimento registrato",
+      "type": "quantitative"
+    }
+  },
+  "params": [
+    {
+      "name": "param_80",
+      "select": {"type": "point", "fields": ["Source"]},
+      "bind": {
+        "input": "radio",
+        "options": ["Vader", "TextBlob"],
+        "labels": ["Vader", "TextBlob"],
+        "name": "Selettore libreria: "
+      }
+    }
+  ],
+  "title": "Analisi comparativa sui valori registrati da TextBlob e Vader tra i dataset provenienti da Twitter e Reddit",
+  "transform": [{"filter": {"param": "param_80"}}],
+  "width": 100,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+  "datasets": {
+    "data-9e349e3cb92a4b6e508775e139ef8f39": [
+      {
+        "Topic": "ai",
+        "Sentiment": 0.20671086974580494,
+        "Source": "Vader",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "ai",
+        "Sentiment": 0.11582429219205083,
+        "Source": "TextBlob",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "chatgpt",
+        "Sentiment": 0.19709014189428875,
+        "Source": "Vader",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "chatgpt",
+        "Sentiment": 0.11346392483704579,
+        "Source": "TextBlob",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "browser",
+        "Sentiment": 0.10864211576846307,
+        "Source": "Vader",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "browser",
+        "Sentiment": 0.09166555884486097,
+        "Source": "TextBlob",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "openai",
+        "Sentiment": 0.21766438740725885,
+        "Source": "Vader",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "openai",
+        "Sentiment": 0.11851205055467615,
+        "Source": "TextBlob",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "google",
+        "Sentiment": 0.1512380351093317,
+        "Source": "Vader",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "google",
+        "Sentiment": 0.1138400691867295,
+        "Source": "TextBlob",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "church",
+        "Sentiment": 0.1497836363636364,
+        "Source": "Vader",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "church",
+        "Sentiment": 0.07403188627560638,
+        "Source": "TextBlob",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "microsoft",
+        "Sentiment": 0.1701547239263804,
+        "Source": "Vader",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "microsoft",
+        "Sentiment": 0.09879887005462158,
+        "Source": "TextBlob",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "learning",
+        "Sentiment": 0.28738041622198507,
+        "Source": "Vader",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "learning",
+        "Sentiment": 0.15225735887786981,
+        "Source": "TextBlob",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "school",
+        "Sentiment": 0.16611175737432488,
+        "Source": "Vader",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "school",
+        "Sentiment": 0.11235896364836509,
+        "Source": "TextBlob",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "cryptocurrencies",
+        "Sentiment": 0.07225978090766823,
+        "Source": "Vader",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "cryptocurrencies",
+        "Sentiment": 0.09040920639431867,
+        "Source": "TextBlob",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "ban",
+        "Sentiment": -0.04244195160441872,
+        "Source": "Vader",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "ban",
+        "Sentiment": 0.09154277485911821,
+        "Source": "TextBlob",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "italy ban",
+        "Sentiment": -0.43274,
+        "Source": "Vader",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "italy ban",
+        "Sentiment": 0.131,
+        "Source": "TextBlob",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "privacy",
+        "Sentiment": -0.0821723076923077,
+        "Source": "Vader",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "privacy",
+        "Sentiment": 0.07838740810852761,
+        "Source": "TextBlob",
+        "social": "Twitter"
+      },
+      {
+        "Topic": "ai",
+        "Sentiment": 0.1726103966955031,
+        "Source": "Vader",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "ai",
+        "Sentiment": 0.0890845136957735,
+        "Source": "TextBlob",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "chatgpt",
+        "Sentiment": 0.15464036253776436,
+        "Source": "Vader",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "chatgpt",
+        "Sentiment": 0.09427970673582549,
+        "Source": "TextBlob",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "browser",
+        "Sentiment": 0.17641242236024846,
+        "Source": "Vader",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "browser",
+        "Sentiment": 0.09770688711005304,
+        "Source": "TextBlob",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "openai",
+        "Sentiment": 0.3057889632107023,
+        "Source": "Vader",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "openai",
+        "Sentiment": 0.09867393533551751,
+        "Source": "TextBlob",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "google",
+        "Sentiment": 0.21680437062937064,
+        "Source": "Vader",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "google",
+        "Sentiment": 0.09624510970534807,
+        "Source": "TextBlob",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "church",
+        "Sentiment": -0.012485294117647053,
+        "Source": "Vader",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "church",
+        "Sentiment": 0.06787203907163701,
+        "Source": "TextBlob",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "microsoft",
+        "Sentiment": 0.0652304347826087,
+        "Source": "Vader",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "microsoft",
+        "Sentiment": 0.05836747002648103,
+        "Source": "TextBlob",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "learning",
+        "Sentiment": 0.3453373449131514,
+        "Source": "Vader",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "learning",
+        "Sentiment": 0.102828800873549,
+        "Source": "TextBlob",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "school",
+        "Sentiment": 0.1226952188006483,
+        "Source": "Vader",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "school",
+        "Sentiment": 0.08365192848065137,
+        "Source": "TextBlob",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "cryptocurrencies",
+        "Sentiment": 0.60475,
+        "Source": "Vader",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "cryptocurrencies",
+        "Sentiment": 0.18568446859263185,
+        "Source": "TextBlob",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "ban",
+        "Sentiment": 0.04079394904458597,
+        "Source": "Vader",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "ban",
+        "Sentiment": 0.06736249824251966,
+        "Source": "TextBlob",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "italy ban",
+        "Sentiment": null,
+        "Source": "Vader",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "italy ban",
+        "Sentiment": null,
+        "Source": "TextBlob",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "privacy",
+        "Sentiment": 0.2669729032258065,
+        "Source": "Vader",
+        "social": "Reddit"
+      },
+      {
+        "Topic": "privacy",
+        "Sentiment": 0.07712752510441037,
+        "Source": "TextBlob",
+        "social": "Reddit"
+      }
+    ]
+  }
+}
