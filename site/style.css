@@ -138,14 +138,7 @@ body.w3-light-grey w3-content{
     width: 1px;
     z-index: -2;
 }
-#about{
-    background-color: #E1E1E1!important;
-}
-.visualization {
-    display: none; /* Hide all visualizations by default */
-  }
-  
-  .visualization.active {
+.visualization.active {
     display: block; /* Show the active visualization */
   }
 
@@ -171,11 +164,6 @@ body.w3-light-grey w3-content{
 .w3-third img:hover{
     opacity: 1;
 }
-
-button {
-    border-radius: 5px;
-}
-
 #mySidebar{
     z-index: 3;
     width: 300px;
@@ -266,3 +254,19 @@ div.w3-third img{
     width: 50%;
   }
 }
+
+//modifiche
+ul {
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+button {
+    cursor: pointer;
+    border-radius: 5px;
+}
+#about{
+    background-color: #E1E1E1!important;
+}
+.visualization {
+    display: none; /* Hide all visualizations by default */
+  }
