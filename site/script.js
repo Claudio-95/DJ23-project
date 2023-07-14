@@ -16,3 +16,17 @@ function onClick(element) {
     var captionText = document.getElementById("caption");
     captionText.innerHTML = element.alt;
 }
+
+//bottone per visualizzazione dei grafici
+document.addEventListener('DOMContentLoaded', function() {
+    const button = document.getElementById('visualization-btn');
+    const visualizations = document.getElementsByClassName('visualization');
+  
+    button.addEventListener('click', function() {
+      // Loop through all visualizations and toggle their active state
+      for (let i = 0; i < visualizations.length; i++) {
+        visualizations[i].classList.toggle('active');
+      }
+    });
+  });
+  
