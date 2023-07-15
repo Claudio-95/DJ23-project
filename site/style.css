@@ -22,6 +22,25 @@ p {
 body.w3-light-grey w3-content{
     max-width: 1600px;
 }
+
+#content {
+    position: relative;
+    display: flex;
+}
+
+#sidebar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%; /* Imposta la larghezza fissa della sidebar */
+    height: 100vh; /* Imposta l'altezza pari all'altezza della finestra */
+}
+
+.w3-main {
+    flex: 1;
+    margin-left: 15%; /* Sposta il contenuto a destra per far spazio alla sidebar */
+}
+
 .w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32 {
     background-color: white;
 }
@@ -36,19 +55,16 @@ body.w3-light-grey w3-content{
     padding-bottom: 1rem;
 }
 
-#sidebar-container {
+/*#sidebar-container {
   position: fixed;
   top: 0;
   left: 0;
-  width: 250px; /* Larghezza del menu di navigazione */
+  width: 15%;
   height: 100%;
   overflow-y: auto;
   z-index: 100;
-}
+}*/
 
-#mySidebar {
-  width: 100%;
-}
 .TableOfContentsContainer {
     padding-top: 10px;
     position: -webkit-sticky;
@@ -67,7 +83,7 @@ body.w3-light-grey w3-content{
     text-decoration: none;
 }
 .pallino {
-    background-color: #E5FC56;
+    background-color: #00A67E; /*#E5FC56*/
     border: 2px solid #fff;
     border-radius: 18px;
     display: inline-block;
@@ -138,9 +154,9 @@ body.w3-light-grey w3-content{
     width: 1px;
     z-index: -2;
 }
-#about{
+/*#about{
     background-color: #E1E1E1!important;
-}
+}*/
 .visualization {
     display: none; /* Hide all visualizations by default */
   }
@@ -176,18 +192,14 @@ button {
     border-radius: 5px;
 }
 
-#mySidebar{
+/*#mySidebar{
     z-index: 3;
-    width: 300px;
+    width: 15%;
     font-weight: bold;
-}
+}*/
 
 #myOverlay{
     cursor:pointer;
-}
-
-div.w3-main{
-    margin-left: 300px;
 }
 
 div.w3-hide-large{
@@ -222,6 +234,21 @@ div.w3-row-padding{
 div.w3-content w3-justify{
     max-width: 600px;
 }*/
+
+.image-container{
+    float: left;
+    margin-right: 2%;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-size: 14px;
+    margin-top: 1%;
+}
+
 
 div.w3-row-padding{
     margin: 0 -16px;
@@ -275,9 +302,7 @@ button {
     cursor: pointer;
     border-radius: 5px;
 }
-#about{
-    background-color: #E1E1E1!important;
-}
+
 .visualization {
     display: none; /* Hide all visualizations by default */
 }

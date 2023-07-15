@@ -30,8 +30,15 @@
     }
   },
   "height": 600,
+  "params": [
+    {
+      "name": "param_10",
+      "select": {"type": "interval", "encodings": ["x", "y"]},
+      "bind": "scales"
+    }
+  ],
   "title": {
-    "text": "Evoluzione del sentimento verso Chat GPT nell'arco dei mesi",
+    "text": "Evoluzione del sentimento verso ChatGPT nell'arco dei mesi",
     "subtitle": "Visualizzazione dei valori relativi al dataset di Tweets"
   },
   "width": 800,

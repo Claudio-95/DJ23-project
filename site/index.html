@@ -17,11 +17,17 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 <body class="w3-light-grey w3-content">
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding"><h1>ChatGPT</h1></span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+<div id="content">
 
 <!-- Sidebar/menu -->
 <div id="sidebar-container">
   <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" id="mySidebar"><br>
-    <h3 class="w3-padding-64 w3-center"><b>Chat-GPT</b></h3>
+    <h3 class="w3-padding-64 w3-center"><b>ChatGPT</b></h3>
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
     <a href="#storia" onclick="w3_close()" class="w3-bar-item w3-button">La storia</a>
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">DALL-E</a>
@@ -32,12 +38,6 @@
   </nav>
 
 </div>
-
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
-  <span class="w3-left w3-padding"><h1>CHAT GPT</h1></span>
-  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
-</header>
 
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" title="close side menu" id="myOverlay"></div>
@@ -123,39 +123,46 @@
  <!-- Storia section -->
   <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="storia">
     <div class="w3-content w3-justify">
-    <h1 class="main-titles"><b>La storia</b></h1>
+      <div class="text-content">
+        <h1 class="main-titles"><b>La storia</b></h1>
 
-    <div id="top-of-toc" class="css-1ez01tu-BodyContainer e1s8k40s0">
-      <div class="css-uiylu1-LeftRailComponents e1s8k40s2">
-          <div class="TocContainer">
-              <div id="toc-block" class="TableOfContentsContainer">
-                  <a href="#sez1" id="toc-element-0" class="ElementWrapper-choicer">
-                      <div class="pallino"></div>
-                      <div class="scritta">
-                          <div>Che cosa è Chat-GPT</div>
-                      </div>
-                  </a>
-                  <a href="#sez2" id="toc-element-1" class="ElementWrapper-choicer">
-                      <div class="pallino"></div>
-                      <div class="scritta">
-                          <div>Come funziona Chat-GPT</div>
-                      </div>
-                  </a>
-                  <a href="#sez3" id="toc-element-3" class="ElementWrapper-choicer">
-                      <div class="pallino"></div>
-                      <div class="scritta">
-                          <div>I neuroni artificiali</div>
-                      </div>
-                  </a>
+        <div id="top-of-toc" class="css-1ez01tu-BodyContainer e1s8k40s0">
+          <div class="css-uiylu1-LeftRailComponents e1s8k40s2">
+              <div class="TocContainer">
+                  <div id="toc-block" class="TableOfContentsContainer">
+                      <a href="#sez1" id="toc-element-0" class="ElementWrapper-choicer">
+                          <div class="pallino"></div>
+                          <div class="scritta">
+                              <div>Che cosa è ChatGPT</div>
+                          </div>
+                      </a>
+                      <a href="#sez2" id="toc-element-1" class="ElementWrapper-choicer">
+                          <div class="pallino"></div>
+                          <div class="scritta">
+                              <div>Come funziona ChatGPT</div>
+                          </div>
+                      </a>
+                      <a href="#sez3" id="toc-element-3" class="ElementWrapper-choicer">
+                          <div class="pallino"></div>
+                          <div class="scritta">
+                              <div>I neuroni artificiali</div>
+                          </div>
+                      </a>
+                  </div>
               </div>
           </div>
+        </div>
       </div>
-    </div>
-    <img src="img/dall-e1.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
       <h2 id="sez1">Cos’è ChatGPT</h2>
       <p>
         ChatGPT è una chatbot sviluppata dalla società americana OpenAI; fondata da Elon Musk, Sam Altman Greg Brockman, Ilya Sutskever, Wojciech Zaremba, e John Schulman nel 2015.
         La prima versione di Generative Pre-trained Transformer (GPT-1) risale al 2018.</p>
+        <div class="image-container">
+          <figure>
+            <img src="img/dall-e1.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
+            <figcaption>Inserire didascalia dell'immagine che abbia la forma di un racconto, per es. "DALL-E disegna (una determinata situazione)"</figcaption>
+          </figure>
+        </div>
         <p>Si tratta di un modello di Intelligenza Artificiale addestrato su enormi quantità di materiale proveniente da diverse fonti, come produzioni testuali digitali, articoli, notizie, libri e contenuti web.
           Grazie a questo training, GPT-1 ha dimostrato di essere in grado di comprendere il linguaggio naturale e di generare testi di alta qualità, anche se con alcune limitazioni legate alla comprensione del contesto e alla complessità delle produzioni.
           </p>
@@ -218,7 +225,7 @@
                     <a href="#sez4" id="toc-element-0" class="ElementWrapper-choicer">
                         <div class="pallino"></div>
                         <div class="scritta">
-                            <div>Cosa pensare di Chat-GPT</div>
+                            <div>Cosa pensare di ChatGPT</div>
                         </div>
                     </a>
                     <a href="#sez5" id="toc-element-1" class="ElementWrapper-choicer">
@@ -238,9 +245,9 @@
         </div>
       </div>
       <img src="img/dall-e3.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
-      <h2 id="sez4">Cosa pensare di Chat-GPT</h2>
+      <h2 id="sez4">Cosa pensare di ChatGPT</h2>
       <p>
-        L'introduzione di uno strumento come Chat-GPT ha indubbiamente generato attenzione da parte di un pubblico molto ampio, soprattutto perché il suo utilizzo è attualmente di libero accesso da qualsiasi browser web.</p>
+        L'introduzione di uno strumento come ChatGPT ha indubbiamente generato attenzione da parte di un pubblico molto ampio, soprattutto perché il suo utilizzo è attualmente di libero accesso da qualsiasi browser web.</p>
       <p>
         Dal suo lancio in Italia, lo scorso 3 Novembre 2022, il numero di utenti si è notevolmente incrementato. Ugualmente è avvenuto nel resto d'Europa e del mondo.
       </p>
@@ -275,28 +282,18 @@
           <li>Realizzazione dei grafici per <i>visualizzare</i> i risultati ottenuti</li>
         </ul>
       </p>
+      <p>
+        Si specifica che per Reddit è stata presa in considerazione solo la lingua inglese, mentre per Twitter sia l'italiano che l'inglese.
+      </p>
       <h2 id="sez6">Risultati sull'analisi</h2>
 
-      <div class="graphics-btn-container-sentiment">
-        <button id="graphics1-btn-sentiment">Sentimento su Reddit</button>
-        <button id="graphics2-btn-sentiment">Sentimento su Twitter.it</button>
-        <button id="graphics3-btn-sentiment">Sentimento su Twitter.com</button>
+      <div class="graphics-btn-container">
+        <h3>Sentimento</h3>
+        <button id="graphics1-btn-sentiment">Reddit</button>
+        <button id="graphics2-btn-sentiment">Twitter.it</button>
+        <button id="graphics3-btn-sentiment">Twitter.com</button>
       </div>
       <div id="graphics-container-sentiment" class="chartContainer"></div>
-
-      <div class="graphics-btn-container-">
-        <button id="graphics1-btn-">Grafico 1</button>
-        <button id="graphics2-btn-">Grafico 2</button>
-        <button id="graphics3-btn-">Grafico 3</button>
-      </div>
-      <div id="graphics-container-" class="chartContainer"></div>
-
-      <div class="graphics-btn-container-">
-        <button id="graphics1-btn-">Grafico 1</button>
-        <button id="graphics2-btn-">Grafico 2</button>
-        <button id="graphics3-btn-">Grafico 3</button>
-      </div>
-      <div id="graphics-container-" class="chartContainer"></div>
 
     </div>
   </div>
@@ -306,11 +303,32 @@
   <div class="w3-container w3-dark-grey w3-padding-32 w3-text-light-grey w3-padding-large" id="contact">
     <div class="w3-content">
       <h1 class="w3-center"><b>Parole e tendenze</b></h1>
+      <div class="graphics-btn-container">
+        <h2>Parole più frequenti</h2>
+        <button id="graphics1-btn-words">Reddit</button>
+        <button id="graphics2-btn-words">Twitter.it</button>
+        <button id="graphics3-btn-words">Twitter.com</button>
+      </div>
+      <div id="graphics-container-words" class="chartContainer"></div>
       <img src="img/dall-e11.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
-      <h2>Parole più frequenti su Twitter in Inglese</h2>
+      <h3>Parole più frequenti su Twitter in Inglese</h3>
       <img src="img/WordcloudENG.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
-      <h2>Parole più frequenti su Twitter in Italiano</h2>
+      <p>
+        Scrivere qui breve spiegazione dei risultati. (testo affiancato all'immagine)
+      </p>
+      <h3>Parole più frequenti su Twitter in Italiano</h3>
       <img src="img/WordcloudITA.png" alt="" class="w3-image w3-padding-32" width="600" height="650">
+      <p>
+        Scrivere qui breve spiegazione dei risultati. (testo affiancato all'immagine)
+      </p>
+
+      <div class="graphics-btn-container">
+        <h3>Trigrammi più frequenti</h3>
+        <button id="graphics1-btn-trigrams">Reddit</button>
+        <button id="graphics2-btn-trigrams">Twitter.it</button>
+        <button id="graphics3-btn-trigrams">Twitter.com</button>
+      </div>
+      <div id="graphics-container-trigrams" class="chartContainer"></div>
     </div>
   </div>
 
@@ -419,6 +437,6 @@
 
 <!-- End page content -->
 </div>
-
+</div>
 </body>
 </html>
