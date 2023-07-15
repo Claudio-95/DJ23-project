@@ -240,6 +240,11 @@ div.w3-content w3-justify{
     margin-right: 2%;
 }
 
+.image-container-right{
+    float: right;
+    margin-left: 2%;
+}
+
 figure {
     text-align: center;
 }
