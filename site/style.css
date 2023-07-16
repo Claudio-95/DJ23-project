@@ -1,20 +1,23 @@
-body, h1, h3, h4, h5{
-    font-family: Georgia,'Georgia W01 Regular','serif';
+body{
+    font-family: "Raleway", sans-serif;
+    
 }
+
 h1 {
-    font-family: Georgia,'Georgia W01 Regular','serif'!important;
+    text-align: center;
 }
-h2 {
-    font-family: 'Belanosima', sans-serif;
-    color: #49485B;
+
+h2, h3, h4, h5 {
+
 }
+
+
+
 p {
     font-size: large;
-    font-family: Georgia,'Georgia W01 Regular','serif';
     font-size: 18px;
     line-height: 1.7;
-    margin: 0;
-    text-align: left;
+    text-align: justify;
     margin-bottom: 36px;
     letter-spacing: 0.35px;
     color: #2D2D30;
@@ -26,24 +29,27 @@ body.w3-light-grey w3-content{
 #content {
     position: relative;
     display: flex;
+    padding-right:10%;
+    padding-left: 10%;
 }
 
 #sidebar-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 15%; /* Imposta la larghezza fissa della sidebar */
-    height: 100vh; /* Imposta l'altezza pari all'altezza della finestra */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px; /* Larghezza del menu di navigazione */
+  height: 100%;
+  overflow-y: auto;
+  z-index: 100;
+  
 }
 
 .w3-main {
     flex: 1;
     margin-left: 15%; /* Sposta il contenuto a destra per far spazio alla sidebar */
 }
+top-of-toc
 
-.w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32 {
-    background-color: white;
-}
 #titoli
 .main-titles {
     font-weight: 700;
@@ -67,9 +73,8 @@ body.w3-light-grey w3-content{
 
 .TableOfContentsContainer {
     padding-top: 10px;
-    position: -webkit-sticky;
     position: sticky;
-    top: 0;
+
 }
 .ElementWrapper-choicer {
     cursor: pointer;
