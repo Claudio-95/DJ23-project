@@ -12,6 +12,9 @@ function w3_close() {
 // Modal Image Gallery
 function onClick(element) {
     var imgContainer = document.getElementById("img01-container");
+    while (imgContainer.firstChild) {
+        imgContainer.removeChild(imgContainer.firstChild);
+    }
     var img = document.createElement('img');
     img.src = element.src;
     img.id = "img01";
