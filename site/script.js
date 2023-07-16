@@ -11,7 +11,15 @@ function w3_close() {
 
 // Modal Image Gallery
 function onClick(element) {
-    document.getElementById("img01").src = element.src;
+    var imgContainer = document.getElementById("img01-container");
+    var img = document.createElement('img');
+    img.src = element.src;
+    img.id = "img01";
+    img.alt = element.alt;
+    img.style.display = "block";
+    img.style.margin = "auto";
+    img.style.width = "74%";
+    imgContainer.appendChild(img);
     document.getElementById("modal01").style.display = "block";
     var captionText = document.getElementById("caption");
     captionText.innerHTML = element.alt;
