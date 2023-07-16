@@ -202,9 +202,9 @@ div.w3-row-padding{
     margin: 0 -16px;
 }
 
-div.w3-content{
+/*div.w3-content{
     max-width: 600px;
-}
+}*/
 
 div.w3-content w3-justify{
     max-width: 600px;
@@ -255,6 +255,10 @@ div.w3-third img{
 #about, #utilizzi{
     background-color: #F1F1F1!important;
     color: #616161!important;
+}
+
+#title-sidebar{
+    padding-left: 12px;
 }
 
 /* Stile per grafici importato da codice di Giorgia*/
