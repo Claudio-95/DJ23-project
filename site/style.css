@@ -261,6 +261,11 @@ div.w3-third img{
     padding-left: 12px;
 }
 
+.force-center{
+    margin: 0 auto;
+    display: block;
+}
+
 /* Stile per grafici importato da codice di Giorgia*/
 .vis.vega-embed {
     width: 100%;
