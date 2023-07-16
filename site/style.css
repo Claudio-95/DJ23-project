@@ -20,7 +20,7 @@ p {
     text-align: justify;
     margin-bottom: 36px;
     letter-spacing: 0.35px;
-    color: #2D2D30;
+    /*color: #2D2D30;*/
  }
 body.w3-light-grey w3-content{
     max-width: 1600px;
@@ -56,7 +56,7 @@ top-of-toc
     font-size: 2rem;
     line-height: 2.25rem;
     border-bottom: 0.7rem solid #1d1c22;
-    color: #2D2D2D;
+    /*color: #2D2D2D;*/
     margin: 0 auto;
     padding-bottom: 1rem;
 }
@@ -114,11 +114,11 @@ top-of-toc
 }
 .scritta {
     display: inline-block;
-    color: #000000;
+    /*color: #000000;*/
     line-height: 1.5rem;
     max-width: 165px;
     vertical-align: middle;
-    width: 90%;
+    /*width: 90%;*/
     font-family: 'Belanosima', sans-serif;
 }
 .css-nx0d73-TocLine {
@@ -143,7 +143,7 @@ top-of-toc
 }
 .scritta-menu {
     display: inline-block;
-    color: #000000;
+    /*color: #000000;*/
     line-height: 1.5rem;
     max-width: 165px;
     vertical-align: middle;
@@ -179,7 +179,7 @@ top-of-toc
     font-size: 3rem;
     line-height: 3.375rem;
     border-bottom: 0.4rem solid #1d1c22;
-    color: #2D2D2D;
+    /*color: #2D2D2D;*/
     margin: 0 auto;
     padding-bottom: 1rem;
 }
@@ -303,7 +303,6 @@ div.w3-third img{
   }
 }
 
-/*modifiche*/
   ul {
       font-size: 18px;
       font-family: Georgia, 'Times New Roman', Times, serif;
@@ -320,4 +319,14 @@ button {
 #authors, #teachers, #project {
     list-style-type: none;
     padding-left: 0%;
+}
+
+#intelligenza, #contact, #storia{
+    background-color: #616161!important;
+    color: #F1F1F1!important;
+}
+
+#about, #utilizzi{
+    background-color: #F1F1F1!important;
+    color: #616161!important;
 }
