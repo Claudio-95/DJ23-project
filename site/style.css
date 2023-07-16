@@ -1,6 +1,6 @@
 body{
     font-family: "Raleway", sans-serif;
-    
+
 }
 
 h1 {
@@ -41,7 +41,7 @@ body.w3-light-grey w3-content{
   height: 100%;
   overflow-y: auto;
   z-index: 100;
-  
+
 }
 
 .w3-main {
@@ -315,4 +315,9 @@ button {
 
 .visualization {
     display: none; /* Hide all visualizations by default */
+}
+
+#authors, #teachers, #project {
+    list-style-type: none;
+    padding-left: 0%;
 }
