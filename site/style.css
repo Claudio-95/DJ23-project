@@ -17,7 +17,6 @@ p {
     font-size: large;
     font-size: 18px;
     line-height: 1.7;
-    text-align: justify;
     margin-bottom: 36px;
     letter-spacing: 0.35px;
     /*color: #2D2D30;*/
@@ -37,8 +36,7 @@ div.w3-main{
     font-weight: 700;
     font-size: 2rem;
     line-height: 2.25rem;
-    border-bottom: 0.7rem solid #1d1c22;
-    /*color: #2D2D2D;*/
+    /*color: #2D2D2D; */
     margin: 0 auto;
     padding-bottom: 1rem;
 }
@@ -60,7 +58,7 @@ div.w3-main{
     text-decoration: none;
 }
 .pallino {
-    background-color: #00A67E; /*#E5FC56*/
+    background-color:#75AB9E; /*#E5FC56*/
     border: 2px solid #fff;
     border-radius: 18px;
     display: inline-block;
@@ -148,8 +146,7 @@ div.w3-main{
 .main-titles {
     font-size: 3rem;
     line-height: 3.375rem;
-    border-bottom: 0.4rem solid #1d1c22;
-    /*color: #2D2D2D;*/
+    border-bottom: 0.4rem solid #75AB9E;
     margin: 0 auto;
     padding-bottom: 1rem;
 }
@@ -215,6 +212,8 @@ div.w3-content w3-justify{
     margin-right: 2%;
 }
 
+
+
 .image-container-right{
     float: right;
     margin-left: 2%;
@@ -247,14 +246,16 @@ div.w3-third img{
     padding-left: 0%;
 }
 
-#intelligenza, #contact, #storia{
-    background-color: #616161!important;
-    color: #F1F1F1!important;
+#intelligenza, #storia, #utilizzi{
+    background-color: #F1F1F1!important;
+    /*color: #616161!important;*/
 }
 
-#about, #utilizzi{
-    background-color: #F1F1F1!important;
-    color: #616161!important;
+#about, #contact {
+    background-color: #616161!important;
+    color: #F1F1F1!important;
+
+    
 }
 
 #title-sidebar{
@@ -304,3 +305,8 @@ button {
 .visualization {
     display: none; /* Hide all visualizations by default */
 }
+
+.green {
+    color: #75AB9E;
+}
+
