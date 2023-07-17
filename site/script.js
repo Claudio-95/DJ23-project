@@ -28,6 +28,20 @@ function onClick(element) {
     captionText.innerHTML = element.alt;
 }
 
+// Funzione per gestire l'evento di passaggio del mouse
+function handleMouseOver(event, item) {
+    const tooltip = document.getElementById('tooltip');
+    tooltip.innerHTML = item.datum.tooltip;
+    tooltip.style.top = event.clientY + 'px';
+    tooltip.style.left = event.clientX + 'px';
+    tooltip.style.display = 'block';
+}
+
+function handleMouseOut() {
+    const tooltip = document.getElementById('tooltip');
+    tooltip.style.display = 'none';
+}
+
 // Ottenere i riferimenti ai pulsanti e al contenitore del grafico - sentiment
 const graphicsContainerSentiment = document.getElementById('graphics-container-sentiment');
 const graphics1BtnSentiment = document.getElementById('graphics1-btn-sentiment');
@@ -130,8 +144,18 @@ const defaultSentiment = {
         ]
     }
 };
+const defaultEmbedOptionsSentiment = {
+    actions: false,
+    tooltip: { theme: 'custom' } // Utilizza il tema dei tooltip personalizzati
+};
 
-vegaEmbed('#graphics-container-sentiment', defaultSentiment);
+vegaEmbed('#graphics-container-sentiment', defaultSentiment, defaultEmbedOptionsSentiment).then((result) => {
+    const view = result.view;
+
+    // Aggiungi l'ascoltatore dell'evento di passaggio del mouse
+    view.addEventListener('mouseover', handleMouseOver);
+    view.addEventListener('mouseout', handleMouseOut);
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     // Funzioni di gestione degli eventi per i pulsanti
@@ -235,7 +259,18 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         // Rendi il grafico visibile in un contenitore HTML
-        vegaEmbed('#graphics-container-sentiment', spec);
+        const embedOptionsSentiment = {
+            actions: false,
+            tooltip: { theme: 'custom' } // Utilizza il tema dei tooltip personalizzati
+        };
+
+        vegaEmbed('#graphics-container-sentiment', spec, embedOptionsSentiment).then((result) => {
+            const view = result.view;
+
+            // Aggiungi l'ascoltatore dell'evento di passaggio del mouse
+            view.addEventListener('mouseover', handleMouseOver);
+            view.addEventListener('mouseout', handleMouseOut);
+        });
     });
 
     graphics2BtnSentiment.addEventListener('click', function() {
@@ -333,7 +368,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
 
-        vegaEmbed('#graphics-container-sentiment', spec);
+        // Rendi il grafico visibile in un contenitore HTML
+        const embedOptionsSentiment = {
+            actions: false,
+            tooltip: { theme: 'custom' } // Utilizza il tema dei tooltip personalizzati
+        };
+
+        vegaEmbed('#graphics-container-sentiment', spec, embedOptionsSentiment).then((result) => {
+            const view = result.view;
+
+            // Aggiungi l'ascoltatore dell'evento di passaggio del mouse
+            view.addEventListener('mouseover', handleMouseOver);
+            view.addEventListener('mouseout', handleMouseOut);
+        });
     });
 
     graphics3BtnSentiment.addEventListener('click', function() {
@@ -460,7 +507,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
 
-        vegaEmbed('#graphics-container-sentiment', spec);
+        // Rendi il grafico visibile in un contenitore HTML
+        const embedOptionsSentiment = {
+            actions: false,
+            tooltip: { theme: 'custom' } // Utilizza il tema dei tooltip personalizzati
+        };
+
+        vegaEmbed('#graphics-container-sentiment', spec, embedOptionsSentiment).then((result) => {
+            const view = result.view;
+
+            // Aggiungi l'ascoltatore dell'evento di passaggio del mouse
+            view.addEventListener('mouseover', handleMouseOver);
+            view.addEventListener('mouseout', handleMouseOut);
+        });
     });
 });
 
@@ -915,7 +974,18 @@ const defaultWords = {
     }
 };
 
-vegaEmbed('#graphics-container-words', defaultWords);
+const defaultEmbedOptionsWords = {
+    actions: false,
+    tooltip: { theme: 'custom' } // Utilizza il tema dei tooltip personalizzati
+};
+
+vegaEmbed('#graphics-container-words', defaultWords, defaultEmbedOptionsWords).then((result) => {
+    const view = result.view;
+
+    // Aggiungi l'ascoltatore dell'evento di passaggio del mouse
+    view.addEventListener('mouseover', handleMouseOver);
+    view.addEventListener('mouseout', handleMouseOut);
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     graphics1BtnWords.addEventListener('click', function() {
@@ -1364,7 +1434,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
 
-        vegaEmbed('#graphics-container-words', spec);
+        // Rendi il grafico visibile in un contenitore HTML
+        const embedOptionsWords = {
+            actions: false,
+            tooltip: { theme: 'custom' } // Utilizza il tema dei tooltip personalizzati
+        };
+
+        vegaEmbed('#graphics-container-words', spec, embedOptionsWords).then((result) => {
+            const view = result.view;
+
+            // Aggiungi l'ascoltatore dell'evento di passaggio del mouse
+            view.addEventListener('mouseover', handleMouseOver);
+            view.addEventListener('mouseout', handleMouseOut);
+        });
     });
 
     graphics2BtnWords.addEventListener('click', function() {
@@ -1677,7 +1759,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
 
-        vegaEmbed('#graphics-container-words', spec);
+        // Rendi il grafico visibile in un contenitore HTML
+        const embedOptionsWords = {
+            actions: false,
+            tooltip: { theme: 'custom' } // Utilizza il tema dei tooltip personalizzati
+        };
+
+        vegaEmbed('#graphics-container-words', spec, embedOptionsWords).then((result) => {
+            const view = result.view;
+
+            // Aggiungi l'ascoltatore dell'evento di passaggio del mouse
+            view.addEventListener('mouseover', handleMouseOver);
+            view.addEventListener('mouseout', handleMouseOut);
+        });
     });
 
     graphics3BtnWords.addEventListener('click', function() {
@@ -1990,7 +2084,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
 
-        vegaEmbed('#graphics-container-words', spec);
+        // Rendi il grafico visibile in un contenitore HTML
+        const embedOptionsWords = {
+            actions: false,
+            tooltip: { theme: 'custom' } // Utilizza il tema dei tooltip personalizzati
+        };
+
+        vegaEmbed('#graphics-container-words', spec, embedOptionsWords).then((result) => {
+            const view = result.view;
+
+            // Aggiungi l'ascoltatore dell'evento di passaggio del mouse
+            view.addEventListener('mouseover', handleMouseOver);
+            view.addEventListener('mouseout', handleMouseOut);
+        });
     });
 });
 
@@ -2003,38 +2109,39 @@ const graphics3BtnTrigrams = document.getElementById('graphics3-btn-trigrams');
 // trigrammimensilireddit - default
 const defaultTrigrams = {
     "config": {
-        "view": {"continuousWidth": 300, "continuousHeight": 300},
-        "axisX": {"labelAlign": "left", "labelAngle": 45, "labelPadding": 15},
-        "legend": {"orient": "top-right"}
+    "view": {"continuousWidth": 300, "continuousHeight": 300},
+    "axisX": {"labelAlign": "left", "labelAngle": 45, "labelPadding": 15},
+    "legend": {"orient": "top-right"}
     },
-    "data": {"name": "data-93c9ffa5b6b9e4def6a08990b0ff3aea"},
-    "mark": {"type": "bar"},
-    "encoding": {
+        "data": {"name": "data-93c9ffa5b6b9e4def6a08990b0ff3aea"},
+        "mark": {"type": "bar"},
+        "encoding": {
         "color": {"field": "Sentiment", "type": "quantitative"},
+        "opacity": {"condition": {"param": "param_23", "value": 1}, "value": 0.3},
         "tooltip": [
             {"field": "Trigram", "title": "Trigramma", "type": "nominal"},
             {
                 "field": "Frequency",
-                "title": "frequenza assoluta",
+                "title": "Frequenza assoluta",
                 "type": "quantitative"
             }
         ],
-        "x": {
+            "x": {
             "field": "Trigram",
-            "sort": "-y",
-            "title": "Trigramma",
-            "type": "nominal"
+                "sort": "-y",
+                "title": "Trigramma",
+                "type": "nominal"
         },
         "y": {
             "field": "Frequency",
-            "title": "Frequenza registrata",
-            "type": "quantitative"
+                "title": "Frequenza registrata",
+                "type": "quantitative"
         }
     },
-    "height": 600,
-    "params": [
+        "height": 600,
+        "params": [
         {
-            "name": "param_8",
+            "name": "param_25",
             "select": {"type": "point", "fields": ["MonthName"]},
             "bind": {
                 "input": "select",
@@ -2044,24 +2151,24 @@ const defaultTrigrams = {
             }
         },
         {
-            "name": "param_9",
-            "select": {"type": "point", "nearest": true, "on": "mouseover"}
+            "name": "param_23",
+            "select": {"type": "point", "fields": ["Trigram", "Frequency"]}
         },
         {
-            "name": "param_10",
+            "name": "param_26",
             "select": {"type": "interval", "encodings": ["x", "y"]},
             "bind": "scales"
         }
     ],
-    "resolve": {"scale": {"y": "independent"}},
-    "title": {
+        "resolve": {"scale": {"y": "independent"}},
+        "title": {
         "text": "Top Trigrammi sul periodo aprile-giugno 2023",
-        "subtitle": "Dati relativi al dataset di Reddit"
+            "subtitle": "Dati relativi al dataset di Reddit"
     },
-    "transform": [{"filter": {"param": "param_8"}}],
-    "width": 800,
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
-    "datasets": {
+        "transform": [{"filter": {"param": "param_25"}}],
+        "width": 800,
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+        "datasets": {
         "data-93c9ffa5b6b9e4def6a08990b0ff3aea": [
             {
                 "Month": 4,
@@ -2277,20 +2384,31 @@ const defaultTrigrams = {
     }
 };
 
-vegaEmbed('#graphics-container-trigrams', defaultTrigrams);
+const defaultEmbedOptionsTrigrams = {
+    actions: false,
+    tooltip: { theme: 'custom' } // Utilizza il tema dei tooltip personalizzati
+};
+
+vegaEmbed('#graphics-container-trigrams', defaultTrigrams, defaultEmbedOptionsTrigrams).then((result) => {
+    const view = result.view;
+
+    // Aggiungi l'ascoltatore dell'evento di passaggio del mouse
+    view.addEventListener('mouseover', handleMouseOver);
+    view.addEventListener('mouseout', handleMouseOut);
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     graphics1BtnTrigrams.addEventListener('click', function() {
         // trigrammimensilireddit
         const spec = {
             "config": {
-            "view": {"continuousWidth": 300, "continuousHeight": 300},
-            "axisX": {"labelAlign": "left", "labelAngle": 45, "labelPadding": 15},
-            "legend": {"orient": "top-right"}
+                "view": {"continuousWidth": 300, "continuousHeight": 300},
+                "axisX": {"labelAlign": "left", "labelAngle": 45, "labelPadding": 15},
+                "legend": {"orient": "top-right"}
             },
-                "data": {"name": "data-93c9ffa5b6b9e4def6a08990b0ff3aea"},
-                "mark": {"type": "bar"},
-                "encoding": {
+            "data": {"name": "data-93c9ffa5b6b9e4def6a08990b0ff3aea"},
+            "mark": {"type": "bar"},
+            "encoding": {
                 "color": {"field": "Sentiment", "type": "quantitative"},
                 "tooltip": [
                     {"field": "Trigram", "title": "Trigramma", "type": "nominal"},
@@ -2300,22 +2418,22 @@ document.addEventListener('DOMContentLoaded', function() {
                         "type": "quantitative"
                     }
                 ],
-                    "x": {
+                "x": {
                     "field": "Trigram",
-                        "sort": "-y",
-                        "title": "Trigramma",
-                        "type": "nominal"
+                    "sort": "-y",
+                    "title": "Trigramma",
+                    "type": "nominal"
                 },
                 "y": {
                     "field": "Frequency",
-                        "title": "Frequenza registrata",
-                        "type": "quantitative"
+                    "title": "Frequenza registrata",
+                    "type": "quantitative"
                 }
             },
-                "height": 600,
-                "params": [
+            "height": 600,
+            "params": [
                 {
-                    "name": "param_8",
+                    "name": "param_11",
                     "select": {"type": "point", "fields": ["MonthName"]},
                     "bind": {
                         "input": "select",
@@ -2325,24 +2443,20 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 },
                 {
-                    "name": "param_9",
-                    "select": {"type": "point", "nearest": true, "on": "mouseover"}
-                },
-                {
-                    "name": "param_10",
+                    "name": "param_13",
                     "select": {"type": "interval", "encodings": ["x", "y"]},
                     "bind": "scales"
                 }
             ],
-                "resolve": {"scale": {"y": "independent"}},
-                "title": {
+            "resolve": {"scale": {"y": "independent"}},
+            "title": {
                 "text": "Top Trigrammi sul periodo aprile-giugno 2023",
-                    "subtitle": "Dati relativi al dataset di Reddit"
+                "subtitle": "Dati relativi al dataset di Reddit"
             },
-                "transform": [{"filter": {"param": "param_8"}}],
-                "width": 800,
-                "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
-                "datasets": {
+            "transform": [{"filter": {"param": "param_11"}}],
+            "width": 800,
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+            "datasets": {
                 "data-93c9ffa5b6b9e4def6a08990b0ff3aea": [
                     {
                         "Month": 4,
@@ -2558,7 +2672,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
 
-        vegaEmbed('#graphics-container-trigrams', spec);
+        // Rendi il grafico visibile in un contenitore HTML
+        const embedOptionsTrigrams = {
+            actions: false,
+            tooltip: { theme: 'custom' } // Utilizza il tema dei tooltip personalizzati
+        };
+
+        vegaEmbed('#graphics-container-trigrams', spec, embedOptionsTrigrams).then((result) => {
+            const view = result.view;
+
+            // Aggiungi l'ascoltatore dell'evento di passaggio del mouse
+            view.addEventListener('mouseover', handleMouseOver);
+            view.addEventListener('mouseout', handleMouseOut);
+        });
     });
 
     graphics2BtnTrigrams.addEventListener('click', function() {
@@ -3346,7 +3472,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
 
-        vegaEmbed('#graphics-container-trigrams', spec);
+        // Rendi il grafico visibile in un contenitore HTML
+        const embedOptionsTrigrams = {
+            actions: false,
+            tooltip: { theme: 'custom' } // Utilizza il tema dei tooltip personalizzati
+        };
+
+        vegaEmbed('#graphics-container-trigrams', spec, embedOptionsTrigrams).then((result) => {
+            const view = result.view;
+
+            // Aggiungi l'ascoltatore dell'evento di passaggio del mouse
+            view.addEventListener('mouseover', handleMouseOver);
+            view.addEventListener('mouseout', handleMouseOut);
+        });
     });
 
     graphics3BtnTrigrams.addEventListener('click', function() {
@@ -4064,7 +4202,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
 
-        vegaEmbed('#graphics-container-trigrams', spec);
+        // Rendi il grafico visibile in un contenitore HTML
+        const embedOptionsTrigrams = {
+            actions: false,
+            tooltip: { theme: 'custom' } // Utilizza il tema dei tooltip personalizzati
+        };
+
+        vegaEmbed('#graphics-container-trigrams', spec, embedOptionsTrigrams).then((result) => {
+            const view = result.view;
+
+            // Aggiungi l'ascoltatore dell'evento di passaggio del mouse
+            view.addEventListener('mouseover', handleMouseOver);
+            view.addEventListener('mouseout', handleMouseOut);
+        });
     });
 });
 
@@ -4446,4 +4596,15 @@ const topic = {
     }
 };
 
-vegaEmbed('#topic-container', topic);
+const defaultEmbedOptionsTopic = {
+    actions: false,
+    tooltip: { theme: 'custom' } // Utilizza il tema dei tooltip personalizzati
+};
+
+vegaEmbed('#topic-container', topic, defaultEmbedOptionsTopic).then((result) => {
+    const view = result.view;
+
+    // Aggiungi l'ascoltatore dell'evento di passaggio del mouse
+    view.addEventListener('mouseover', handleMouseOver);
+    view.addEventListener('mouseout', handleMouseOut);
+});
