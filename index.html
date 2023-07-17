@@ -76,8 +76,6 @@
  <!-- Storia section -->
   <div class="w3-container w3-center w3-padding-32" id="storia">
     <div class="w3-content w3-justify">
-      <div class="text-content"></div>
-
       <div class="w3-container w3-center w3-padding-32">
 
         <h1 class="main-titles"><b>Storia di un chatbot</b></h1>
@@ -108,7 +106,7 @@
             </div>
           </div>
         </div>
-        <img src="img/dall-e4.png" alt="Robot tra i fiori" class="w3-image w3-center w3-padding-32" width="600" height="650">
+        <img src="img/dall-e10.png" alt="Robot e umani a un tavolo che bevono" class="w3-image w3-center w3-padding-32" width="600" height="650">
         <div class="w3-content w3-justify">
           <h2 id="sez1">Cos’è ChatGPT</h2>
           <p>ChatGPT è un chatbot sviluppato dalla società americana OpenAI, fondata da Elon Musk, Sam Altman Greg Brockman, Ilya Sutskever, Wojciech Zaremba, and John Schulman nel 2015.<br>
@@ -118,9 +116,11 @@
 
 
       <h2 id="sez2">Come funziona ChatGPT</h2>
+      <img src="img/dall-e12.png" class="image-container" alt="Robot in luogo con alberi e fiori"> 
         <p>ChatGPT è un chatbot basato su intelligenza artificiale specializzato nel dialogo uomo-macchina. È in grado di comporre poesie, opere teatrali, testi di canzoni su un determinato tema e persino di spiegare le barzellette. Come siamo arrivati ad un modello con un livello di competenza morfosintattica così accurata e in grado di generare varie tipologie di testi in maniera veloce e tremendamente plausibile, che dimostra anche raffinate capacità di ragionamento?<br>
 
-          “Il Natural Language Processing ha visto miglioramenti senza precedenti nel corso degli ultimi anni, e i progressi sono avvenuti con la sostituzione dei cosiddetti sistemi di apprendimento tradizionali (modelli statistici, basati su sistemi di machine learning) a modelli di algoritmi deep learning" <a href="https://alemiaschi.github.io/files/Seminario_LABCD_8_marzo_2023.pdf"  target="_blank">ha spiegato Alessio Miaschi</a>, ricercatore del CNR, durante un <a href="http://www.labcd.unipi.it/seminari/le-risorse-linguistiche-al-tempo-delle-reti-neurali/" target="_blank"> seminario di cultura digitale</a> all'Università di Pisa.<br></p>
+          “Il Natural Language Processing ha visto miglioramenti senza precedenti nel corso degli ultimi anni, e i progressi sono avvenuti con la sostituzione dei cosiddetti sistemi di apprendimento tradizionali (modelli statistici, basati su sistemi di machine learning) a modelli di algoritmi deep learning" <a href="https://alemiaschi.github.io/files/Seminario_LABCD_8_marzo_2023.pdf"  target="_blank">ha spiegato Alessio Miaschi</a>, ricercatore del CNR, durante un <a href="http://www.labcd.unipi.it/seminari/le-risorse-linguistiche-al-tempo-delle-reti-neurali/" target="_blank"> seminario di cultura digitale</a> all'Università di Pisa.<br>
+        </p>
         <p>
           “In passato, dopo una lunga catena di preprocessing e annotazione linguistica, si passava alla fase di modeling, ovvero l’estrazione di una serie di caratteristiche e features da testi linguisticamente annotati, che venivano poi usate come caratteristiche in input per un modello di apprendimento usato per svolgere vari compiti di NLP, entity recognition etc.<br>
         Adesso, con i modelli di <strong>deep learning</strong>, dopo una fase breve di <i>preprocessing</i>, il testo viene dato in pasto alla rete neurale che dopo il momento di apprendimento-addestramento, si specializza nella risoluzione di un determinato task.
@@ -168,7 +168,7 @@
             </div>
           </div>
         </div>
-        <img src="img/dall-e3.png" alt="Computer circondato da robot" class="w3-image w3-center w3-padding-32 force-center" width="600" height="650">
+        <img src="img/dall-e13.png" alt="Robot tra i fiori" class="w3-image w3-center w3-padding-32 force-center" width="600" height="650">
       </div>
 
       <h2 id="sez4">L'arrivo di ChatGPT</h2>
@@ -179,10 +179,11 @@
       </p>
 
       <h2 id="sez5">Sentiment Analysis</h2>
+      <img src="img/dall-e3.png" alt="Computer circondato da robot" class="image-container-right">
       <p>
         Al fine di determinare come le persone hanno recepito questa nuovo tool, sono stati recuperati post dai social media Reddit e Twitter, in lingua inglese e italiana, ed è stata effettuata la Sentiment Analysis con 2 strumenti diversi, NLTK e Textblob, 2 librerie Python che permettono di eseguire operazioni di <i>Natural Language Processing</i> su testi.<br>
         <i>L'anallisi del sentimento</i> consiste in un processo di categorizzazione digitale di pezzi di testo attraverso l'uso di algoritmi, in modo da poter definire se una frase ha connotazione positiva, neutra oppure negativa.
-      </p>
+      </p><br>
 
       <h2 id="sez6">Sentiment analysis sui dataset in italiano e inglese</h2>
       <p>
@@ -191,7 +192,7 @@
 
 
       <div class="graphics-btn-container">
-        <h3>Sentimento</h3>
+        <h3 class="green">Sentimento</h3>
         <button id="graphics1-btn-sentiment">Reddit</button>
         <button id="graphics2-btn-sentiment">Twitter.it</button>
         <button id="graphics3-btn-sentiment">Twitter.com</button>
@@ -200,6 +201,7 @@
 
     </div>
   </div>
+
   <!-- Utilizzi section -->
   <div class="w3-container w3-light-grey w3-center w3-padding-32" id="utilizzi">
     <h1 class="main-titles"><b>Interazione Uomo Macchina</b></h1>
@@ -210,13 +212,67 @@
         Le persone interagiscono con ChatGPT in maniera variegata, dando libero sfogo alle proprie fantasie, inclinazioni e interessi. <br>
         In generale, il chatbot viene utilizzato per scrivere elaborati di testo di vario tipo (email, presentazioni, introduzioni, racconti, sceneggiature etc) e per fare sintesi; è di aiuto nei compiti scolastici e accademici, e nella programmazione (è usato per creare siti web, o per fare debugging dei codici e chiedere spiegazioni). 
       </p>
+      <p>
+        Su Twitter, sono stati individuati alcuni utlizzzi particolari di ChatGPT:
+      </p>
+      <h3 class="green">Lingua inglese</h3>
+      <p>
+        <b><i>Just for fun, we asked ChatGPT to write a haiku for us on fake news. And, <a href="https://t.co/ecglrw7ub" target="_blank">it delivered</a></i>
+      </b>
+      <p>
+        Purtroppo il tweet non è più disponibile e non è stato possibile leggere l'<i>haiku</i>, componimento poetico nato in Giappone nel XVII secolo).
+      </p>
+      <p>
+        <b><i>We asked chat GPT to write a sex toy joke and this is what it wrote: Why was the vibrator feeling cold? Because it left its batteries in the refrigerator!</i></b>
+      </p>
+      <p>
+        <b><i>I asked #ChatGPT to write a <a href="https://t.co/fjGiK1y5CA" target="_blank">prayer that can be said at same-sex blessings...</a></i></b>
+      </p>
+      <p>
+        <b><i>Some interesting questions people ask ChatGPT: Can you generate a recipe for a three course meal? #ChatGPT #ChatGPTQuestions #Openai</i></b>
+      </p>
+      <p>
+        <b><i>Chat GPT and Me — I ask ChatGPT <a href="https://t.co/b22jyyuqfj" target="_blank"> to Daydream</a></i></b> 
+      </p>
+      <p>
+        <b><i>I interviewed #ChatGPT who is a music enthusiast. Now here is yet another interesting use case of this AI. You could ask ChatGPT to pretend to be any role you want it to be and interview its AI just like you would interview a real person</p></i></b>
+      </p>
+      <h3 class="green">Lingua italiana</h3>
+      <p>
+        <b><i>Abbiamo chiesto a #Chatgpt di creare una storia che includesse: Il sindaco di #Benevento, dei #cinghiali, il #golf e dell'acqua contaminata da #tetracloroetilene. <a href="https://t.co/oaKAEfaWTc" target="_blank">Quello che ne viene fuori</a> ci sembra una soluzione migliore di quelle adottate fino ad ora</i></b>
+      </b>
+      <p>
+        <b><i>Nel 1970 dal dialogo fra #JamesBaldwin e #MargaretMead nasce il libro "Discussione sulla razza". Cosa si direbbero oggi davanti a #BlackLivesMatter? L'abbiamo <a href="https://t.co/bTySq6Q6d3"> chiesto a #ChatGPT</a></i></b>
+      </p>
+      <p>
+        <b><i>Sono davvero preoccupato per il futuro dell’editoria italiana se i giornali tradizionali non si evolveranno". Abbiamo chiesto a #ChatGPT cosa farebbe per salvare il giornalismo italiano. <a href="https://t.co/q1cCCxA77C" target="_blank">Questa</a> è stata la sua risposta</a></i></b>
+      </p>
+      <p>
+        <b><i>Chiesto a chat gpt di <a href="https://t.co/0MngK293WM" target="_blank"> scrivere un testo usando i titoli della tracklist</a> e STO URLANDO</i></b>
+      </p>
+      <p>
+        <b><i>Ho chiesto a #ChatGPT se #dantealighieri si potesse considerare #fascista. Ecco la sua  <a href="https://t.co/WJnSAlCjN" target="_blank">risposta</a></i></b> 
+      </p>
+      <p>
+        Purtroppo anche questo contenuto non è più disponibile.
+      </p>
+      <p>
+        <b><i>Ho chiesto a #ChatGPT quante volte in 24 ore le lancette di un orologio formano un angolo di 90 gradi. É stato impreciso ed evasivo come ero io durante le interrogazioni di chimica al liceo, ha anche simulato un attacco di dissenteria e la morte del nonno per prendere tempo</i></b>
+      </p>
+      <p>
+        <b><i>Stamattina da Linus e Nicola parlano di intelligenza artificiale. Combinazione l’altro ieri sera, abbiamo chiesto a chat GPT un finale alternativo di Lost. Non ci è piaciuto però ho apprezzato lo sforzo: pronto in pochissimi secondi</i></b>
+      </p>
+      <p>
+        <b><i>Ho chiesto a #ChatGPT di scrivere un monologo per #Sanremo2023. Se qualcuno di voi conduttori ancora non ha preparato niente oppure ha scritto la solita roba cringe prendete e <a href="https://t.co/DEHBWf4VSv">usufruitene tutti</a> </i></b>
+      </p>
     </div>
   </div>
 
   <!-- Parole e tendenze section -->
-  <div class="w3-container w3-dark-grey w3-padding-32 w3-text-light-grey w3-padding-large" id="contact">
+  <div class="w3-container w3-dark-grey w3-padding-32 w3-text-light-grey" id="contact">
     <div class="w3-content w3-justify w3-container">
       <h1 class="main-titles"><b>Parole e tendenze</b></h1>
+
       <img src="img/dall-e11.png" alt="Robot che esegue calcoli" class="w3-image w3-padding-32 w3-center force-center" width="600" height="650">
       <div class="graphics-btn-container">
         <h2>Parole più frequenti</h2>
@@ -242,8 +298,9 @@
           <figcaption>WordCloud: rappresentazione visuale delle parole più usate su Twitter.com</figcaption>
         </figure>
       </div>
+      <h3>Esplorazioni sui dati in inglese</h3>
       <p>
-        <b class="green">Math/Matematica</b>: svariati tweet in lingua inglese si riferiscono all'incapacità di ChatGPT di svolgere compiti matematici, mentre in italiano i post contenenti la parola "matematica" sono legati all'uso di ChatGPT da parte degli studenti a scuola (abitudine che suscita preoccupazioni di carattere pedagogico ed educativo).
+        <b class="green">Math</b>: svariati tweet in lingua inglese si riferiscono all'incapacità di ChatGPT di svolgere compiti matematici complessi, altri invece ne esaltano le doti, dunque l'opinione degli utenti su Twitter sembra divisa su questo tema. 
       </p>
       <p>
         <b class="green">Erotic</b>: alcuni utenti hanno interagito con ChatGPT per creare componimenti erotici di varia tipologia, dal racconto sci-fi alla poesia. È stato individuato in questo ambito un utilizzo ancora più particolare:
@@ -279,13 +336,17 @@
           <figcaption>WordCloud: rappresentazione visuale delle parole più usate su Twitter.it</figcaption>
         </figure>
       </div>
+      <h3>Esplorazioni sui dati in italiano</h3>
+      <p>
+        <b class="green">Matematica</b>: in italiano i post contenenti la parola "matematica" sono legati all'uso di ChatGPT da parte degli studenti a scuola e questa abitudine suscita preoccupazioni di carattere pedagogico ed educativo.
+      </p>
       <p>
         Nel Corpus di tweet in italiano non compaiono post relativi ad un utilizzo erotico di ChatGPT, mentre ricercando nei dati attraverso una keyword semanticamente vicina, ma più diretta, sono state individuate alcune informazioni interessanti:
       </p>
       <p>
         <b class="green">Sesso</b>:
         In un tweet si fa riferimento al fenomeno delle truffe online, in particolare a quelle definite "romantiche": attraverso l'inganno la vittima viene coinvolta in una relazione romantica che ha come fine quello di estocere denaro. <br>
-        "L’età delle vittime circuite dai falsi corteggiatori sui social si aggira intorno ai 50 anni e a rimanerne coinvolte spesso sono donne di estrazione sociale eterogenea" si può leggere sul <a href="https://www.commissariatodips.it/consigli/per-i-cittadini-e-i-ragazzi/truffe-romantiche-romance-scam/index.html" target="_blank">
+        "L’età delle persone circuite dai falsi corteggiatori sui social si aggira intorno ai 50 anni e a rimanerne coinvolte spesso sono donne di estrazione sociale eterogenea" si può leggere sul <a href="https://www.commissariatodips.it/consigli/per-i-cittadini-e-i-ragazzi/truffe-romantiche-romance-scam/index.html" target="_blank">
         sito della Polizia</a>. "La realtà dei casi rivela infatti che la maggioranza delle vittime non è più giovanissima e che, magari dopo una relazione sentimentale finita male e con figli che vivono autonomamente, si diventa facile preda chattando davanti al computer o su uno smartphone".
       </p>
       <p>
@@ -314,15 +375,16 @@
   
 
    <!-- Intelligenza section -->
-  <div class="w3-container w3-dark-grey w3-padding-32 w3-text-light-grey w3-padding-large" id="intelligenza">
+  <div class="w3-container w3-dark-grey w3-padding-32 w3-text-light-grey" id="intelligenza">
     <div class="w3-content w3-justify w3-container">
       <h1 class="main-titles"><b>Intelligenza Artificiale</b></h1>
       <img src="img/dall-e4.png" alt="Robot immerso in una dimensione onirica" class="w3-image w3-center w3-padding-32 force-center" width="600" height="650">
       <h2>ChatGPT è realmente in grado di capire?</h2>
       <p>I large language models come ChatGPT sono talmente grandi e complessi da suscitare sorprese inaspettate: hanno iniziato a mostrare comportamenti sorprendenti, che non erano stati previsti. <br>
-       “Sono sorpreso dalle capacità che questi modelli hanno sviluppato” <a href="https://www.quantamagazine.org/the-unpredictable-abilities-emerging-from-large-ai-models-20230316/" target="_blank"> ha dichiarato Ethan Dyer</a>, computer scientist di Google Research che lavora da anni nel campo dell’AI. “È sorprendente perché questi modelli in teoria hanno una sola direttiva: prendere in input una stringa di testo e predire cosa verrà dopo, ripetutamente, su basi puramente statistiche. Gli esperti nel settore avevano previsto che con l’aumentare della dimensione dei dati sarebbero migliorate le performance su task già noti, ma non si aspettavano che i modelli all’improvviso sarebbero stati in grado di svolgere così tante nuove (e imprevedibili) attività”.</p>
+       “Sono meravigliato dalle capacità che questi modelli hanno sviluppato” <a href="https://www.quantamagazine.org/the-unpredictable-abilities-emerging-from-large-ai-models-20230316/" target="_blank"> ha dichiarato Ethan Dyer</a>, computer scientist di Google Research che lavora da anni nel campo dell’AI. “È sorprendente perché questi modelli in teoria hanno una sola direttiva: prendere in input una stringa di testo e predire cosa verrà dopo, ripetutamente, su basi puramente statistiche. Gli esperti nel settore avevano previsto che con l’aumentare della dimensione dei dati sarebbero migliorate le performance su task già noti, ma non si aspettavano che i modelli all’improvviso sarebbero stati in grado di svolgere così tante nuove (e imprevedibili) attività”.</p>
       <h2>Proprietà emergenti</h2>
-      <p>A quanto pare i LLMs sembrano sviluppare centinaia di attività emergenti - dai calcoli matematici alla produzione di testi e di codici, fino al riconoscimento dei titoli di film tramite emoji (come in un esperimento condotto dal team di Dyer).<br>
+      <img src="img/dall-e14.png" class="image-container-right">
+      <p>A quanto pare i LLMs sembrano sviluppare centinaia di capacità non previste - dai calcoli matematici alla produzione di testi e di codici, fino al riconoscimento dei titoli di film tramite emoji (come in un esperimento condotto dal team di Dyer).<br>
       I modelli linguistici odierni sono stati dimensionati principalmente in base a tre fattori: quantità di calcolo, numero di parametri e dimensione del set di dati di addestramento. Un'abilità è considerata "emergente" se non è presente nei modelli più piccoli ma lo è in quelli più grandi. In generale, si può considerare l'emergere di nuove proprietà come una funzione di molte variabili correlate, la scala in cui si osserva per la prima volta l'emergere di un'abilità dipende da una serie di fattori e non è una proprietà immutabile, le prestazioni sembrano migliorare notevolmente oltre un certo ordine di grandezza dei parametri.
       “I fenomeni complessi possono essere ricondotti a una semplice legge probabilistica, nel caso di un language model si tratta di predire la prossima parola" ha dichiarato il professor Giuseppe Attardi in <a href= "https://www.youtube.com/watch?v=ej5lEP1bmdQ" target="_blank">un'intervista online</a> in cui ci si interroga sullo sviluppo delle AI. <br>
       "Emerge un comportamento sorprendente perché la nostra mente non è capace di capire un sistema complesso. GPT 4 ha superato una trentina di test per ammissione - a medicina, giurisprudenza, scienze infermieristiche, li supera tutti.
@@ -331,13 +393,14 @@
       Il comportamento emergente non è al momento spiegabile, nemmeno gli stessi ricercatori che lo stanno osservando sono in grado di spiegarlo, ha sorpreso tutti. Ci sono degli studi. Alcuni sostengono che questi sistemi non abbiano  capacità di fare ragionamenti matematici o logici, nessuno ha mai insegnato loro a fare conti, eppure in certi casi riesce a fare anche ragionamenti complessi. <br>
       In genere i sistemi di apprendimento automatico arrivano ad un certo plateau, la cosa sorprendente è che nel caso dei language model questo non è avvenuto, non si vede ancora la curva rallentare la crescita, con l’aggiunta di nuovi dati la curva continua a crescere. Ci sono  risultati più stupefacenti: più si aumentano i dati, più avviene fenomeno chiamato delle capacità emergenti: il sistema diventa in grado di fare cose che non sapeva fare, che non erano previste. Spuntano fuori, c’è una specie di salto quantico che avviene a certo momento con la crescita della dimensione dei sistemi”.</p>
       <h2>ChatGPT è intelligente?</h2>
+      <img src="img/dall-e15.png" class="image-container">
       <p>"Nessuno ha insegnato a GPT-3, o GPT-4, a fare i calcoli. Questo comportamento viene fuori dall’addestramento su una grande quantità di dati utilizzando miliardi di parametri" <a href="http://www.labcd.unipi.it/seminari/le-risorse-linguistiche-al-tempo-delle-reti-neurali/"  target="_blank">ha spiegato il professore Felice Dell’Orletta</a>, docente di inguistica computazionale all'Università di Pisa e ricercatore al CNR, duarante il seminario citato sopra. "I parametri sono variabili, memorizzarne 2 miliardi vuol dire avere un’infinità di server. Ogni volta che usiamo ChatGPT bruciamo 3 foreste. Per ora abbiamo dei super computer che nessuno può gestire, a parte 2 o 3 aziende che hanno decomposto tutto il web in micro parti di informazione che in qualche modo ricollegano tramite la rete neurale in maniera intelligente, ovvero attraverso un qualche tipo di comportamento che non è casuale. <br>
       ChatGPT riorganizza l’informazione e la riutilizza in maniera da permettere di risolvere dei task anche quando questi task non sono conosciuti. Questa cosa è intelligenza? No, è un comportamento emergente che viene fuori da una simulazione del dato umano. Quando un modello in qualche modo simulerà al 100% un comportamento che tu consideri intelligente, sta a te definirlo intelligente oppure no, però sta simulando un comportamento, e da questa simulazione verranno fuori tanti altri comportamenti.
       È vero che il dato linguistico manca di correlazione con la concretezza del mondo reale, però contiene tanta informazione. Non è un caso che questi comportamenti emergenti si siano visti la prima volta sui testi, gli stessi algoritmi sono stati applicati anche alle immagini, ma non è  emerso lo stesso comportamento intelligente. Lo abbiamo potuto osservare sul testo. Non è una casualità che le parole, che la capacità del linguaggio, siano forse ciò che più ci distingue dagli altri animali. <br>
       Non è la vista, la forza o la velocità, è il linguaggio, e il sistema ha fatto emergere questa competenza sul linguaggio. Credo che quello che abbiamo visto oggi sul testo è un qualcosa che ci ha sorpreso tutti, forse qualcuno se lo immaginava, ma non in così poco tempo. Chiamarla intelligenza oppure no è un modo per definire le cose. Sicuramente funziona in maniera diversa da un essere umano. C’è ragionamento o non c’é, sicuramente non c’è quello umano, però c’è una simulazione di quel comportamento. Quando la simulazione è al 100% poi decidi tu se chiamarla A o chiamarla B.<br>
       C’è stato uno scandalo perché tantissimi Kenyani sono stati sfruttati per creare dei Corpus Gold (annotati in maniera corretta) per addestrare ChatGPT. Questo vuol dire che di dati linguistici annotati ne abbiamo bisogno ancora tanto,  quindi il passaggio ad una macchina in grado di fare tutto senza una supervisione umana è ancora molto distante.
-      Possiamo fidarci che siano stati utilizzati solo i dati del web? Comunicazioni coi cellulari, interazioni uomo macchina, davanti alla tv o con Amazon Alexa, potrebbero essere tutti dati che vengono utilizzati. Non possiamo saperlo con esattezza perché sono fatti da aziende private, e questo è un altro grande problema. <br>
-      Come ha ricordato il prfossor Attardi nell'intervista citata sopra “Non ha senso dare la colpa alla tecnologia, i danni sono dovuti alle aziende che sfruttano in maniera distorta la tecnologia. Bisogna distinguere tra tecnologia e uso malevolo e deleterio di essa. L’etica è una caratteristica umana, che non ha a che fare con la tecnologia, assumiamo che le persone abbiano libero arbitrio e puniamo le loro azioni, non gli strumenti che utilizzano”.
+      Possiamo fidarci che siano stati utilizzati solo i dati del web? Comunicazioni coi cellulari, interazioni uomo macchina, davanti alla tv o con Amazon Alexa, potrebbero essere tutti dati che vengono utilizzati. Non possiamo saperlo con esattezza perché sono fatti da aziende private, e questo è un altro grande problema". <br>
+      Come ha ricordato il professor Attardi nell'intervista citata sopra “Non ha senso dare la colpa alla tecnologia, i danni sono dovuti alle aziende che la sfruttano in maniera distorta. Bisogna distinguere tra tecnologia e uso malevolo e deleterio di essa. L’etica è una caratteristica umana, che non ha a che fare con la tecnologia, assumiamo che le persone abbiano libero arbitrio e puniamo le loro azioni, non gli strumenti che utilizzano”.
     </p>
     </div>
   </div>
