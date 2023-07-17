@@ -34,6 +34,105 @@ const graphics1BtnSentiment = document.getElementById('graphics1-btn-sentiment')
 const graphics2BtnSentiment = document.getElementById('graphics2-btn-sentiment');
 const graphics3BtnSentiment = document.getElementById('graphics3-btn-sentiment');
 
+// chartSentimentING_reddit - default
+const defaultSentiment = {
+    "config": {
+        "view": {"continuousWidth": 300, "continuousHeight": 300},
+        "axis": {"grid": false},
+        "legend": {"orient": "top"}
+    },
+    "data": {"name": "data-800eee6c893eaac0f5534d5c99f91252"},
+    "mark": {"type": "line", "opacity": 0.1},
+    "encoding": {
+        "color": {
+            "field": "sentiment_complete",
+            "legend": {"orient": "right"},
+            "scale": {
+                "domain": ["Positivo", "Negativo", "Neutrale"],
+                "range": ["#ADFC92", "#F44E3F", "#788BFF"]
+            },
+            "title": "Sentimento registrato",
+            "type": "nominal"
+        },
+        "opacity": {"value": 0.9},
+        "x": {
+            "axis": {"format": "%B %Y", "tickCount": 12, "title": "Periodo"},
+            "field": "Comment date",
+            "type": "temporal"
+        },
+        "y": {
+            "axis": {"title": "Numero di tweets"},
+            "field": "Value",
+            "type": "quantitative"
+        }
+    },
+    "height": 600,
+    "params": [
+        {
+            "name": "param_3",
+            "select": {"type": "interval", "encodings": ["x", "y"]},
+            "bind": "scales"
+        }
+    ],
+    "title": {
+        "text": "Evoluzione del sentimento verso ChatGPT nell'arco dei mesi",
+        "subtitle": "Visualizzazione dei valori relativi al dataset di Tweets"
+    },
+    "width": 800,
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+    "datasets": {
+        "data-800eee6c893eaac0f5534d5c99f91252": [
+            {
+                "Comment date": "April 2023",
+                "sentiment_complete": "Negativo",
+                "Value": 4717
+            },
+            {
+                "Comment date": "May 2023",
+                "sentiment_complete": "Negativo",
+                "Value": 9471
+            },
+            {
+                "Comment date": "June 2023",
+                "sentiment_complete": "Negativo",
+                "Value": 2339
+            },
+            {
+                "Comment date": "April 2023",
+                "sentiment_complete": "Neutrale",
+                "Value": 5138
+            },
+            {
+                "Comment date": "May 2023",
+                "sentiment_complete": "Neutrale",
+                "Value": 10454
+            },
+            {
+                "Comment date": "June 2023",
+                "sentiment_complete": "Neutrale",
+                "Value": 3002
+            },
+            {
+                "Comment date": "April 2023",
+                "sentiment_complete": "Positivo",
+                "Value": 9626
+            },
+            {
+                "Comment date": "May 2023",
+                "sentiment_complete": "Positivo",
+                "Value": 18334
+            },
+            {
+                "Comment date": "June 2023",
+                "sentiment_complete": "Positivo",
+                "Value": 4897
+            }
+        ]
+    }
+};
+
+vegaEmbed('#graphics-container-sentiment', defaultSentiment);
+
 document.addEventListener('DOMContentLoaded', function() {
     // Funzioni di gestione degli eventi per i pulsanti
     graphics1BtnSentiment.addEventListener('click', function() {
@@ -370,6 +469,453 @@ const graphicsContainerWords = document.getElementById('graphics-container-words
 const graphics1BtnWords = document.getElementById('graphics1-btn-words');
 const graphics2BtnWords = document.getElementById('graphics2-btn-words');
 const graphics3BtnWords = document.getElementById('graphics3-btn-words');
+
+// wordsfreq_allmonths - default
+const defaultWords = {
+    "config": {
+        "view": {"continuousWidth": 300, "continuousHeight": 300},
+        "axisX": {"labelAlign": "left", "labelAngle": 45, "labelPadding": 15}
+    },
+    "hconcat": [
+        {
+            "data": {"name": "data-8dec01e42173f30af991a01c1933e19d"},
+            "mark": {"type": "point", "filled": true},
+            "encoding": {
+                "color": {
+                    "field": "Sentiment",
+                    "scale": {
+                        "domain": ["Positive", "Neutral", "Negative"],
+                        "range": ["#ADFC92", "#788BFF", "#F44E3F"]
+                    },
+                    "title": "Sentimento registrato",
+                    "type": "nominal"
+                },
+                "opacity": {"value": 0.7},
+                "size": {"field": "frequency", "type": "quantitative"},
+                "tooltip": [
+                    {"field": "word", "type": "nominal"},
+                    {"field": "frequency", "type": "quantitative"},
+                    {"field": "frequency", "type": "quantitative"}
+                ],
+                "x": {"field": "word", "title": "Parola", "type": "nominal"},
+                "y": {
+                    "axis": {"labels": false},
+                    "field": "frequency",
+                    "title": "Frequenza",
+                    "type": "quantitative"
+                }
+            },
+            "height": 400,
+            "name": "view_1",
+            "title": "Sentiment sulle top 30 parole per categoria di sentimento: Aprile",
+            "transform": [{"filter": {"param": "param_2"}}],
+            "width": 600
+        },
+        {
+            "data": {"name": "data-d8064814f70fc4e5dadfa166c144c8dc"},
+            "mark": {"type": "point", "filled": true},
+            "encoding": {
+                "color": {
+                    "field": "Sentiment",
+                    "scale": {
+                        "domain": ["Positive", "Neutral", "Negative"],
+                        "range": ["#ADFC92", "#788BFF", "#F44E3F"]
+                    },
+                    "title": "Sentimento registrato",
+                    "type": "nominal"
+                },
+                "opacity": {"value": 0.7},
+                "size": {"field": "frequency", "type": "quantitative"},
+                "tooltip": [
+                    {"field": "word", "type": "nominal"},
+                    {"field": "frequency", "type": "quantitative"},
+                    {"field": "frequency", "type": "quantitative"}
+                ],
+                "x": {"field": "word", "title": "Parola", "type": "nominal"},
+                "y": {
+                    "axis": {"labels": false},
+                    "field": "frequency",
+                    "title": "Frequenza",
+                    "type": "quantitative"
+                }
+            },
+            "height": 400,
+            "name": "view_2",
+            "title": "Sentiment sulle top 30 parole per categoria di sentimento: Maggio",
+            "transform": [{"filter": {"param": "param_4"}}],
+            "width": 600
+        },
+        {
+            "data": {"name": "data-47f0aad1aa5057b506b5ab9e832e0ec4"},
+            "mark": {"type": "point", "filled": true},
+            "encoding": {
+                "color": {
+                    "field": "Sentiment",
+                    "scale": {
+                        "domain": ["Positive", "Neutral", "Negative"],
+                        "range": ["#ADFC92", "#788BFF", "#F44E3F"]
+                    },
+                    "title": "Sentimento registrato",
+                    "type": "nominal"
+                },
+                "opacity": {"value": 0.7},
+                "size": {"field": "frequency", "type": "quantitative"},
+                "tooltip": [
+                    {"field": "word", "type": "nominal"},
+                    {"field": "frequency", "type": "quantitative"},
+                    {"field": "frequency", "type": "quantitative"}
+                ],
+                "x": {"field": "word", "title": "Parola", "type": "nominal"},
+                "y": {
+                    "axis": {"labels": false},
+                    "field": "frequency",
+                    "title": "Frequenza",
+                    "type": "quantitative"
+                }
+            },
+            "height": 400,
+            "name": "view_3",
+            "title": "Sentiment sulle top 30 parole per categoria di sentimento: Giugno",
+            "transform": [{"filter": {"param": "param_6"}}],
+            "width": 600
+        }
+    ],
+    "params": [
+        {
+            "name": "param_2",
+            "select": {"type": "point", "fields": ["Sentiment"]},
+            "bind": {
+                "input": "radio",
+                "options": ["Positive", "Neutral", "Negative", null],
+                "labels": ["Positive ", "Neutral ", "Negative ", "All"],
+                "name": "Selettore sentimento: "
+            },
+            "views": ["view_1"]
+        },
+        {
+            "name": "param_3",
+            "select": {"type": "interval", "encodings": ["x", "y"]},
+            "bind": "scales",
+            "views": ["view_1"]
+        },
+        {
+            "name": "param_4",
+            "select": {"type": "point", "fields": ["Sentiment"]},
+            "bind": {
+                "input": "radio",
+                "options": ["Positive", "Neutral", "Negative", null],
+                "labels": ["Positive ", "Neutral ", "Negative ", "All"],
+                "name": "Selettore sentimento: "
+            },
+            "views": ["view_2"]
+        },
+        {
+            "name": "param_5",
+            "select": {"type": "interval", "encodings": ["x", "y"]},
+            "bind": "scales",
+            "views": ["view_2"]
+        },
+        {
+            "name": "param_6",
+            "select": {"type": "point", "fields": ["Sentiment"]},
+            "bind": {
+                "input": "radio",
+                "options": ["Positive", "Neutral", "Negative", null],
+                "labels": ["Positive ", "Neutral ", "Negative ", "All"],
+                "name": "Selettore sentimento: "
+            },
+            "views": ["view_3"]
+        },
+        {
+            "name": "param_7",
+            "select": {"type": "interval", "encodings": ["x", "y"]},
+            "bind": "scales",
+            "views": ["view_3"]
+        }
+    ],
+    "resolve": {"scale": {"y": "independent"}},
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+    "datasets": {
+        "data-8dec01e42173f30af991a01c1933e19d": [
+            {"Sentiment": "Positive", "word": "like", "frequency": 2696},
+            {"Sentiment": "Positive", "word": "people", "frequency": 1691},
+            {"Sentiment": "Positive", "word": "good", "frequency": 1527},
+            {"Sentiment": "Positive", "word": "think", "frequency": 1367},
+            {"Sentiment": "Positive", "word": "would", "frequency": 1325},
+            {"Sentiment": "Positive", "word": "dont", "frequency": 1209},
+            {"Sentiment": "Positive", "word": "use", "frequency": 1097},
+            {"Sentiment": "Positive", "word": "get", "frequency": 1056},
+            {"Sentiment": "Positive", "word": "even", "frequency": 1019},
+            {"Sentiment": "Positive", "word": "one", "frequency": 982},
+            {"Sentiment": "Positive", "word": "time", "frequency": 923},
+            {"Sentiment": "Positive", "word": "way", "frequency": 820},
+            {"Sentiment": "Positive", "word": "well", "frequency": 788},
+            {"Sentiment": "Positive", "word": "thats", "frequency": 785},
+            {"Sentiment": "Positive", "word": "make", "frequency": 776},
+            {"Sentiment": "Positive", "word": "know", "frequency": 772},
+            {"Sentiment": "Positive", "word": "work", "frequency": 763},
+            {"Sentiment": "Positive", "word": "things", "frequency": 736},
+            {"Sentiment": "Positive", "word": "bot", "frequency": 709},
+            {"Sentiment": "Positive", "word": "really", "frequency": 688},
+            {"Sentiment": "Positive", "word": "better", "frequency": 680},
+            {"Sentiment": "Positive", "word": "much", "frequency": 680},
+            {"Sentiment": "Positive", "word": "using", "frequency": 674},
+            {"Sentiment": "Positive", "word": "writing", "frequency": 661},
+            {"Sentiment": "Positive", "word": "going", "frequency": 645},
+            {"Sentiment": "Positive", "word": "something", "frequency": 640},
+            {"Sentiment": "Positive", "word": "see", "frequency": 639},
+            {"Sentiment": "Positive", "word": "need", "frequency": 638},
+            {"Sentiment": "Positive", "word": "internet", "frequency": 635},
+            {"Sentiment": "Positive", "word": "youre", "frequency": 619},
+            {"Sentiment": "Negative", "word": "people", "frequency": 929},
+            {"Sentiment": "Negative", "word": "like", "frequency": 667},
+            {"Sentiment": "Negative", "word": "dont", "frequency": 628},
+            {"Sentiment": "Negative", "word": "would", "frequency": 579},
+            {"Sentiment": "Negative", "word": "get", "frequency": 544},
+            {"Sentiment": "Negative", "word": "think", "frequency": 482},
+            {"Sentiment": "Negative", "word": "one", "frequency": 475},
+            {"Sentiment": "Negative", "word": "time", "frequency": 435},
+            {"Sentiment": "Negative", "word": "even", "frequency": 424},
+            {"Sentiment": "Negative", "word": "use", "frequency": 402},
+            {"Sentiment": "Negative", "word": "thats", "frequency": 367},
+            {"Sentiment": "Negative", "word": "make", "frequency": 364},
+            {"Sentiment": "Negative", "word": "know", "frequency": 361},
+            {"Sentiment": "Negative", "word": "youre", "frequency": 331},
+            {"Sentiment": "Negative", "word": "shit", "frequency": 320},
+            {"Sentiment": "Negative", "word": "going", "frequency": 316},
+            {"Sentiment": "Negative", "word": "work", "frequency": 316},
+            {"Sentiment": "Negative", "word": "way", "frequency": 315},
+            {"Sentiment": "Negative", "word": "doesnt", "frequency": 306},
+            {"Sentiment": "Negative", "word": "cant", "frequency": 305},
+            {"Sentiment": "Negative", "word": "something", "frequency": 303},
+            {"Sentiment": "Negative", "word": "right", "frequency": 303},
+            {"Sentiment": "Negative", "word": "problem", "frequency": 290},
+            {"Sentiment": "Negative", "word": "wrong", "frequency": 282},
+            {"Sentiment": "Negative", "word": "using", "frequency": 273},
+            {"Sentiment": "Negative", "word": "really", "frequency": 270},
+            {"Sentiment": "Negative", "word": "write", "frequency": 264},
+            {"Sentiment": "Negative", "word": "fucking", "frequency": 261},
+            {"Sentiment": "Negative", "word": "need", "frequency": 260},
+            {"Sentiment": "Negative", "word": "thing", "frequency": 255},
+            {"Sentiment": "Neutral", "word": "deleted", "frequency": 373},
+            {"Sentiment": "Neutral", "word": "dont", "frequency": 158},
+            {"Sentiment": "Neutral", "word": "think", "frequency": 155},
+            {"Sentiment": "Neutral", "word": "one", "frequency": 150},
+            {"Sentiment": "Neutral", "word": "get", "frequency": 148},
+            {"Sentiment": "Neutral", "word": "use", "frequency": 133},
+            {"Sentiment": "Neutral", "word": "would", "frequency": 125},
+            {"Sentiment": "Neutral", "word": "thats", "frequency": 122},
+            {"Sentiment": "Neutral", "word": "people", "frequency": 113},
+            {"Sentiment": "Neutral", "word": "know", "frequency": 112},
+            {"Sentiment": "Neutral", "word": "write", "frequency": 101},
+            {"Sentiment": "Neutral", "word": "time", "frequency": 100},
+            {"Sentiment": "Neutral", "word": "chat", "frequency": 97},
+            {"Sentiment": "Neutral", "word": "internet", "frequency": 96},
+            {"Sentiment": "Neutral", "word": "got", "frequency": 90},
+            {"Sentiment": "Neutral", "word": "using", "frequency": 90},
+            {"Sentiment": "Neutral", "word": "even", "frequency": 88},
+            {"Sentiment": "Neutral", "word": "thing", "frequency": 87},
+            {"Sentiment": "Neutral", "word": "going", "frequency": 85},
+            {"Sentiment": "Neutral", "word": "right", "frequency": 83},
+            {"Sentiment": "Neutral", "word": "work", "frequency": 83},
+            {"Sentiment": "Neutral", "word": "need", "frequency": 82},
+            {"Sentiment": "Neutral", "word": "say", "frequency": 82},
+            {"Sentiment": "Neutral", "word": "isnt", "frequency": 79},
+            {"Sentiment": "Neutral", "word": "bot", "frequency": 79},
+            {"Sentiment": "Neutral", "word": "make", "frequency": 77},
+            {"Sentiment": "Neutral", "word": "way", "frequency": 76},
+            {"Sentiment": "Neutral", "word": "ask", "frequency": 75},
+            {"Sentiment": "Neutral", "word": "cant", "frequency": 75},
+            {"Sentiment": "Neutral", "word": "already", "frequency": 74}
+        ],
+        "data-d8064814f70fc4e5dadfa166c144c8dc": [
+            {"Sentiment": "Positive", "word": "like", "frequency": 5138},
+            {"Sentiment": "Positive", "word": "would", "frequency": 3239},
+            {"Sentiment": "Positive", "word": "people", "frequency": 3058},
+            {"Sentiment": "Positive", "word": "dont", "frequency": 2830},
+            {"Sentiment": "Positive", "word": "use", "frequency": 2796},
+            {"Sentiment": "Positive", "word": "think", "frequency": 2256},
+            {"Sentiment": "Positive", "word": "good", "frequency": 2128},
+            {"Sentiment": "Positive", "word": "work", "frequency": 2093},
+            {"Sentiment": "Positive", "word": "get", "frequency": 2083},
+            {"Sentiment": "Positive", "word": "one", "frequency": 2060},
+            {"Sentiment": "Positive", "word": "even", "frequency": 1957},
+            {"Sentiment": "Positive", "word": "make", "frequency": 1947},
+            {"Sentiment": "Positive", "word": "know", "frequency": 1915},
+            {"Sentiment": "Positive", "word": "time", "frequency": 1909},
+            {"Sentiment": "Positive", "word": "thats", "frequency": 1737},
+            {"Sentiment": "Positive", "word": "way", "frequency": 1698},
+            {"Sentiment": "Positive", "word": "write", "frequency": 1696},
+            {"Sentiment": "Positive", "word": "better", "frequency": 1672},
+            {"Sentiment": "Positive", "word": "using", "frequency": 1655},
+            {"Sentiment": "Positive", "word": "something", "frequency": 1584},
+            {"Sentiment": "Positive", "word": "well", "frequency": 1583},
+            {"Sentiment": "Positive", "word": "really", "frequency": 1454},
+            {"Sentiment": "Positive", "word": "want", "frequency": 1400},
+            {"Sentiment": "Positive", "word": "things", "frequency": 1366},
+            {"Sentiment": "Positive", "word": "much", "frequency": 1363},
+            {"Sentiment": "Positive", "word": "youre", "frequency": 1351},
+            {"Sentiment": "Positive", "word": "see", "frequency": 1350},
+            {"Sentiment": "Positive", "word": "need", "frequency": 1303},
+            {"Sentiment": "Positive", "word": "used", "frequency": 1269},
+            {"Sentiment": "Positive", "word": "going", "frequency": 1268},
+            {"Sentiment": "Negative", "word": "people", "frequency": 1531},
+            {"Sentiment": "Negative", "word": "dont", "frequency": 1456},
+            {"Sentiment": "Negative", "word": "like", "frequency": 1255},
+            {"Sentiment": "Negative", "word": "would", "frequency": 1177},
+            {"Sentiment": "Negative", "word": "get", "frequency": 1007},
+            {"Sentiment": "Negative", "word": "use", "frequency": 975},
+            {"Sentiment": "Negative", "word": "even", "frequency": 923},
+            {"Sentiment": "Negative", "word": "one", "frequency": 906},
+            {"Sentiment": "Negative", "word": "think", "frequency": 905},
+            {"Sentiment": "Negative", "word": "know", "frequency": 838},
+            {"Sentiment": "Negative", "word": "make", "frequency": 791},
+            {"Sentiment": "Negative", "word": "using", "frequency": 782},
+            {"Sentiment": "Negative", "word": "time", "frequency": 779},
+            {"Sentiment": "Negative", "word": "work", "frequency": 776},
+            {"Sentiment": "Negative", "word": "thats", "frequency": 736},
+            {"Sentiment": "Negative", "word": "youre", "frequency": 697},
+            {"Sentiment": "Negative", "word": "really", "frequency": 664},
+            {"Sentiment": "Negative", "word": "something", "frequency": 639},
+            {"Sentiment": "Negative", "word": "doesnt", "frequency": 627},
+            {"Sentiment": "Negative", "word": "going", "frequency": 621},
+            {"Sentiment": "Negative", "word": "way", "frequency": 611},
+            {"Sentiment": "Negative", "word": "write", "frequency": 611},
+            {"Sentiment": "Negative", "word": "cant", "frequency": 583},
+            {"Sentiment": "Negative", "word": "shit", "frequency": 578},
+            {"Sentiment": "Negative", "word": "wrong", "frequency": 576},
+            {"Sentiment": "Negative", "word": "need", "frequency": 545},
+            {"Sentiment": "Negative", "word": "want", "frequency": 516},
+            {"Sentiment": "Negative", "word": "say", "frequency": 509},
+            {"Sentiment": "Negative", "word": "used", "frequency": 507},
+            {"Sentiment": "Negative", "word": "bad", "frequency": 501},
+            {"Sentiment": "Neutral", "word": "use", "frequency": 465},
+            {"Sentiment": "Neutral", "word": "deleted", "frequency": 457},
+            {"Sentiment": "Neutral", "word": "dont", "frequency": 372},
+            {"Sentiment": "Neutral", "word": "one", "frequency": 339},
+            {"Sentiment": "Neutral", "word": "would", "frequency": 332},
+            {"Sentiment": "Neutral", "word": "know", "frequency": 326},
+            {"Sentiment": "Neutral", "word": "get", "frequency": 319},
+            {"Sentiment": "Neutral", "word": "work", "frequency": 280},
+            {"Sentiment": "Neutral", "word": "write", "frequency": 279},
+            {"Sentiment": "Neutral", "word": "think", "frequency": 271},
+            {"Sentiment": "Neutral", "word": "thats", "frequency": 269},
+            {"Sentiment": "Neutral", "word": "ask", "frequency": 266},
+            {"Sentiment": "Neutral", "word": "day", "frequency": 265},
+            {"Sentiment": "Neutral", "word": "time", "frequency": 261},
+            {"Sentiment": "Neutral", "word": "people", "frequency": 254},
+            {"Sentiment": "Neutral", "word": "remindme", "frequency": 231},
+            {"Sentiment": "Neutral", "word": "got", "frequency": 216},
+            {"Sentiment": "Neutral", "word": "chat", "frequency": 213},
+            {"Sentiment": "Neutral", "word": "even", "frequency": 207},
+            {"Sentiment": "Neutral", "word": "say", "frequency": 206},
+            {"Sentiment": "Neutral", "word": "need", "frequency": 199},
+            {"Sentiment": "Neutral", "word": "used", "frequency": 195},
+            {"Sentiment": "Neutral", "word": "using", "frequency": 194},
+            {"Sentiment": "Neutral", "word": "cant", "frequency": 193},
+            {"Sentiment": "Neutral", "word": "doesnt", "frequency": 180},
+            {"Sentiment": "Neutral", "word": "tell", "frequency": 174},
+            {"Sentiment": "Neutral", "word": "make", "frequency": 165},
+            {"Sentiment": "Neutral", "word": "way", "frequency": 163},
+            {"Sentiment": "Neutral", "word": "youre", "frequency": 160},
+            {"Sentiment": "Neutral", "word": "see", "frequency": 158}
+        ],
+        "data-47f0aad1aa5057b506b5ab9e832e0ec4": [
+            {"Sentiment": "Positive", "word": "like", "frequency": 1371},
+            {"Sentiment": "Positive", "word": "would", "frequency": 680},
+            {"Sentiment": "Positive", "word": "people", "frequency": 656},
+            {"Sentiment": "Positive", "word": "dont", "frequency": 596},
+            {"Sentiment": "Positive", "word": "use", "frequency": 518},
+            {"Sentiment": "Positive", "word": "one", "frequency": 502},
+            {"Sentiment": "Positive", "word": "good", "frequency": 501},
+            {"Sentiment": "Positive", "word": "think", "frequency": 441},
+            {"Sentiment": "Positive", "word": "get", "frequency": 433},
+            {"Sentiment": "Positive", "word": "make", "frequency": 409},
+            {"Sentiment": "Positive", "word": "even", "frequency": 404},
+            {"Sentiment": "Positive", "word": "thats", "frequency": 371},
+            {"Sentiment": "Positive", "word": "well", "frequency": 370},
+            {"Sentiment": "Positive", "word": "know", "frequency": 361},
+            {"Sentiment": "Positive", "word": "time", "frequency": 348},
+            {"Sentiment": "Positive", "word": "work", "frequency": 345},
+            {"Sentiment": "Positive", "word": "something", "frequency": 326},
+            {"Sentiment": "Positive", "word": "way", "frequency": 323},
+            {"Sentiment": "Positive", "word": "really", "frequency": 313},
+            {"Sentiment": "Positive", "word": "better", "frequency": 308},
+            {"Sentiment": "Positive", "word": "want", "frequency": 297},
+            {"Sentiment": "Positive", "word": "right", "frequency": 295},
+            {"Sentiment": "Positive", "word": "things", "frequency": 294},
+            {"Sentiment": "Positive", "word": "need", "frequency": 285},
+            {"Sentiment": "Positive", "word": "youre", "frequency": 277},
+            {"Sentiment": "Positive", "word": "say", "frequency": 274},
+            {"Sentiment": "Positive", "word": "sure", "frequency": 269},
+            {"Sentiment": "Positive", "word": "much", "frequency": 267},
+            {"Sentiment": "Positive", "word": "using", "frequency": 261},
+            {"Sentiment": "Positive", "word": "see", "frequency": 255},
+            {"Sentiment": "Negative", "word": "people", "frequency": 416},
+            {"Sentiment": "Negative", "word": "like", "frequency": 306},
+            {"Sentiment": "Negative", "word": "dont", "frequency": 284},
+            {"Sentiment": "Negative", "word": "would", "frequency": 222},
+            {"Sentiment": "Negative", "word": "get", "frequency": 219},
+            {"Sentiment": "Negative", "word": "think", "frequency": 203},
+            {"Sentiment": "Negative", "word": "even", "frequency": 202},
+            {"Sentiment": "Negative", "word": "one", "frequency": 193},
+            {"Sentiment": "Negative", "word": "use", "frequency": 173},
+            {"Sentiment": "Negative", "word": "time", "frequency": 168},
+            {"Sentiment": "Negative", "word": "know", "frequency": 166},
+            {"Sentiment": "Negative", "word": "make", "frequency": 164},
+            {"Sentiment": "Negative", "word": "thats", "frequency": 161},
+            {"Sentiment": "Negative", "word": "right", "frequency": 144},
+            {"Sentiment": "Negative", "word": "shit", "frequency": 140},
+            {"Sentiment": "Negative", "word": "cant", "frequency": 137},
+            {"Sentiment": "Negative", "word": "youre", "frequency": 136},
+            {"Sentiment": "Negative", "word": "doesnt", "frequency": 136},
+            {"Sentiment": "Negative", "word": "bad", "frequency": 126},
+            {"Sentiment": "Negative", "word": "say", "frequency": 125},
+            {"Sentiment": "Negative", "word": "want", "frequency": 125},
+            {"Sentiment": "Negative", "word": "way", "frequency": 124},
+            {"Sentiment": "Negative", "word": "really", "frequency": 123},
+            {"Sentiment": "Negative", "word": "wrong", "frequency": 123},
+            {"Sentiment": "Negative", "word": "see", "frequency": 122},
+            {"Sentiment": "Negative", "word": "work", "frequency": 112},
+            {"Sentiment": "Negative", "word": "thing", "frequency": 111},
+            {"Sentiment": "Negative", "word": "world", "frequency": 105},
+            {"Sentiment": "Negative", "word": "islam", "frequency": 102},
+            {"Sentiment": "Negative", "word": "using", "frequency": 101},
+            {"Sentiment": "Neutral", "word": "use", "frequency": 123},
+            {"Sentiment": "Neutral", "word": "deleted", "frequency": 117},
+            {"Sentiment": "Neutral", "word": "would", "frequency": 92},
+            {"Sentiment": "Neutral", "word": "thats", "frequency": 88},
+            {"Sentiment": "Neutral", "word": "one", "frequency": 84},
+            {"Sentiment": "Neutral", "word": "dont", "frequency": 77},
+            {"Sentiment": "Neutral", "word": "bro", "frequency": 72},
+            {"Sentiment": "Neutral", "word": "chat", "frequency": 71},
+            {"Sentiment": "Neutral", "word": "think", "frequency": 71},
+            {"Sentiment": "Neutral", "word": "work", "frequency": 71},
+            {"Sentiment": "Neutral", "word": "right", "frequency": 68},
+            {"Sentiment": "Neutral", "word": "get", "frequency": 63},
+            {"Sentiment": "Neutral", "word": "got", "frequency": 58},
+            {"Sentiment": "Neutral", "word": "people", "frequency": 56},
+            {"Sentiment": "Neutral", "word": "know", "frequency": 49},
+            {"Sentiment": "Neutral", "word": "cant", "frequency": 49},
+            {"Sentiment": "Neutral", "word": "using", "frequency": 48},
+            {"Sentiment": "Neutral", "word": "make", "frequency": 48},
+            {"Sentiment": "Neutral", "word": "say", "frequency": 48},
+            {"Sentiment": "Neutral", "word": "removed", "frequency": 45},
+            {"Sentiment": "Neutral", "word": "wrote", "frequency": 43},
+            {"Sentiment": "Neutral", "word": "see", "frequency": 43},
+            {"Sentiment": "Neutral", "word": "youre", "frequency": 42},
+            {"Sentiment": "Neutral", "word": "something", "frequency": 42},
+            {"Sentiment": "Neutral", "word": "need", "frequency": 41},
+            {"Sentiment": "Neutral", "word": "time", "frequency": 40},
+            {"Sentiment": "Neutral", "word": "even", "frequency": 40},
+            {"Sentiment": "Neutral", "word": "read", "frequency": 38},
+            {"Sentiment": "Neutral", "word": "ask", "frequency": 38},
+            {"Sentiment": "Neutral", "word": "phone", "frequency": 37}
+        ]
+    }
+};
+
+vegaEmbed('#graphics-container-words', defaultWords);
 
 document.addEventListener('DOMContentLoaded', function() {
     graphics1BtnWords.addEventListener('click', function() {
@@ -1453,6 +1999,285 @@ const graphicsContainerTrigrams = document.getElementById('graphics-container-tr
 const graphics1BtnTrigrams = document.getElementById('graphics1-btn-trigrams');
 const graphics2BtnTrigrams = document.getElementById('graphics2-btn-trigrams');
 const graphics3BtnTrigrams = document.getElementById('graphics3-btn-trigrams');
+
+// trigrammimensilireddit - default
+const defaultTrigrams = {
+    "config": {
+        "view": {"continuousWidth": 300, "continuousHeight": 300},
+        "axisX": {"labelAlign": "left", "labelAngle": 45, "labelPadding": 15},
+        "legend": {"orient": "top-right"}
+    },
+    "data": {"name": "data-93c9ffa5b6b9e4def6a08990b0ff3aea"},
+    "mark": {"type": "bar"},
+    "encoding": {
+        "color": {"field": "Sentiment", "type": "quantitative"},
+        "tooltip": [
+            {"field": "Trigram", "title": "Trigramma", "type": "nominal"},
+            {
+                "field": "Frequency",
+                "title": "frequenza assoluta",
+                "type": "quantitative"
+            }
+        ],
+        "x": {
+            "field": "Trigram",
+            "sort": "-y",
+            "title": "Trigramma",
+            "type": "nominal"
+        },
+        "y": {
+            "field": "Frequency",
+            "title": "Frequenza registrata",
+            "type": "quantitative"
+        }
+    },
+    "height": 600,
+    "params": [
+        {
+            "name": "param_8",
+            "select": {"type": "point", "fields": ["MonthName"]},
+            "bind": {
+                "input": "select",
+                "options": ["Aprile", "Maggio", "Giugno", null],
+                "labels": ["Aprile ", "Maggio ", "Giugno ", "All"],
+                "name": "Selettore del periodo: "
+            }
+        },
+        {
+            "name": "param_9",
+            "select": {"type": "point", "nearest": true, "on": "mouseover"}
+        },
+        {
+            "name": "param_10",
+            "select": {"type": "interval", "encodings": ["x", "y"]},
+            "bind": "scales"
+        }
+    ],
+    "resolve": {"scale": {"y": "independent"}},
+    "title": {
+        "text": "Top Trigrammi sul periodo aprile-giugno 2023",
+        "subtitle": "Dati relativi al dataset di Reddit"
+    },
+    "transform": [{"filter": {"param": "param_8"}}],
+    "width": 800,
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+    "datasets": {
+        "data-93c9ffa5b6b9e4def6a08990b0ff3aea": [
+            {
+                "Month": 4,
+                "Trigram": "smart robot response",
+                "Frequency": 217,
+                "Sentiment": 0.4019,
+                "MonthName": "Aprile"
+            },
+            {
+                "Month": 4,
+                "Trigram": "automatic tldr shorter",
+                "Frequency": 43,
+                "Sentiment": 0,
+                "MonthName": "Aprile"
+            },
+            {
+                "Month": 4,
+                "Trigram": "robot summary automatic",
+                "Frequency": 43,
+                "Sentiment": 0,
+                "MonthName": "Aprile"
+            },
+            {
+                "Month": 4,
+                "Trigram": "smart robot summary",
+                "Frequency": 43,
+                "Sentiment": 0.4019,
+                "MonthName": "Aprile"
+            },
+            {
+                "Month": 4,
+                "Trigram": "good sense humor",
+                "Frequency": 47,
+                "Sentiment": 0.6124,
+                "MonthName": "Aprile"
+            },
+            {
+                "Month": 4,
+                "Trigram": "summary automatic tldr",
+                "Frequency": 43,
+                "Sentiment": 0,
+                "MonthName": "Aprile"
+            },
+            {
+                "Month": 4,
+                "Trigram": "think based comments",
+                "Frequency": 107,
+                "Sentiment": 0,
+                "MonthName": "Aprile"
+            },
+            {
+                "Month": 4,
+                "Trigram": "heres think based",
+                "Frequency": 110,
+                "Sentiment": 0,
+                "MonthName": "Aprile"
+            },
+            {
+                "Month": 4,
+                "Trigram": "robot response automatic",
+                "Frequency": 217,
+                "Sentiment": 0,
+                "MonthName": "Aprile"
+            },
+            {
+                "Month": 4,
+                "Trigram": "based comments like",
+                "Frequency": 60,
+                "Sentiment": 0.3612,
+                "MonthName": "Aprile"
+            },
+            {
+                "Month": 6,
+                "Trigram": "wrote explanation breakdown",
+                "Frequency": 28,
+                "Sentiment": 0,
+                "MonthName": "Giugno"
+            },
+            {
+                "Month": 6,
+                "Trigram": "feel error message",
+                "Frequency": 19,
+                "Sentiment": -0.4019,
+                "MonthName": "Giugno"
+            },
+            {
+                "Month": 6,
+                "Trigram": "disagree strongly disagree",
+                "Frequency": 20,
+                "Sentiment": -0.4767,
+                "MonthName": "Giugno"
+            },
+            {
+                "Month": 6,
+                "Trigram": "black mirror episode",
+                "Frequency": 23,
+                "Sentiment": 0,
+                "MonthName": "Giugno"
+            },
+            {
+                "Month": 6,
+                "Trigram": "error message moderators",
+                "Frequency": 25,
+                "Sentiment": -0.4019,
+                "MonthName": "Giugno"
+            },
+            {
+                "Month": 6,
+                "Trigram": "action performed automatically",
+                "Frequency": 26,
+                "Sentiment": 0,
+                "MonthName": "Giugno"
+            },
+            {
+                "Month": 6,
+                "Trigram": "bot action performed",
+                "Frequency": 26,
+                "Sentiment": 0,
+                "MonthName": "Giugno"
+            },
+            {
+                "Month": 6,
+                "Trigram": "explanation breakdown list",
+                "Frequency": 29,
+                "Sentiment": 0,
+                "MonthName": "Giugno"
+            },
+            {
+                "Month": 6,
+                "Trigram": "toolkit feel error",
+                "Frequency": 17,
+                "Sentiment": -0.4019,
+                "MonthName": "Giugno"
+            },
+            {
+                "Month": 6,
+                "Trigram": "moderation toolkit feel",
+                "Frequency": 17,
+                "Sentiment": 0,
+                "MonthName": "Giugno"
+            },
+            {
+                "Month": 5,
+                "Trigram": "reminded reduce spam",
+                "Frequency": 43,
+                "Sentiment": -0.3612,
+                "MonthName": "Maggio"
+            },
+            {
+                "Month": 5,
+                "Trigram": "link send reminded",
+                "Frequency": 43,
+                "Sentiment": 0,
+                "MonthName": "Maggio"
+            },
+            {
+                "Month": 5,
+                "Trigram": "utc remind link",
+                "Frequency": 43,
+                "Sentiment": 0,
+                "MonthName": "Maggio"
+            },
+            {
+                "Month": 5,
+                "Trigram": "mir spanisch vor",
+                "Frequency": 57,
+                "Sentiment": 0,
+                "MonthName": "Maggio"
+            },
+            {
+                "Month": 5,
+                "Trigram": "das kommt mir",
+                "Frequency": 62,
+                "Sentiment": 0,
+                "MonthName": "Maggio"
+            },
+            {
+                "Month": 5,
+                "Trigram": "verstehe nur bahnhof",
+                "Frequency": 63,
+                "Sentiment": 0,
+                "MonthName": "Maggio"
+            },
+            {
+                "Month": 5,
+                "Trigram": "large language model",
+                "Frequency": 69,
+                "Sentiment": 0,
+                "MonthName": "Maggio"
+            },
+            {
+                "Month": 5,
+                "Trigram": "ich verstehe nur",
+                "Frequency": 74,
+                "Sentiment": 0,
+                "MonthName": "Maggio"
+            },
+            {
+                "Month": 5,
+                "Trigram": "send reminded reduce",
+                "Frequency": 43,
+                "Sentiment": 0,
+                "MonthName": "Maggio"
+            },
+            {
+                "Month": 5,
+                "Trigram": "kommt mir spanisch",
+                "Frequency": 57,
+                "Sentiment": 0,
+                "MonthName": "Maggio"
+            }
+        ]
+    }
+};
+
+vegaEmbed('#graphics-container-trigrams', defaultTrigrams);
 
 document.addEventListener('DOMContentLoaded', function() {
     graphics1BtnTrigrams.addEventListener('click', function() {
