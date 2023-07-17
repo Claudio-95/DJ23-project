@@ -210,13 +210,13 @@ div.w3-content w3-justify{
 .image-container{
     float: left;
     margin-right: 2%;
+    width: 50%;
 }
-
-
 
 .image-container-right{
     float: right;
     margin-left: 2%;
+    width: 50%;
 }
 
 figure {
