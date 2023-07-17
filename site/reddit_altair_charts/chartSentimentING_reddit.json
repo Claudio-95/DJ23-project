@@ -24,7 +24,7 @@
       "type": "temporal"
     },
     "y": {
-      "axis": {"title": "Numero di tweets"},
+      "axis": {"title": "Numero di commenti"},
       "field": "Value",
       "type": "quantitative"
     }
@@ -32,14 +32,14 @@
   "height": 600,
   "params": [
     {
-      "name": "param_3",
+      "name": "param_36",
       "select": {"type": "interval", "encodings": ["x", "y"]},
       "bind": "scales"
     }
   ],
   "title": {
     "text": "Evoluzione del sentimento verso ChatGPT nell'arco dei mesi",
-    "subtitle": "Visualizzazione dei valori relativi al dataset di Tweets"
+    "subtitle": "Visualizzazione dei valori relativi al dataset di commenti"
   },
   "width": 800,
   "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",

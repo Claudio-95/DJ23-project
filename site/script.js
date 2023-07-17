@@ -51,50 +51,50 @@ const graphics3BtnSentiment = document.getElementById('graphics3-btn-sentiment')
 // chartSentimentING_reddit - default
 const defaultSentiment = {
     "config": {
-        "view": {"continuousWidth": 300, "continuousHeight": 300},
-        "axis": {"grid": false},
-        "legend": {"orient": "top"}
+    "view": {"continuousWidth": 300, "continuousHeight": 300},
+    "axis": {"grid": false},
+    "legend": {"orient": "top"}
     },
-    "data": {"name": "data-800eee6c893eaac0f5534d5c99f91252"},
-    "mark": {"type": "line", "opacity": 0.1},
-    "encoding": {
+        "data": {"name": "data-800eee6c893eaac0f5534d5c99f91252"},
+        "mark": {"type": "line", "opacity": 0.1},
+        "encoding": {
         "color": {
             "field": "sentiment_complete",
-            "legend": {"orient": "right"},
+                "legend": {"orient": "right"},
             "scale": {
                 "domain": ["Positivo", "Negativo", "Neutrale"],
-                "range": ["#ADFC92", "#F44E3F", "#788BFF"]
+                    "range": ["#ADFC92", "#F44E3F", "#788BFF"]
             },
             "title": "Sentimento registrato",
-            "type": "nominal"
+                "type": "nominal"
         },
         "opacity": {"value": 0.9},
         "x": {
             "axis": {"format": "%B %Y", "tickCount": 12, "title": "Periodo"},
             "field": "Comment date",
-            "type": "temporal"
+                "type": "temporal"
         },
         "y": {
-            "axis": {"title": "Numero di tweets"},
+            "axis": {"title": "Numero di commenti"},
             "field": "Value",
-            "type": "quantitative"
+                "type": "quantitative"
         }
     },
-    "height": 600,
-    "params": [
+        "height": 600,
+        "params": [
         {
-            "name": "param_3",
+            "name": "param_36",
             "select": {"type": "interval", "encodings": ["x", "y"]},
             "bind": "scales"
         }
     ],
-    "title": {
+        "title": {
         "text": "Evoluzione del sentimento verso ChatGPT nell'arco dei mesi",
-        "subtitle": "Visualizzazione dei valori relativi al dataset di Tweets"
+            "subtitle": "Visualizzazione dei valori relativi al dataset di commenti"
     },
-    "width": 800,
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
-    "datasets": {
+        "width": 800,
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+        "datasets": {
         "data-800eee6c893eaac0f5534d5c99f91252": [
             {
                 "Comment date": "April 2023",
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         "type": "temporal"
                 },
                 "y": {
-                    "axis": {"title": "Numero di tweets"},
+                    "axis": {"title": "Numero di commenti"},
                     "field": "Value",
                         "type": "quantitative"
                 }
@@ -196,14 +196,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 "height": 600,
                 "params": [
                 {
-                    "name": "param_3",
+                    "name": "param_36",
                     "select": {"type": "interval", "encodings": ["x", "y"]},
                     "bind": "scales"
                 }
             ],
                 "title": {
                 "text": "Evoluzione del sentimento verso ChatGPT nell'arco dei mesi",
-                    "subtitle": "Visualizzazione dei valori relativi al dataset di Tweets"
+                    "subtitle": "Visualizzazione dei valori relativi al dataset di commenti"
             },
                 "width": 800,
                 "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
