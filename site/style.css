@@ -13,7 +13,7 @@ h2, h3, h4, h5 {
 
 
 
-p {
+p, #reddit_future_use, #reddit_use {
     font-size: large;
     font-size: 18px;
     line-height: 1.7;
@@ -255,7 +255,7 @@ div.w3-third img{
     background-color: #616161!important;
     color: #F1F1F1!important;
 
-    
+
 }
 
 #title-sidebar{
