@@ -22,11 +22,11 @@
 <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top" id="mySidebar"><br>
   <h3 class="w3-padding-64" id="title-sidebar"><b>ChatGPT</b></h3>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
-  <a href="#storia" onclick="w3_close()" class="w3-bar-item w3-button-sidebar">Storia di un chatbot</a>
   <a href="#" onclick="w3_close()" class="w3-bar-item w3-button-sidebar">DALL-E</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button-sidebar">Ti odio o ti amo?</a>
+  <a href="#storia" onclick="w3_close()" class="w3-bar-item w3-button-sidebar">Storia di un chatbot</a>
+  <a href="#sentiment" onclick="w3_close()" class="w3-bar-item w3-button-sidebar">Ti odio o ti amo?</a>
   <a href="#utilizzi" onclick="w3_close()" class="w3-bar-item w3-button-sidebar">Interazione uomo macchina</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button-sidebar">Parole e tendenze</a>
+  <a href="#trends" onclick="w3_close()" class="w3-bar-item w3-button-sidebar">Parole e tendenze</a>
   <a href="#intelligenza" onclick="w3_close()" class="w3-bar-item w3-button-sidebar">Intelligenza Artificiale</a>
 </nav>
 
@@ -138,7 +138,7 @@
     </div>
   </div>
   <!-- Sentiment analysis section -->
-  <div class="w3-container w3-light-grey w3-center w3-padding-32" id="about">
+  <div class="w3-container w3-light-grey w3-center w3-padding-32" id="sentiment">
 
     <div class="w3-content w3-justify w3-container">
       <h1 class="main-titles"><b>Ti odio o ti amo?</b></h1>
@@ -287,11 +287,17 @@
           <li>la possibilità che, specialmente negli Stati in cui il sistema sanitario è a pagamento, le IA siano più efficienti degli umani nel diagnosticare malattie ai pazienti e nel controllare, ed eventualmente negare, l'idoneità degli stessi al trattamento sanitario;</li>
           <li>il rischio di sostituzione di intere aziende tramite l'uso di IA.</li>
         </ul>
+      <div id="topic-modeling">
+        <p>
+          Di seguito è riportato il grafico sugli argomenti più dibattuti su Twitter e Reddit riguardanti ChatGPT.
+        </p>
+        <div id="topic-container" class="chartContainer"></div>
+      </div>
     </div>
   </div>
 
   <!-- Parole e tendenze section -->
-  <div class="w3-container w3-dark-grey w3-padding-32 w3-text-light-grey" id="contact">
+  <div class="w3-container w3-dark-grey w3-padding-32 w3-text-light-grey" id="trends">
     <div class="w3-content w3-justify w3-container">
       <h1 class="main-titles"><b>Parole e tendenze</b></h1>
 
@@ -382,7 +388,9 @@
         <button id="graphics2-btn-trigrams">Twitter.it</button>
         <button id="graphics3-btn-trigrams">Twitter.com</button>
       </div>
+
       <div id="graphics-container-trigrams" class="chartContainer"></div>
+
     </div>
   </div>
 
