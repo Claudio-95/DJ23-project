@@ -4558,53 +4558,50 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// comparativeAnalysis_twitter_reddit
 const topic = {
     "config": {
-        "view": {"continuousWidth": 300, "continuousHeight": 300},
-        "axisX": {"labelAlign": "left", "labelAngle": 45, "labelPadding": 15},
-        "facet": {"spacing": 10},
-        "legend": {"orient": "right"},
-        "title": {"fontSize": 16, "fontWeight": "bold"}
+    "view": {"continuousWidth": 300, "continuousHeight": 300},
+    "facet": {"spacing": 10},
+    "header": {"labelAlign": "left", "labelAngle": 45, "labelPadding": 10},
+    "legend": {"orient": "right"},
+    "title": {"fontSize": 16, "fontWeight": "bold"}
     },
-    "data": {"name": "data-9e349e3cb92a4b6e508775e139ef8f39"},
-    "mark": {"type": "bar", "opacity": 0.7},
-    "encoding": {
+        "data": {"name": "data-d12e49509664dde5ecb1d08bf0dc2fc1"},
+        "mark": {"type": "bar", "opacity": 0.7},
+        "encoding": {
         "color": {
             "field": "social",
-            "scale": {
+                "scale": {
                 "domain": ["Twitter", "Reddit"],
-                "range": ["#1DA1F2", "#F44E3F"]
+                    "range": ["#1DA1F2", "#F44E3F"]
             },
             "title": "Social di riferimento",
-            "type": "nominal"
+                "type": "nominal"
         },
         "column": {
             "field": "Topic",
-            "header": {"orient": "bottom"},
+                "header": {"orient": "bottom"},
             "sort": {"field": "Topic", "order": "descending"},
-            "title": "Topic",
-            "type": "ordinal"
+            "title": "Argomento",
+                "type": "ordinal"
         },
         "tooltip": [
             {"field": "Topic", "type": "nominal"},
             {"field": "Sentiment", "type": "quantitative"},
             {"field": "Source", "type": "nominal"}
         ],
-        "x": {
-            "axis": {"labels": false, "ticks": false},
+            "x": {
+            "axis": {"labels": false},
             "field": "social",
-            "title": "",
-            "type": "nominal"
+                "title": "",
+                "type": "nominal"
         },
-        "y": {
-            "field": "Sentiment",
-            "title": "Sentimento registrato",
-            "type": "quantitative"
-        }
+        "y": {"field": "Sentiment", "title": "Sentimento", "type": "quantitative"}
     },
-    "params": [
+        "params": [
         {
-            "name": "param_80",
+            "name": "param_86",
             "select": {"type": "point", "fields": ["Source"]},
             "bind": {
                 "input": "radio",
@@ -4612,71 +4609,39 @@ const topic = {
                 "labels": ["Vader", "TextBlob"],
                 "name": "Selettore libreria: "
             }
+        },
+        {
+            "name": "param_87",
+            "select": {"type": "interval", "encodings": ["x", "y"]},
+            "bind": "scales"
         }
     ],
-    "title": "Analisi comparativa sui valori registrati da TextBlob e Vader tra i dataset provenienti da Twitter e Reddit",
-    "transform": [{"filter": {"param": "param_80"}}],
-    "width": 100,
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
-    "datasets": {
-        "data-9e349e3cb92a4b6e508775e139ef8f39": [
-            {
-                "Topic": "ai",
-                "Sentiment": 0.20671086974580494,
-                "Source": "Vader",
-                "social": "Twitter"
-            },
-            {
-                "Topic": "ai",
-                "Sentiment": 0.11582429219205083,
-                "Source": "TextBlob",
-                "social": "Twitter"
-            },
-            {
-                "Topic": "chatgpt",
-                "Sentiment": 0.19709014189428875,
-                "Source": "Vader",
-                "social": "Twitter"
-            },
-            {
-                "Topic": "chatgpt",
-                "Sentiment": 0.11346392483704579,
-                "Source": "TextBlob",
-                "social": "Twitter"
-            },
+        "title": "Analisi comparativa sui valori registrati nei dataset di Twitter e Reddit",
+        "transform": [{"filter": {"param": "param_86"}}],
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+        "datasets": {
+        "data-d12e49509664dde5ecb1d08bf0dc2fc1": [
             {
                 "Topic": "browser",
-                "Sentiment": 0.10864211576846307,
+                "Sentiment": 0.12513816964285715,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "browser",
-                "Sentiment": 0.09166555884486097,
-                "Source": "TextBlob",
-                "social": "Twitter"
-            },
-            {
-                "Topic": "openai",
-                "Sentiment": 0.21766438740725885,
-                "Source": "Vader",
-                "social": "Twitter"
-            },
-            {
-                "Topic": "openai",
-                "Sentiment": 0.11851205055467615,
+                "Sentiment": 0.11306694293709998,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
                 "Topic": "google",
-                "Sentiment": 0.1512380351093317,
+                "Sentiment": 0.15539044259140472,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "google",
-                "Sentiment": 0.1138400691867295,
+                "Sentiment": 0.11700492095516343,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
@@ -4694,217 +4659,181 @@ const topic = {
             },
             {
                 "Topic": "microsoft",
-                "Sentiment": 0.1701547239263804,
+                "Sentiment": 0.1817045393858478,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "microsoft",
-                "Sentiment": 0.09879887005462158,
+                "Sentiment": 0.10643076350477886,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
                 "Topic": "learning",
-                "Sentiment": 0.28738041622198507,
+                "Sentiment": 0.2918083408720825,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "learning",
-                "Sentiment": 0.15225735887786981,
+                "Sentiment": 0.1548236830886573,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
                 "Topic": "school",
-                "Sentiment": 0.16611175737432488,
+                "Sentiment": 0.1661807980049875,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "school",
-                "Sentiment": 0.11235896364836509,
+                "Sentiment": 0.11240566313450323,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
                 "Topic": "cryptocurrencies",
-                "Sentiment": 0.07225978090766823,
+                "Sentiment": 0.07174561128526645,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "cryptocurrencies",
-                "Sentiment": 0.09040920639431867,
+                "Sentiment": 0.09055091361437247,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
                 "Topic": "ban",
-                "Sentiment": -0.04244195160441872,
+                "Sentiment": -0.05126939411098528,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "ban",
-                "Sentiment": 0.09154277485911821,
+                "Sentiment": 0.0967781465357166,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
                 "Topic": "italy ban",
-                "Sentiment": -0.43274,
+                "Sentiment": -0.401575,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "italy ban",
-                "Sentiment": 0.131,
+                "Sentiment": 0.16375,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
                 "Topic": "privacy",
-                "Sentiment": -0.0821723076923077,
+                "Sentiment": -0.10222243958573075,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "privacy",
-                "Sentiment": 0.07838740810852761,
+                "Sentiment": 0.09206016730178328,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
-                "Topic": "ai",
-                "Sentiment": 0.1726103966955031,
-                "Source": "Vader",
-                "social": "Reddit"
-            },
-            {
-                "Topic": "ai",
-                "Sentiment": 0.0890845136957735,
-                "Source": "TextBlob",
-                "social": "Reddit"
-            },
-            {
-                "Topic": "chatgpt",
-                "Sentiment": 0.15464036253776436,
-                "Source": "Vader",
-                "social": "Reddit"
-            },
-            {
-                "Topic": "chatgpt",
-                "Sentiment": 0.09427970673582549,
-                "Source": "TextBlob",
-                "social": "Reddit"
-            },
-            {
                 "Topic": "browser",
-                "Sentiment": 0.17641242236024846,
+                "Sentiment": 0.21027664670658683,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "browser",
-                "Sentiment": 0.09770688711005304,
-                "Source": "TextBlob",
-                "social": "Reddit"
-            },
-            {
-                "Topic": "openai",
-                "Sentiment": 0.3057889632107023,
-                "Source": "Vader",
-                "social": "Reddit"
-            },
-            {
-                "Topic": "openai",
-                "Sentiment": 0.09867393533551751,
+                "Sentiment": 0.09446546841898104,
                 "Source": "TextBlob",
                 "social": "Reddit"
             },
             {
                 "Topic": "google",
-                "Sentiment": 0.21680437062937064,
+                "Sentiment": 0.24002482517482515,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "google",
-                "Sentiment": 0.09624510970534807,
+                "Sentiment": 0.08747736593722892,
                 "Source": "TextBlob",
                 "social": "Reddit"
             },
             {
                 "Topic": "church",
-                "Sentiment": -0.012485294117647053,
+                "Sentiment": 0.14810882352941174,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "church",
-                "Sentiment": 0.06787203907163701,
+                "Sentiment": 0.06989789738214161,
                 "Source": "TextBlob",
                 "social": "Reddit"
             },
             {
                 "Topic": "microsoft",
-                "Sentiment": 0.0652304347826087,
+                "Sentiment": 0.03791739130434783,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "microsoft",
-                "Sentiment": 0.05836747002648103,
+                "Sentiment": 0.08387802850930105,
                 "Source": "TextBlob",
                 "social": "Reddit"
             },
             {
                 "Topic": "learning",
-                "Sentiment": 0.3453373449131514,
+                "Sentiment": 0.3745450372208437,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "learning",
-                "Sentiment": 0.102828800873549,
+                "Sentiment": 0.09229668671780765,
                 "Source": "TextBlob",
                 "social": "Reddit"
             },
             {
                 "Topic": "school",
-                "Sentiment": 0.1226952188006483,
+                "Sentiment": 0.15754870340356564,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "school",
-                "Sentiment": 0.08365192848065137,
+                "Sentiment": 0.0692709223923041,
                 "Source": "TextBlob",
                 "social": "Reddit"
             },
             {
                 "Topic": "cryptocurrencies",
-                "Sentiment": 0.60475,
+                "Sentiment": 0.6024499999999999,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "cryptocurrencies",
-                "Sentiment": 0.18568446859263185,
+                "Sentiment": 0.1721897546897547,
                 "Source": "TextBlob",
                 "social": "Reddit"
             },
             {
                 "Topic": "ban",
-                "Sentiment": 0.04079394904458597,
+                "Sentiment": 0.0648280701754386,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "ban",
-                "Sentiment": 0.06736249824251966,
+                "Sentiment": 0.06086591154350151,
                 "Source": "TextBlob",
                 "social": "Reddit"
             },
@@ -4922,13 +4851,13 @@ const topic = {
             },
             {
                 "Topic": "privacy",
-                "Sentiment": 0.2669729032258065,
+                "Sentiment": 0.3657619354838709,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "privacy",
-                "Sentiment": 0.07712752510441037,
+                "Sentiment": 0.09730854053364278,
                 "Source": "TextBlob",
                 "social": "Reddit"
             }
