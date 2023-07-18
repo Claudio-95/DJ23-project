@@ -1296,7 +1296,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
 
-        vegaEmbed('#graphics-container-words2', spec2, embedOptionsWords).then((result) => {
+        // Rendi il grafico visibile in un contenitore HTML
+        const embedOptionsWords2 = {
+            actions: false,
+            tooltip: { theme: 'custom' } // Utilizza il tema dei tooltip personalizzati
+        };
+
+        vegaEmbed('#graphics-container-words2', spec2, embedOptionsWords2).then((result) => {
             const view = result.view;
 
             // Aggiungi l'ascoltatore dell'evento di passaggio del mouse
@@ -1304,7 +1310,7 @@ document.addEventListener('DOMContentLoaded', function() {
             view.addEventListener('mouseout', handleMouseOut);
         });
 
-        graphicsContainerWords2.style.display = 'block';
+        graphicsContainerWords2.style.display = 'inline-block';
     });
 
     graphics3BtnWords.addEventListener('click', function() {
@@ -1627,7 +1633,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
 
-        vegaEmbed('#graphics-container-words2', spec2, embedOptionsWords).then((result) => {
+        // Rendi il grafico visibile in un contenitore HTML
+        const embedOptionsWords2 = {
+            actions: false,
+            tooltip: { theme: 'custom' } // Utilizza il tema dei tooltip personalizzati
+        };
+
+        vegaEmbed('#graphics-container-words2', spec2, embedOptionsWords2).then((result) => {
             const view = result.view;
 
             // Aggiungi l'ascoltatore dell'evento di passaggio del mouse
@@ -1635,7 +1647,7 @@ document.addEventListener('DOMContentLoaded', function() {
             view.addEventListener('mouseout', handleMouseOut);
         });
 
-        graphicsContainerWords2.style.display = 'block';
+        graphicsContainerWords2.style.display = 'inline-block';
     });
 });
 
