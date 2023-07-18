@@ -18,16 +18,12 @@
     "opacity": {"value": 0.7},
     "size": {
       "field": "Frequenza",
-      "title": "Frequenza assoluta",
+      "title": "Frequenza",
       "type": "quantitative"
     },
     "tooltip": [
-      {"field": "Parola", "title": "parola", "type": "nominal"},
-      {
-        "field": "frequency",
-        "title": "frequenza assoluta",
-        "type": "quantitative"
-      }
+      {"field": "Parola", "title": "Parola", "type": "nominal"},
+      {"field": "Frequenza", "title": "Frequenza", "type": "quantitative"}
     ],
     "x": {"field": "Parola", "title": "Parola", "type": "nominal"},
     "y": {
@@ -37,10 +33,10 @@
       "type": "quantitative"
     }
   },
-  "height": 400,
+  "height": 600,
   "params": [
     {
-      "name": "param_21",
+      "name": "param_64",
       "select": {"type": "point", "fields": ["Sentimento"]},
       "bind": {
         "input": "radio",
@@ -50,14 +46,14 @@
       }
     },
     {
-      "name": "param_22",
+      "name": "param_65",
       "select": {"type": "interval", "encodings": ["x", "y"]},
       "bind": "scales"
     }
   ],
   "title": "Sentimento sulle prime 30 parole di tweets inglesi nel 2023",
-  "transform": [{"filter": {"param": "param_21"}}],
-  "width": 600,
+  "transform": [{"filter": {"param": "param_64"}}],
+  "width": 800,
   "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
   "datasets": {
     "data-2dc2ae9e118b7661c9eef13bf1daeaf3": [

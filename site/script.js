@@ -979,15 +979,18 @@ document.addEventListener('DOMContentLoaded', function() {
     graphics2BtnWords.addEventListener('click', function() {
         // chart-wordsfrequency-2022-ita
         const spec = {
-            "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}},
-            "data": {"name": "data-3ddb57789240c7b601be85226fa48863"},
-            "mark": {"type": "point", "filled": true},
-            "encoding": {
-            "color": {
-                "field": "Sentimento",
-                    "scale": {
-                    "domain": ["Positivo", "Neutrale", "Negativo"],
-                        "range": ["#ADFC92", "#788BFF", "#F44E3F"]
+            "config": {
+            "view": {"continuousWidth": 300, "continuousHeight": 300},
+            "axisX": {"labelAngle": 45}
+            },
+                "data": {"name": "data-3ddb57789240c7b601be85226fa48863"},
+                "mark": {"type": "point", "filled": true},
+                "encoding": {
+                "color": {
+                    "field": "Sentimento",
+                        "scale": {
+                        "domain": ["Positivo", "Neutrale", "Negativo"],
+                            "range": ["#ADFC92", "#788BFF", "#F44E3F"]
                     },
                     "title": "Sentimento registrato",
                         "type": "nominal"
@@ -996,8 +999,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 "size": {"field": "Frequenza", "type": "quantitative"},
                 "tooltip": [
                     {"field": "Parola", "type": "nominal"},
-                    {"field": "frequency", "type": "quantitative"},
-                    {"field": "frequency", "type": "quantitative"}
+                    {"field": "Frequenza", "type": "quantitative"},
+                    {"field": "Frequenza", "type": "quantitative"}
                 ],
                     "x": {"field": "Parola", "title": "Parola", "type": "nominal"},
                 "y": {
@@ -1007,10 +1010,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         "type": "quantitative"
                 }
             },
-                "height": 400,
+                "height": 600,
                 "params": [
                 {
-                    "name": "param_3",
+                    "name": "param_61",
                     "select": {"type": "point", "fields": ["Sentimento"]},
                     "bind": {
                         "input": "radio",
@@ -1020,14 +1023,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 },
                 {
-                    "name": "param_5",
+                    "name": "param_63",
                     "select": {"type": "interval", "encodings": ["x", "y"]},
                     "bind": "scales"
                 }
             ],
                 "title": "Sentimento sulle prime 30 parole di tweets italiani nel 2022",
-                "transform": [{"filter": {"param": "param_3"}}],
-                "width": 600,
+                "transform": [{"filter": {"param": "param_61"}}],
+                "width": 800,
                 "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
                 "datasets": {
                 "data-3ddb57789240c7b601be85226fa48863": [
@@ -1160,16 +1163,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 "opacity": {"value": 0.7},
                 "size": {
                     "field": "Frequenza",
-                        "title": "Frequenza assoluta",
+                        "title": "Frequenza",
                         "type": "quantitative"
                 },
                 "tooltip": [
-                    {"field": "word", "title": "parola", "type": "nominal"},
-                    {
-                        "field": "frequency",
-                        "title": "frequenza assoluta",
-                        "type": "quantitative"
-                    }
+                    {"field": "Parola", "title": "Parola", "type": "nominal"},
+                    {"field": "Frequenza", "title": "Frequenza", "type": "quantitative"}
                 ],
                     "x": {"field": "Parola", "title": "Parola", "type": "nominal"},
                 "y": {
@@ -1179,10 +1178,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         "type": "quantitative"
                 }
             },
-                "height": 400,
+                "height": 600,
                 "params": [
                 {
-                    "name": "param_18",
+                    "name": "param_67",
                     "select": {"type": "point", "fields": ["Sentimento"]},
                     "bind": {
                         "input": "radio",
@@ -1192,14 +1191,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 },
                 {
-                    "name": "param_20",
+                    "name": "param_69",
                     "select": {"type": "interval", "encodings": ["x", "y"]},
                     "bind": "scales"
                 }
             ],
                 "title": "Sentimento sulle prime 30 parole di tweets italiani nel 2023",
-                "transform": [{"filter": {"param": "param_18"}}],
-                "width": 600,
+                "transform": [{"filter": {"param": "param_67"}}],
+                "width": 800,
                 "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
                 "datasets": {
                 "data-8dc34e70ee76654bd9c9b56999dea0ba": [
@@ -1298,11 +1297,11 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         vegaEmbed('#graphics-container-words2', spec2, embedOptionsWords).then((result) => {
-            const view2 = result.view;
+            const view = result.view;
 
             // Aggiungi l'ascoltatore dell'evento di passaggio del mouse
-            view2.addEventListener('mouseover', handleMouseOver);
-            view2.addEventListener('mouseout', handleMouseOut);
+            view.addEventListener('mouseover', handleMouseOver);
+            view.addEventListener('mouseout', handleMouseOut);
         });
 
         graphicsContainerWords2.style.display = 'block';
@@ -1311,15 +1310,18 @@ document.addEventListener('DOMContentLoaded', function() {
     graphics3BtnWords.addEventListener('click', function() {
         // chart-wordsfrequency-2022
         const spec = {
-            "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}},
-            "data": {"name": "data-63b5b9917904df14feae1859706c37f7"},
-            "mark": {"type": "point", "filled": true},
-            "encoding": {
-            "color": {
-                "field": "Sentimento",
-                    "scale": {
-                    "domain": ["Positivo", "Neutrale", "Negativo"],
-                        "range": ["#ADFC92", "#788BFF", "#F44E3F"]
+            "config": {
+            "view": {"continuousWidth": 300, "continuousHeight": 300},
+            "axisX": {"labelAngle": 45}
+            },
+                "data": {"name": "data-63b5b9917904df14feae1859706c37f7"},
+                "mark": {"type": "point", "filled": true},
+                "encoding": {
+                "color": {
+                    "field": "Sentimento",
+                        "scale": {
+                        "domain": ["Positivo", "Neutrale", "Negativo"],
+                            "range": ["#ADFC92", "#788BFF", "#F44E3F"]
                     },
                     "title": "Sentimento registrato",
                         "type": "nominal"
@@ -1328,8 +1330,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 "size": {"field": "Frequenza", "type": "quantitative"},
                 "tooltip": [
                     {"field": "Parola", "type": "nominal"},
-                    {"field": "frequency", "type": "quantitative"},
-                    {"field": "frequency", "type": "quantitative"}
+                    {"field": "Frequenza", "type": "quantitative"},
+                    {"field": "Frequenza", "type": "quantitative"}
                 ],
                     "x": {"field": "Parola", "title": "Parola", "type": "nominal"},
                 "y": {
@@ -1339,10 +1341,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         "type": "quantitative"
                 }
             },
-                "height": 400,
+                "height": 600,
                 "params": [
                 {
-                    "name": "param_3",
+                    "name": "param_61",
                     "select": {"type": "point", "fields": ["Sentimento"]},
                     "bind": {
                         "input": "radio",
@@ -1352,14 +1354,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 },
                 {
-                    "name": "param_4",
+                    "name": "param_62",
                     "select": {"type": "interval", "encodings": ["x", "y"]},
                     "bind": "scales"
                 }
             ],
                 "title": "Sentimento sulle prime 30 parole di tweets inglesi nel 2022",
-                "transform": [{"filter": {"param": "param_3"}}],
-                "width": 600,
+                "transform": [{"filter": {"param": "param_61"}}],
+                "width": 800,
                 "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
                 "datasets": {
                 "data-63b5b9917904df14feae1859706c37f7": [
@@ -1492,16 +1494,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 "opacity": {"value": 0.7},
                 "size": {
                     "field": "Frequenza",
-                        "title": "Frequenza assoluta",
+                        "title": "Frequenza",
                         "type": "quantitative"
                 },
                 "tooltip": [
-                    {"field": "Parola", "title": "parola", "type": "nominal"},
-                    {
-                        "field": "frequency",
-                        "title": "frequenza assoluta",
-                        "type": "quantitative"
-                    }
+                    {"field": "Parola", "title": "Parola", "type": "nominal"},
+                    {"field": "Frequenza", "title": "Frequenza", "type": "quantitative"}
                 ],
                     "x": {"field": "Parola", "title": "Parola", "type": "nominal"},
                 "y": {
@@ -1511,10 +1509,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         "type": "quantitative"
                 }
             },
-                "height": 400,
+                "height": 600,
                 "params": [
                 {
-                    "name": "param_21",
+                    "name": "param_64",
                     "select": {"type": "point", "fields": ["Sentimento"]},
                     "bind": {
                         "input": "radio",
@@ -1524,14 +1522,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 },
                 {
-                    "name": "param_22",
+                    "name": "param_65",
                     "select": {"type": "interval", "encodings": ["x", "y"]},
                     "bind": "scales"
                 }
             ],
                 "title": "Sentimento sulle prime 30 parole di tweets inglesi nel 2023",
-                "transform": [{"filter": {"param": "param_21"}}],
-                "width": 600,
+                "transform": [{"filter": {"param": "param_64"}}],
+                "width": 800,
                 "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
                 "datasets": {
                 "data-2dc2ae9e118b7661c9eef13bf1daeaf3": [
@@ -1629,12 +1627,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
 
-        vegaEmbed('#graphics-container-words', spec2, embedOptionsWords).then((result) => {
-            const view2 = result.view;
+        vegaEmbed('#graphics-container-words2', spec2, embedOptionsWords).then((result) => {
+            const view = result.view;
 
             // Aggiungi l'ascoltatore dell'evento di passaggio del mouse
-            view2.addEventListener('mouseover', handleMouseOver);
-            view2.addEventListener('mouseout', handleMouseOut);
+            view.addEventListener('mouseover', handleMouseOver);
+            view.addEventListener('mouseout', handleMouseOut);
         });
 
         graphicsContainerWords2.style.display = 'block';
