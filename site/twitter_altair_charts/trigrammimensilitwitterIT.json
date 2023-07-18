@@ -31,7 +31,7 @@
   "height": 600,
   "params": [
     {
-      "name": "param_46",
+      "name": "param_48",
       "select": {"type": "point", "fields": ["MonthName"]},
       "bind": {
         "input": "select",
@@ -63,8 +63,13 @@
       }
     },
     {
-      "name": "param_47",
+      "name": "param_49",
       "select": {"type": "point", "fields": ["Trigram", "Frequency"]}
+    },
+    {
+      "name": "param_51",
+      "select": {"type": "interval", "encodings": ["x", "y"]},
+      "bind": "scales"
     }
   ],
   "resolve": {"scale": {"y": "independent"}},
@@ -73,7 +78,7 @@
     "subtitle": "Dati relativi ai tweets in lingua italiana"
   },
   "transform": [
-    {"filter": {"param": "param_46"}},
+    {"filter": {"param": "param_48"}},
     {
       "window": [{"op": "rank", "field": "row_number", "as": "rank"}],
       "sort": [{"field": "Frequency", "order": "descending"}]
