@@ -7,11 +7,6 @@ h1 {
     text-align: center;
 }
 
-h2, h3, h4, h5 {
-
-}
-
-
 
 p, #reddit_future_use, #reddit_use {
     font-size: large;
@@ -28,8 +23,6 @@ body.w3-light-grey w3-content{
 div.w3-main{
     margin-left: 300px;
 }
-
-/*top-of-toc*/
 
 #titoli
 .main-titles {
@@ -254,8 +247,6 @@ div.w3-third img{
 #sentiment, #trends {
     background-color: #616161!important;
     color: #F1F1F1!important;
-
-
 }
 
 #title-sidebar{
@@ -299,8 +290,8 @@ div.w3-third img{
 
 ul {
     font-size: 18px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 button {
     cursor: pointer;
     border-radius: 5px;
