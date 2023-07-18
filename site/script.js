@@ -2224,15 +2224,15 @@ document.addEventListener('DOMContentLoaded', function() {
             "axisX": {"labelAlign": "left", "labelAngle": 45, "labelPadding": 15},
             "legend": {"orient": "top-right"}
             },
-                "data": {"name": "data-3079b0940864c73a429f2debe8879a1e"},
+                "data": {"name": "data-0e58b5d9c8f694fc3ee53efab992547b"},
                 "mark": {"type": "bar"},
                 "encoding": {
-                "color": {"field": "Sentiment", "type": "quantitative"},
+                "color": {"field": "Sentimento", "type": "quantitative"},
                 "tooltip": [
                     {"field": "Trigram", "title": "Trigramma", "type": "nominal"},
                     {
                         "field": "Frequency",
-                        "title": "frequenza assoluta",
+                        "title": "Frequenza assoluta",
                         "type": "quantitative"
                     }
                 ],
@@ -2251,7 +2251,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "height": 600,
                 "params": [
                 {
-                    "name": "param_37",
+                    "name": "param_46",
                     "select": {"type": "point", "fields": ["MonthName"]},
                     "bind": {
                         "input": "select",
@@ -2277,724 +2277,731 @@ document.addEventListener('DOMContentLoaded', function() {
                             "Aprile ",
                             "Maggio ",
                             "Giugno ",
-                            "All"
+                            "Tutto"
                         ],
                         "name": "Selettore del periodo: "
                     }
                 },
                 {
-                    "name": "param_38",
-                    "select": {"type": "point", "nearest": true, "on": "mouseover"}
+                    "name": "param_47",
+                    "select": {"type": "point", "fields": ["Trigram", "Frequency"]}
                 }
             ],
                 "resolve": {"scale": {"y": "independent"}},
                 "title": {
-                "text": "Top Trigrammi sul periodo 2022/2023 sui Tweets italiani",
-                    "subtitle": "Dati relativi al dataset di Tweets in lingua italiana"
+                "text": "Top trigrammi sul periodo 2022/2023",
+                    "subtitle": "Dati relativi ai tweets in lingua italiana"
             },
-                "transform": [{"filter": {"param": "param_37"}}],
+                "transform": [
+                {"filter": {"param": "param_46"}},
+                {
+                    "window": [{"op": "rank", "field": "row_number", "as": "rank"}],
+                    "sort": [{"field": "Frequency", "order": "descending"}]
+                },
+                {"filter": "(datum.rank <= 30)"}
+            ],
                 "width": 800,
                 "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
                 "datasets": {
-                "data-3079b0940864c73a429f2debe8879a1e": [
+                "data-0e58b5d9c8f694fc3ee53efab992547b": [
                     {
                         "Month": 4,
                         "Trigram": "info qui tagga",
                         "Frequency": 14,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "tagga persona interessata",
                         "Frequency": 14,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "persona interessata opinione",
                         "Frequency": 12,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "interessata opinione commenti",
                         "Frequency": 12,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "scrivere prompt efficace",
                         "Frequency": 6,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "prompt efficace programmi",
                         "Frequency": 6,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "efficace programmi intelligenza",
                         "Frequency": 6,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "programmi intelligenza artificiale",
                         "Frequency": 6,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "intelligenza artificiale generativa",
                         "Frequency": 6,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "qui tagga persona",
                         "Frequency": 14,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 12,
                         "Trigram": "sicurezza hacker potrebbero",
                         "Frequency": 10,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "linizio fine google",
                         "Frequency": 20,
-                        "Sentiment": 0.2023,
+                        "Sentimento": 0.2023,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "intelligenza artificiale stupisce",
                         "Frequency": 10,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "google deve preoccuparsi",
                         "Frequency": 10,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "problema sicurezza hacker",
                         "Frequency": 10,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "ora intelligenza artificiale",
                         "Frequency": 11,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "sostituire google uomo",
                         "Frequency": 12,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "artificiale stupisce spaventa",
                         "Frequency": 14,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "grosso problema sicurezza",
                         "Frequency": 16,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "diventare grosso problema",
                         "Frequency": 16,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 2,
                         "Trigram": "info qui tagga",
                         "Frequency": 15,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "leggi larticolo link",
                         "Frequency": 12,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "italia comprendi tecnologia",
                         "Frequency": 13,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "comprendi tecnologia applicazioni",
                         "Frequency": 14,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "interessata opinione commenti",
                         "Frequency": 14,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "persona interessata opinione",
                         "Frequency": 14,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "tagga persona interessata",
                         "Frequency": 15,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "qui tagga persona",
                         "Frequency": 15,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "parlarne parlarne parlarne",
                         "Frequency": 20,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "ruba credenziali social",
                         "Frequency": 15,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "leggi larticolo link",
                         "Frequency": 36,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "comprendi tecnologia applicazioni",
                         "Frequency": 34,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "italia comprendi tecnologia",
                         "Frequency": 30,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "intelligenza artificiale generativa",
                         "Frequency": 25,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "minaccia monopolio motore",
                         "Frequency": 19,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "monopolio motore ricerca",
                         "Frequency": 19,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "info qui tagga",
                         "Frequency": 18,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "qui tagga persona",
                         "Frequency": 18,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "tagga persona interessata",
                         "Frequency": 18,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "persona interessata opinione",
                         "Frequency": 18,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 6,
                         "Trigram": "bard risposta google",
                         "Frequency": 9,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "scambiare idee conoscenze",
                         "Frequency": 24,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "idee conoscenze altri",
                         "Frequency": 24,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "conoscenze altri appassionati",
                         "Frequency": 24,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "ecco bard risposta",
                         "Frequency": 7,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "vuoi scambiare idee",
                         "Frequency": 24,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "appassionati esperti unisciti",
                         "Frequency": 24,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "esperti unisciti gruppo",
                         "Frequency": 24,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "unisciti gruppo facebook",
                         "Frequency": 24,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "altri appassionati esperti",
                         "Frequency": 24,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 5,
                         "Trigram": "già lavoro sicuro",
                         "Frequency": 5,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "appassionati esperti unisciti",
                         "Frequency": 9,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "unisciti gruppo facebook",
                         "Frequency": 9,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "esperti unisciti gruppo",
                         "Frequency": 9,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "altri appassionati esperti",
                         "Frequency": 9,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "conoscenze altri appassionati",
                         "Frequency": 9,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "idee conoscenze altri",
                         "Frequency": 9,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "scambiare idee conoscenze",
                         "Frequency": 9,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "vuoi scambiare idee",
                         "Frequency": 9,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "100 milioni utenti",
                         "Frequency": 6,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 3,
                         "Trigram": "nuova intelligenza artificiale",
                         "Frequency": 21,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "100 milioni utenti",
                         "Frequency": 21,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "unisciti gruppo facebook",
                         "Frequency": 97,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "esperti unisciti gruppo",
                         "Frequency": 97,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "appassionati esperti unisciti",
                         "Frequency": 97,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "altri appassionati esperti",
                         "Frequency": 97,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "conoscenze altri appassionati",
                         "Frequency": 97,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "idee conoscenze altri",
                         "Frequency": 97,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "scambiare idee conoscenze",
                         "Frequency": 97,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "vuoi scambiare idee",
                         "Frequency": 97,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 11,
                         "Trigram": "modello linguaggio grandi",
                         "Frequency": 2,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Novembre"
                     },
                     {
                         "Month": 11,
                         "Trigram": "facendogli domanda amiloidosi",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Novembre"
                     },
                     {
                         "Month": 11,
                         "Trigram": "testo simile umano",
                         "Frequency": 2,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Novembre"
                     },
                     {
                         "Month": 11,
                         "Trigram": "generazione testo simile",
                         "Frequency": 2,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Novembre"
                     },
                     {
                         "Month": 11,
                         "Trigram": "addestrato dallintelligenza artificiale",
                         "Frequency": 2,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Novembre"
                     },
                     {
                         "Month": 11,
                         "Trigram": "dimensioni addestrato dallintelligenza",
                         "Frequency": 2,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Novembre"
                     },
                     {
                         "Month": 11,
                         "Trigram": "grandi dimensioni addestrato",
                         "Frequency": 2,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Novembre"
                     },
                     {
                         "Month": 11,
                         "Trigram": "linguaggio grandi dimensioni",
                         "Frequency": 2,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Novembre"
                     },
                     {
                         "Month": 11,
                         "Trigram": "sviluppo sicuramente bene",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Novembre"
                     },
                     {
                         "Month": 11,
                         "Trigram": "sogno diventa reale",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Novembre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "gira verso programmatori",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "scuote testa gira",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "artificiale scuote testa",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "immaginando intelligenza artificiale",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "lavorando farla scalare",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "sovraccarico lavorando farla",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "google hitech ansa",
                         "Frequency": 3,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "concorrenza google hitech",
                         "Frequency": 3,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "testa gira verso",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "intelligenza artificiale scuote",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "google risposte argomenti",
                         "Frequency": 3,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "qualche errore confonde",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "ancora qualche errore",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "vedi ancora qualche",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "gioco google anni",
                         "Frequency": 2,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "fuori gioco google",
                         "Frequency": 3,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "scopriamo cos funziona",
                         "Frequency": 2,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "oltre milione utenti",
                         "Frequency": 3,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "concorrenza google risposte",
                         "Frequency": 3,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "mette fuori gioco",
                         "Frequency": 2,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     }
                 ]
@@ -3024,15 +3031,15 @@ document.addEventListener('DOMContentLoaded', function() {
             "axisX": {"labelAlign": "left", "labelAngle": 45, "labelPadding": 15},
             "legend": {"orient": "top-right"}
             },
-                "data": {"name": "data-27129dce2d692b9d1d41a1e313f98f54"},
+                "data": {"name": "data-e4affbbf8048626926c898916b0e176e"},
                 "mark": {"type": "bar"},
                 "encoding": {
-                "color": {"field": "Sentiment", "type": "quantitative"},
+                "color": {"field": "Sentimento", "type": "quantitative"},
                 "tooltip": [
                     {"field": "Trigram", "title": "Trigramma", "type": "nominal"},
                     {
                         "field": "Frequency",
-                        "title": "frequenza assoluta",
+                        "title": "Frequenza assoluta",
                         "type": "quantitative"
                     }
                 ],
@@ -3051,7 +3058,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "height": 600,
                 "params": [
                 {
-                    "name": "param_7",
+                    "name": "param_46",
                     "select": {"type": "point", "fields": ["MonthName"]},
                     "bind": {
                         "input": "select",
@@ -3077,654 +3084,661 @@ document.addEventListener('DOMContentLoaded', function() {
                             "Aprile ",
                             "Maggio ",
                             "Giugno ",
-                            "All"
+                            "Tutto"
                         ],
                         "name": "Selettore del periodo: "
                     }
                 },
                 {
-                    "name": "param_8",
-                    "select": {"type": "point", "nearest": true, "on": "mouseover"}
+                    "name": "param_47",
+                    "select": {"type": "point", "fields": ["Trigram", "Frequency"]}
                 }
             ],
                 "resolve": {"scale": {"y": "independent"}},
                 "title": {
-                "text": "Top Trigrammi sul periodo 2022/2023",
-                    "subtitle": "Dati relativi al dataset di Tweets in lingua inglese"
+                "text": "Top trigrammi sul periodo 2022/2023",
+                    "subtitle": "Dati relativi ai tweets in lingua inglese"
             },
-                "transform": [{"filter": {"param": "param_7"}}],
+                "transform": [
+                {"filter": {"param": "param_46"}},
+                {
+                    "window": [{"op": "rank", "field": "row_number", "as": "rank"}],
+                    "sort": [{"field": "Frequency", "order": "descending"}]
+                },
+                {"filter": "(datum.rank <= 30)"}
+            ],
                 "width": 800,
                 "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
                 "datasets": {
-                "data-27129dce2d692b9d1d41a1e313f98f54": [
+                "data-e4affbbf8048626926c898916b0e176e": [
                     {
                         "Month": 4,
                         "Trigram": "banned italy privacy",
                         "Frequency": 146,
-                        "Sentiment": -0.4588,
+                        "Sentimento": -0.4588,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "spot recommendation ticker",
                         "Frequency": 86,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "recommendation ticker time",
                         "Frequency": 86,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "ticker time interval",
                         "Frequency": 86,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "special edition guide",
                         "Frequency": 84,
-                        "Sentiment": 0.4019,
+                        "Sentimento": 0.4019,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "rsi recommendation ticker",
                         "Frequency": 78,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "time interval 5min",
                         "Frequency": 53,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "interval 5min price",
                         "Frequency": 53,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "predict stock moves",
                         "Frequency": 47,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 4,
                         "Trigram": "italy privacy concerns",
                         "Frequency": 142,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Aprile"
                     },
                     {
                         "Month": 12,
                         "Trigram": "pros need master",
                         "Frequency": 130,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "2022 review eeat",
                         "Frequency": 200,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "red google search",
                         "Frequency": 134,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "quora launches poe",
                         "Frequency": 145,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "code red amid",
                         "Frequency": 132,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "launches poe way",
                         "Frequency": 148,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "poe way talk",
                         "Frequency": 149,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "issued code red",
                         "Frequency": 196,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "code red google",
                         "Frequency": 197,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 12,
                         "Trigram": "seo 2022 review",
                         "Frequency": 197,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Dicembre"
                     },
                     {
                         "Month": 2,
                         "Trigram": "monthly active users",
                         "Frequency": 97,
-                        "Sentiment": 0.4019,
+                        "Sentimento": 0.4019,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "access new features",
                         "Frequency": 80,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "faster response times",
                         "Frequency": 86,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "million monthly active",
                         "Frequency": 86,
-                        "Sentiment": 0.4019,
+                        "Sentimento": 0.4019,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "generated based instructions",
                         "Frequency": 87,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "humidity wind speed",
                         "Frequency": 87,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "current temp humidity",
                         "Frequency": 87,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "100 million monthly",
                         "Frequency": 93,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "100 million users",
                         "Frequency": 118,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 2,
                         "Trigram": "temp humidity wind",
                         "Frequency": 87,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Febbraio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "large language models",
                         "Frequency": 304,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "natural language processing",
                         "Frequency": 254,
-                        "Sentiment": 0.3612,
+                        "Sentimento": 0.3612,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "medical licensing exam",
                         "Frequency": 216,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "generated based instructions",
                         "Frequency": 195,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "current temp humidity",
                         "Frequency": 189,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "temp humidity wind",
                         "Frequency": 189,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "humidity wind speed",
                         "Frequency": 189,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "wharton mba exam",
                         "Frequency": 165,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "multibillion dollar investment",
                         "Frequency": 158,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 1,
                         "Trigram": "trending wikipedia pages",
                         "Frequency": 144,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Gennaio"
                     },
                     {
                         "Month": 6,
                         "Trigram": "spread malicious code",
                         "Frequency": 34,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "experts fight attacks",
                         "Frequency": 55,
-                        "Sentiment": -0.6705,
+                        "Sentimento": -0.6705,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "fight attacks experts",
                         "Frequency": 54,
-                        "Sentiment": -0.6705,
+                        "Sentimento": -0.6705,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "church service generated",
                         "Frequency": 34,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "attend church service",
                         "Frequency": 34,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "experts exploring application",
                         "Frequency": 54,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "hundreds attend church",
                         "Frequency": 34,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "cybersecurity experts fight",
                         "Frequency": 55,
-                        "Sentiment": -0.3818,
+                        "Sentimento": -0.3818,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "attacks experts exploring",
                         "Frequency": 54,
-                        "Sentiment": -0.4404,
+                        "Sentimento": -0.4404,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 6,
                         "Trigram": "help cybersecurity experts",
                         "Frequency": 55,
-                        "Sentiment": 0.4019,
+                        "Sentimento": 0.4019,
                         "MonthName": "Giugno"
                     },
                     {
                         "Month": 5,
                         "Trigram": "new york federal",
                         "Frequency": 24,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "cases new york",
                         "Frequency": 23,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "bogus cases new",
                         "Frequency": 23,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "federal court filing",
                         "Frequency": 24,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "cited bogus cases",
                         "Frequency": 24,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "shopping app temu",
                         "Frequency": 25,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "temu invitation code",
                         "Frequency": 30,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "large language models",
                         "Frequency": 39,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "cited fake cases",
                         "Frequency": 23,
-                        "Sentiment": -0.4767,
+                        "Sentimento": -0.4767,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 5,
                         "Trigram": "york federal court",
                         "Frequency": 24,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Maggio"
                     },
                     {
                         "Month": 3,
                         "Trigram": "artificial intelligence technology",
                         "Frequency": 34,
-                        "Sentiment": 0.4767,
+                        "Sentimento": 0.4767,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "large language models",
                         "Frequency": 41,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "100 million users",
                         "Frequency": 44,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "temporarily banned italy",
                         "Frequency": 46,
-                        "Sentiment": -0.4588,
+                        "Sentimento": -0.4588,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "italy privacy concerns",
                         "Frequency": 87,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "plugin accessing website",
                         "Frequency": 89,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "browser plugin accessing",
                         "Frequency": 89,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "web browser plugin",
                         "Frequency": 89,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "banned italy privacy",
                         "Frequency": 108,
-                        "Sentiment": -0.4588,
+                        "Sentimento": -0.4588,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 3,
                         "Trigram": "monthly active users",
                         "Frequency": 34,
-                        "Sentiment": 0.4019,
+                        "Sentimento": 0.4019,
                         "MonthName": "Marzo"
                     },
                     {
                         "Month": 10,
                         "Trigram": "cares watches women",
                         "Frequency": 2,
-                        "Sentiment": 0.4588,
+                        "Sentimento": 0.4588,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "coti years ago",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "watches women soccer",
                         "Frequency": 2,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "looks like fun",
                         "Frequency": 2,
-                        "Sentiment": 0.7003,
+                        "Sentimento": 0.7003,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "close nuclear war",
                         "Frequency": 4,
-                        "Sentiment": -0.5994,
+                        "Sentimento": -0.5994,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "needs deescalate russia",
                         "Frequency": 2,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "great nft project",
                         "Frequency": 2,
-                        "Sentiment": 0.6249,
+                        "Sentimento": 0.6249,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "0xf23a8ca32aabc994d81dfdab0f369e0ca752a3ad testnet test",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "biden deescalate russia",
                         "Frequency": 2,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 10,
                         "Trigram": "tell cost website",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Ottobre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "lehman brothers 2022",
                         "Frequency": 2,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "billions trillions dollars",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "spend billions trillions",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "let spend billions",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "yayyyy let spend",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "100 3000 week",
                         "Frequency": 2,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "home owner charged",
                         "Frequency": 2,
-                        "Sentiment": -0.2023,
+                        "Sentimento": -0.2023,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "flying bussing illegals",
                         "Frequency": 2,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "trillions dollars members",
                         "Frequency": 1,
-                        "Sentiment": 0,
+                        "Sentimento": 0,
                         "MonthName": "Settembre"
                     },
                     {
                         "Month": 9,
                         "Trigram": "stop paying congress",
                         "Frequency": 2,
-                        "Sentiment": -0.296,
+                        "Sentimento": -0.296,
                         "MonthName": "Settembre"
                     }
                 ]
