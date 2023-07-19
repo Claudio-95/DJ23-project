@@ -10,11 +10,7 @@
     "color": {"field": "Sentimento", "type": "quantitative"},
     "tooltip": [
       {"field": "Trigram", "title": "Trigramma", "type": "nominal"},
-      {
-        "field": "Frequency",
-        "title": "Frequenza assoluta",
-        "type": "quantitative"
-      }
+      {"field": "Frequency", "title": "Frequenza", "type": "quantitative"}
     ],
     "x": {
       "field": "Trigram",
@@ -31,7 +27,7 @@
   "height": 600,
   "params": [
     {
-      "name": "param_48",
+      "name": "param_3",
       "select": {"type": "point", "fields": ["MonthName"]},
       "bind": {
         "input": "select",
@@ -63,13 +59,8 @@
       }
     },
     {
-      "name": "param_49",
+      "name": "param_4",
       "select": {"type": "point", "fields": ["Trigram", "Frequency"]}
-    },
-    {
-      "name": "param_50",
-      "select": {"type": "interval", "encodings": ["x", "y"]},
-      "bind": "scales"
     }
   ],
   "resolve": {"scale": {"y": "independent"}},
@@ -78,7 +69,7 @@
     "subtitle": "Dati relativi ai tweets in lingua inglese"
   },
   "transform": [
-    {"filter": {"param": "param_48"}},
+    {"filter": {"param": "param_3"}},
     {
       "window": [{"op": "rank", "field": "row_number", "as": "rank"}],
       "sort": [{"field": "Frequency", "order": "descending"}]

@@ -33,7 +33,7 @@
   "height": 600,
   "params": [
     {
-      "name": "param_4",
+      "name": "param_1",
       "select": {"type": "point", "fields": ["sentiment_complete"]},
       "bind": {
         "input": "radio",
@@ -43,7 +43,7 @@
       }
     },
     {
-      "name": "param_4",
+      "name": "param_1",
       "select": {"type": "point", "fields": ["sentiment_complete"]},
       "bind": {
         "input": "radio",
@@ -51,15 +51,10 @@
         "labels": ["Positivo ", "Neutrale ", "Negativo ", "Tutto"],
         "name": "Selettore sentimento: "
       }
-    },
-    {
-      "name": "param_5",
-      "select": {"type": "interval", "encodings": ["x", "y"]},
-      "bind": "scales"
     }
   ],
   "title": "Sentimento sulle 30 parole più frequenti nel periodo aprile-giugno 2023",
-  "transform": [{"filter": {"param": "param_4"}}],
+  "transform": [{"filter": {"param": "param_1"}}],
   "width": 800,
   "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
   "datasets": {

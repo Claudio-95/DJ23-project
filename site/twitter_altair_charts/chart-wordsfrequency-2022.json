@@ -33,7 +33,7 @@
   "height": 600,
   "params": [
     {
-      "name": "param_61",
+      "name": "param_1",
       "select": {"type": "point", "fields": ["Sentimento"]},
       "bind": {
         "input": "radio",
@@ -41,15 +41,10 @@
         "labels": ["Positivo ", "Neutrale ", "Negativo ", "Tutto"],
         "name": "Selettore sentimento: "
       }
-    },
-    {
-      "name": "param_62",
-      "select": {"type": "interval", "encodings": ["x", "y"]},
-      "bind": "scales"
     }
   ],
   "title": "Sentimento sulle prime 30 parole di tweets inglesi nel 2022",
-  "transform": [{"filter": {"param": "param_61"}}],
+  "transform": [{"filter": {"param": "param_1"}}],
   "width": 800,
   "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
   "datasets": {

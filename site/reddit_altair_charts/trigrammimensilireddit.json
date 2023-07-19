@@ -8,7 +8,7 @@
   "mark": {"type": "bar"},
   "encoding": {
     "color": {"field": "Sentimento", "type": "quantitative"},
-    "opacity": {"condition": {"param": "param_7", "value": 1}, "value": 0.3},
+    "opacity": {"condition": {"param": "param_3", "value": 1}, "value": 0.3},
     "tooltip": [
       {"field": "Trigram", "title": "Trigramma", "type": "nominal"},
       {
@@ -32,7 +32,7 @@
   "height": 600,
   "params": [
     {
-      "name": "param_6",
+      "name": "param_2",
       "select": {"type": "point", "fields": ["MonthName"]},
       "bind": {
         "input": "select",
@@ -42,13 +42,8 @@
       }
     },
     {
-      "name": "param_7",
+      "name": "param_3",
       "select": {"type": "point", "fields": ["Trigram", "Frequency"]}
-    },
-    {
-      "name": "param_8",
-      "select": {"type": "interval", "encodings": ["x", "y"]},
-      "bind": "scales"
     }
   ],
   "resolve": {"scale": {"y": "independent"}},
@@ -56,7 +51,7 @@
     "text": "Top Trigrammi sul periodo aprile-giugno 2023",
     "subtitle": "Dati relativi al dataset di Reddit"
   },
-  "transform": [{"filter": {"param": "param_6"}}],
+  "transform": [{"filter": {"param": "param_2"}}],
   "width": 800,
   "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
   "datasets": {

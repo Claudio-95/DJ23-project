@@ -36,7 +36,7 @@
   "height": 600,
   "params": [
     {
-      "name": "param_67",
+      "name": "param_2",
       "select": {"type": "point", "fields": ["Sentimento"]},
       "bind": {
         "input": "radio",
@@ -44,15 +44,10 @@
         "labels": ["Positivo ", "Neutrale ", "Negativo ", "Tutto"],
         "name": "Selettore sentimento 2023: "
       }
-    },
-    {
-      "name": "param_69",
-      "select": {"type": "interval", "encodings": ["x", "y"]},
-      "bind": "scales"
     }
   ],
   "title": "Sentimento sulle prime 30 parole di tweets italiani nel 2023",
-  "transform": [{"filter": {"param": "param_67"}}],
+  "transform": [{"filter": {"param": "param_2"}}],
   "width": 800,
   "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
   "datasets": {

@@ -81,13 +81,6 @@ const defaultSentiment = {
         }
     },
         "height": 600,
-        "params": [
-        {
-            "name": "param_36",
-            "select": {"type": "interval", "encodings": ["x", "y"]},
-            "bind": "scales"
-        }
-    ],
         "title": {
         "text": "Evoluzione del sentimento verso ChatGPT nell'arco dei mesi",
             "subtitle": "Visualizzazione dei valori relativi al dataset di commenti"
@@ -167,50 +160,43 @@ document.addEventListener('DOMContentLoaded', function() {
         // chartSentimentING_reddit
         const spec = {
             "config": {
-            "view": {"continuousWidth": 300, "continuousHeight": 300},
-            "axis": {"grid": false},
-            "legend": {"orient": "top"}
+                "view": {"continuousWidth": 300, "continuousHeight": 300},
+                "axis": {"grid": false},
+                "legend": {"orient": "top"}
             },
-                "data": {"name": "data-800eee6c893eaac0f5534d5c99f91252"},
-                "mark": {"type": "line", "opacity": 0.1},
-                "encoding": {
+            "data": {"name": "data-800eee6c893eaac0f5534d5c99f91252"},
+            "mark": {"type": "line", "opacity": 0.1},
+            "encoding": {
                 "color": {
                     "field": "sentiment_complete",
-                        "legend": {"orient": "right"},
+                    "legend": {"orient": "right"},
                     "scale": {
                         "domain": ["Positivo", "Negativo", "Neutrale"],
-                            "range": ["#ADFC92", "#F44E3F", "#788BFF"]
+                        "range": ["#ADFC92", "#F44E3F", "#788BFF"]
                     },
                     "title": "Sentimento registrato",
-                        "type": "nominal"
+                    "type": "nominal"
                 },
                 "opacity": {"value": 0.9},
                 "x": {
                     "axis": {"format": "%B %Y", "tickCount": 12, "title": "Periodo"},
                     "field": "Comment date",
-                        "type": "temporal"
+                    "type": "temporal"
                 },
                 "y": {
                     "axis": {"title": "Numero di commenti"},
                     "field": "Value",
-                        "type": "quantitative"
+                    "type": "quantitative"
                 }
             },
-                "height": 600,
-                "params": [
-                {
-                    "name": "param_36",
-                    "select": {"type": "interval", "encodings": ["x", "y"]},
-                    "bind": "scales"
-                }
-            ],
-                "title": {
+            "height": 600,
+            "title": {
                 "text": "Evoluzione del sentimento verso ChatGPT nell'arco dei mesi",
-                    "subtitle": "Visualizzazione dei valori relativi al dataset di commenti"
+                "subtitle": "Visualizzazione dei valori relativi al dataset di commenti"
             },
-                "width": 800,
-                "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
-                "datasets": {
+            "width": 800,
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+            "datasets": {
                 "data-800eee6c893eaac0f5534d5c99f91252": [
                     {
                         "Comment date": "April 2023",
@@ -287,11 +273,11 @@ document.addEventListener('DOMContentLoaded', function() {
             "axis": {"grid": false},
             "legend": {"orient": "top"}
             },
-                "data": {"name": "data-e85009f7c5c557fbd302034b3277b24f"},
+                "data": {"name": "data-b2efc7f4f33c8856302f0d7c551f7508"},
                 "mark": {"type": "line", "opacity": 0.1},
                 "encoding": {
                 "color": {
-                    "field": "sentiment_complete",
+                    "field": "Sentimento",
                         "legend": {"orient": "right"},
                     "scale": {
                         "domain": ["Positivo", "Neutrale", "Negativo"],
@@ -313,13 +299,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             },
                 "height": 600,
-                "params": [
-                {
-                    "name": "param_9",
-                    "select": {"type": "interval", "encodings": ["x", "y"]},
-                    "bind": "scales"
-                }
-            ],
                 "title": {
                 "text": "Evoluzione del sentimento verso ChatGPT nell'arco dei mesi",
                     "subtitle": "Visualizzazione dei valori relativi al dataset di tweets italiani"
@@ -327,49 +306,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 "width": 800,
                 "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
                 "datasets": {
-                "data-e85009f7c5c557fbd302034b3277b24f": [
-                    {"date": "September 2022", "sentiment_complete": "Negativo", "Value": 2},
-                    {"date": "October 2022", "sentiment_complete": "Negativo", "Value": 1},
-                    {"date": "November 2022", "sentiment_complete": "Negativo", "Value": 6},
-                    {"date": "December 2022", "sentiment_complete": "Negativo", "Value": 89},
-                    {"date": "January 2023", "sentiment_complete": "Negativo", "Value": 311},
-                    {"date": "February 2023", "sentiment_complete": "Negativo", "Value": 198},
-                    {"date": "March 2023", "sentiment_complete": "Negativo", "Value": 475},
-                    {"date": "April 2023", "sentiment_complete": "Negativo", "Value": 21},
-                    {"date": "May 2023", "sentiment_complete": "Negativo", "Value": 32},
-                    {"date": "June 2023", "sentiment_complete": "Negativo", "Value": 25},
-                    {"date": "September 2022", "sentiment_complete": "Neutrale", "Value": 39},
-                    {"date": "October 2022", "sentiment_complete": "Neutrale", "Value": 29},
-                    {"date": "November 2022", "sentiment_complete": "Neutrale", "Value": 29},
-                    {
-                        "date": "December 2022",
-                        "sentiment_complete": "Neutrale",
-                        "Value": 1049
-                    },
-                    {"date": "January 2023", "sentiment_complete": "Neutrale", "Value": 5222},
-                    {
-                        "date": "February 2023",
-                        "sentiment_complete": "Neutrale",
-                        "Value": 3050
-                    },
-                    {"date": "March 2023", "sentiment_complete": "Neutrale", "Value": 6207},
-                    {"date": "April 2023", "sentiment_complete": "Neutrale", "Value": 437},
-                    {"date": "May 2023", "sentiment_complete": "Neutrale", "Value": 450},
-                    {"date": "June 2023", "sentiment_complete": "Neutrale", "Value": 387},
-                    {"date": "September 2022", "sentiment_complete": "Positivo", "Value": 9},
-                    {"date": "October 2022", "sentiment_complete": "Positivo", "Value": 5},
-                    {
-                        "date": "November 2022",
-                        "sentiment_complete": "Positivo",
-                        "Value": null
-                    },
-                    {"date": "December 2022", "sentiment_complete": "Positivo", "Value": 215},
-                    {"date": "January 2023", "sentiment_complete": "Positivo", "Value": 891},
-                    {"date": "February 2023", "sentiment_complete": "Positivo", "Value": 537},
-                    {"date": "March 2023", "sentiment_complete": "Positivo", "Value": 1118},
-                    {"date": "April 2023", "sentiment_complete": "Positivo", "Value": 65},
-                    {"date": "May 2023", "sentiment_complete": "Positivo", "Value": 75},
-                    {"date": "June 2023", "sentiment_complete": "Positivo", "Value": 76}
+                "data-b2efc7f4f33c8856302f0d7c551f7508": [
+                    {"date": "September 2022", "Sentimento": "Negativo", "Value": 2},
+                    {"date": "October 2022", "Sentimento": "Negativo", "Value": 1},
+                    {"date": "November 2022", "Sentimento": "Negativo", "Value": 6},
+                    {"date": "December 2022", "Sentimento": "Negativo", "Value": 89},
+                    {"date": "January 2023", "Sentimento": "Negativo", "Value": 311},
+                    {"date": "February 2023", "Sentimento": "Negativo", "Value": 198},
+                    {"date": "March 2023", "Sentimento": "Negativo", "Value": 475},
+                    {"date": "April 2023", "Sentimento": "Negativo", "Value": 21},
+                    {"date": "May 2023", "Sentimento": "Negativo", "Value": 32},
+                    {"date": "June 2023", "Sentimento": "Negativo", "Value": 25},
+                    {"date": "September 2022", "Sentimento": "Neutrale", "Value": 39},
+                    {"date": "October 2022", "Sentimento": "Neutrale", "Value": 29},
+                    {"date": "November 2022", "Sentimento": "Neutrale", "Value": 29},
+                    {"date": "December 2022", "Sentimento": "Neutrale", "Value": 1049},
+                    {"date": "January 2023", "Sentimento": "Neutrale", "Value": 5222},
+                    {"date": "February 2023", "Sentimento": "Neutrale", "Value": 3050},
+                    {"date": "March 2023", "Sentimento": "Neutrale", "Value": 6207},
+                    {"date": "April 2023", "Sentimento": "Neutrale", "Value": 437},
+                    {"date": "May 2023", "Sentimento": "Neutrale", "Value": 450},
+                    {"date": "June 2023", "Sentimento": "Neutrale", "Value": 387},
+                    {"date": "September 2022", "Sentimento": "Positivo", "Value": 9},
+                    {"date": "October 2022", "Sentimento": "Positivo", "Value": 5},
+                    {"date": "November 2022", "Sentimento": "Positivo", "Value": null},
+                    {"date": "December 2022", "Sentimento": "Positivo", "Value": 215},
+                    {"date": "January 2023", "Sentimento": "Positivo", "Value": 891},
+                    {"date": "February 2023", "Sentimento": "Positivo", "Value": 537},
+                    {"date": "March 2023", "Sentimento": "Positivo", "Value": 1118},
+                    {"date": "April 2023", "Sentimento": "Positivo", "Value": 65},
+                    {"date": "May 2023", "Sentimento": "Positivo", "Value": 75},
+                    {"date": "June 2023", "Sentimento": "Positivo", "Value": 76}
                 ]
             }
         };
@@ -400,11 +367,11 @@ document.addEventListener('DOMContentLoaded', function() {
             "axis": {"grid": false},
             "legend": {"orient": "top"}
             },
-                "data": {"name": "data-f5aa40d221b8f095fd9ec2a8cf953d4d"},
+                "data": {"name": "data-33dcc734e7abe4bdd1108d6c5a0f6641"},
                 "mark": {"type": "line", "opacity": 0.1},
                 "encoding": {
                 "color": {
-                    "field": "sentiment_complete",
+                    "field": "Sentimento",
                         "legend": {"orient": "right"},
                     "scale": {
                         "domain": ["Positivo", "Neutrale", "Negativo"],
@@ -426,13 +393,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             },
                 "height": 600,
-                "params": [
-                {
-                    "name": "param_10",
-                    "select": {"type": "interval", "encodings": ["x", "y"]},
-                    "bind": "scales"
-                }
-            ],
                 "title": {
                 "text": "Evoluzione del sentimento verso ChatGPT nell'arco dei mesi",
                     "subtitle": "Visualizzazione dei valori relativi al dataset di Tweets"
@@ -440,78 +400,34 @@ document.addEventListener('DOMContentLoaded', function() {
                 "width": 800,
                 "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
                 "datasets": {
-                "data-f5aa40d221b8f095fd9ec2a8cf953d4d": [
-                    {"date": "September 2022", "sentiment_complete": "Negativo", "Value": 64},
-                    {"date": "October 2022", "sentiment_complete": "Negativo", "Value": 103},
-                    {
-                        "date": "December 2022",
-                        "sentiment_complete": "Negativo",
-                        "Value": 12890
-                    },
-                    {
-                        "date": "January 2023",
-                        "sentiment_complete": "Negativo",
-                        "Value": 21900
-                    },
-                    {
-                        "date": "February 2023",
-                        "sentiment_complete": "Negativo",
-                        "Value": 6205
-                    },
-                    {"date": "March 2023", "sentiment_complete": "Negativo", "Value": 3109},
-                    {"date": "April 2023", "sentiment_complete": "Negativo", "Value": 2138},
-                    {"date": "May 2023", "sentiment_complete": "Negativo", "Value": 1901},
-                    {"date": "June 2023", "sentiment_complete": "Negativo", "Value": 999},
-                    {
-                        "date": "September 2022",
-                        "sentiment_complete": "Neutrale",
-                        "Value": 101
-                    },
-                    {"date": "October 2022", "sentiment_complete": "Neutrale", "Value": 75},
-                    {
-                        "date": "December 2022",
-                        "sentiment_complete": "Neutrale",
-                        "Value": 26609
-                    },
-                    {
-                        "date": "January 2023",
-                        "sentiment_complete": "Neutrale",
-                        "Value": 44188
-                    },
-                    {
-                        "date": "February 2023",
-                        "sentiment_complete": "Neutrale",
-                        "Value": 11888
-                    },
-                    {"date": "March 2023", "sentiment_complete": "Neutrale", "Value": 4615},
-                    {"date": "April 2023", "sentiment_complete": "Neutrale", "Value": 3418},
-                    {"date": "May 2023", "sentiment_complete": "Neutrale", "Value": 3131},
-                    {"date": "June 2023", "sentiment_complete": "Neutrale", "Value": 1545},
-                    {
-                        "date": "September 2022",
-                        "sentiment_complete": "Positivo",
-                        "Value": 114
-                    },
-                    {"date": "October 2022", "sentiment_complete": "Positivo", "Value": 104},
-                    {
-                        "date": "December 2022",
-                        "sentiment_complete": "Positivo",
-                        "Value": 37278
-                    },
-                    {
-                        "date": "January 2023",
-                        "sentiment_complete": "Positivo",
-                        "Value": 67973
-                    },
-                    {
-                        "date": "February 2023",
-                        "sentiment_complete": "Positivo",
-                        "Value": 17068
-                    },
-                    {"date": "March 2023", "sentiment_complete": "Positivo", "Value": 7458},
-                    {"date": "April 2023", "sentiment_complete": "Positivo", "Value": 5070},
-                    {"date": "May 2023", "sentiment_complete": "Positivo", "Value": 4859},
-                    {"date": "June 2023", "sentiment_complete": "Positivo", "Value": 2506}
+                "data-33dcc734e7abe4bdd1108d6c5a0f6641": [
+                    {"date": "September 2022", "Sentimento": "Negativo", "Value": 64},
+                    {"date": "October 2022", "Sentimento": "Negativo", "Value": 103},
+                    {"date": "December 2022", "Sentimento": "Negativo", "Value": 12890},
+                    {"date": "January 2023", "Sentimento": "Negativo", "Value": 21900},
+                    {"date": "February 2023", "Sentimento": "Negativo", "Value": 6205},
+                    {"date": "March 2023", "Sentimento": "Negativo", "Value": 3109},
+                    {"date": "April 2023", "Sentimento": "Negativo", "Value": 2138},
+                    {"date": "May 2023", "Sentimento": "Negativo", "Value": 1901},
+                    {"date": "June 2023", "Sentimento": "Negativo", "Value": 999},
+                    {"date": "September 2022", "Sentimento": "Neutrale", "Value": 101},
+                    {"date": "October 2022", "Sentimento": "Neutrale", "Value": 75},
+                    {"date": "December 2022", "Sentimento": "Neutrale", "Value": 26609},
+                    {"date": "January 2023", "Sentimento": "Neutrale", "Value": 44188},
+                    {"date": "February 2023", "Sentimento": "Neutrale", "Value": 11888},
+                    {"date": "March 2023", "Sentimento": "Neutrale", "Value": 4615},
+                    {"date": "April 2023", "Sentimento": "Neutrale", "Value": 3418},
+                    {"date": "May 2023", "Sentimento": "Neutrale", "Value": 3131},
+                    {"date": "June 2023", "Sentimento": "Neutrale", "Value": 1545},
+                    {"date": "September 2022", "Sentimento": "Positivo", "Value": 114},
+                    {"date": "October 2022", "Sentimento": "Positivo", "Value": 104},
+                    {"date": "December 2022", "Sentimento": "Positivo", "Value": 37278},
+                    {"date": "January 2023", "Sentimento": "Positivo", "Value": 67973},
+                    {"date": "February 2023", "Sentimento": "Positivo", "Value": 17068},
+                    {"date": "March 2023", "Sentimento": "Positivo", "Value": 7458},
+                    {"date": "April 2023", "Sentimento": "Positivo", "Value": 5070},
+                    {"date": "May 2023", "Sentimento": "Positivo", "Value": 4859},
+                    {"date": "June 2023", "Sentimento": "Positivo", "Value": 2506}
                 ]
             }
         };
@@ -575,7 +491,7 @@ const defaultWords = {
         "height": 600,
         "params": [
         {
-            "name": "param_4",
+            "name": "param_1",
             "select": {"type": "point", "fields": ["sentiment_complete"]},
             "bind": {
                 "input": "radio",
@@ -585,7 +501,7 @@ const defaultWords = {
             }
         },
         {
-            "name": "param_4",
+            "name": "param_1",
             "select": {"type": "point", "fields": ["sentiment_complete"]},
             "bind": {
                 "input": "radio",
@@ -593,15 +509,10 @@ const defaultWords = {
                 "labels": ["Positivo ", "Neutrale ", "Negativo ", "Tutto"],
                 "name": "Selettore sentimento: "
             }
-        },
-        {
-            "name": "param_5",
-            "select": {"type": "interval", "encodings": ["x", "y"]},
-            "bind": "scales"
         }
     ],
         "title": "Sentimento sulle 30 parole più frequenti nel periodo aprile-giugno 2023",
-        "transform": [{"filter": {"param": "param_4"}}],
+        "transform": [{"filter": {"param": "param_1"}}],
         "width": 800,
         "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
         "datasets": {
@@ -767,20 +678,20 @@ document.addEventListener('DOMContentLoaded', function() {
         // wordsfreq_allmonths
         const spec = {
             "config": {
-            "view": {"continuousWidth": 300, "continuousHeight": 300},
-            "axisX": {"labelAngle": 45}
+                "view": {"continuousWidth": 300, "continuousHeight": 300},
+                "axisX": {"labelAngle": 45}
             },
-                "data": {"name": "data-ac0eefac8118804c69dbd0dd5f2bf7a9"},
-                "mark": {"type": "point", "filled": true},
-                "encoding": {
+            "data": {"name": "data-ac0eefac8118804c69dbd0dd5f2bf7a9"},
+            "mark": {"type": "point", "filled": true},
+            "encoding": {
                 "color": {
                     "field": "sentiment_complete",
-                        "scale": {
+                    "scale": {
                         "domain": ["Positivo", "Neutrale", "Negativo"],
-                            "range": ["#ADFC92", "#788BFF", "#F44E3F"]
+                        "range": ["#ADFC92", "#788BFF", "#F44E3F"]
                     },
                     "title": "Sentimento registrato",
-                        "type": "nominal"
+                    "type": "nominal"
                 },
                 "opacity": {"value": 0.7},
                 "size": {"field": "Frequenza", "type": "quantitative"},
@@ -789,18 +700,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     {"field": "Frequenza", "type": "quantitative"},
                     {"field": "Frequenza", "type": "quantitative"}
                 ],
-                    "x": {"field": "Parola", "title": "Parola", "type": "nominal"},
+                "x": {"field": "Parola", "title": "Parola", "type": "nominal"},
                 "y": {
                     "axis": {"labels": false},
                     "field": "Frequenza",
-                        "title": "Frequenza",
-                        "type": "quantitative"
+                    "title": "Frequenza",
+                    "type": "quantitative"
                 }
             },
-                "height": 600,
-                "params": [
+            "height": 600,
+            "params": [
                 {
-                    "name": "param_4",
+                    "name": "param_1",
                     "select": {"type": "point", "fields": ["sentiment_complete"]},
                     "bind": {
                         "input": "radio",
@@ -810,7 +721,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 },
                 {
-                    "name": "param_4",
+                    "name": "param_1",
                     "select": {"type": "point", "fields": ["sentiment_complete"]},
                     "bind": {
                         "input": "radio",
@@ -818,18 +729,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         "labels": ["Positivo ", "Neutrale ", "Negativo ", "Tutto"],
                         "name": "Selettore sentimento: "
                     }
-                },
-                {
-                    "name": "param_5",
-                    "select": {"type": "interval", "encodings": ["x", "y"]},
-                    "bind": "scales"
                 }
             ],
-                "title": "Sentimento sulle 30 parole più frequenti nel periodo aprile-giugno 2023",
-                "transform": [{"filter": {"param": "param_4"}}],
-                "width": 800,
-                "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
-                "datasets": {
+            "title": "Sentimento sulle 30 parole più frequenti nel periodo aprile-giugno 2023",
+            "transform": [{"filter": {"param": "param_1"}}],
+            "width": 800,
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+            "datasets": {
                 "data-ac0eefac8118804c69dbd0dd5f2bf7a9": [
                     {"sentiment_complete": "Negativo", "Parola": "bad", "Frequenza": 627},
                     {"sentiment_complete": "Negativo", "Parola": "cant", "Frequenza": 1025},
@@ -1028,7 +934,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "height": 600,
                 "params": [
                 {
-                    "name": "param_61",
+                    "name": "param_1",
                     "select": {"type": "point", "fields": ["Sentimento"]},
                     "bind": {
                         "input": "radio",
@@ -1036,15 +942,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         "labels": ["Positivo ", "Neutrale ", "Negativo ", "Tutto"],
                         "name": "Selettore sentimento: "
                     }
-                },
-                {
-                    "name": "param_63",
-                    "select": {"type": "interval", "encodings": ["x", "y"]},
-                    "bind": "scales"
                 }
             ],
                 "title": "Sentimento sulle prime 30 parole di tweets italiani nel 2022",
-                "transform": [{"filter": {"param": "param_61"}}],
+                "transform": [{"filter": {"param": "param_1"}}],
                 "width": 800,
                 "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
                 "datasets": {
@@ -1196,7 +1097,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "height": 600,
                 "params": [
                 {
-                    "name": "param_67",
+                    "name": "param_2",
                     "select": {"type": "point", "fields": ["Sentimento"]},
                     "bind": {
                         "input": "radio",
@@ -1204,15 +1105,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         "labels": ["Positivo ", "Neutrale ", "Negativo ", "Tutto"],
                         "name": "Selettore sentimento 2023: "
                     }
-                },
-                {
-                    "name": "param_69",
-                    "select": {"type": "interval", "encodings": ["x", "y"]},
-                    "bind": "scales"
                 }
             ],
                 "title": "Sentimento sulle prime 30 parole di tweets italiani nel 2023",
-                "transform": [{"filter": {"param": "param_67"}}],
+                "transform": [{"filter": {"param": "param_2"}}],
                 "width": 800,
                 "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
                 "datasets": {
@@ -1368,7 +1264,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "height": 600,
                 "params": [
                 {
-                    "name": "param_61",
+                    "name": "param_1",
                     "select": {"type": "point", "fields": ["Sentimento"]},
                     "bind": {
                         "input": "radio",
@@ -1376,15 +1272,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         "labels": ["Positivo ", "Neutrale ", "Negativo ", "Tutto"],
                         "name": "Selettore sentimento: "
                     }
-                },
-                {
-                    "name": "param_62",
-                    "select": {"type": "interval", "encodings": ["x", "y"]},
-                    "bind": "scales"
                 }
             ],
                 "title": "Sentimento sulle prime 30 parole di tweets inglesi nel 2022",
-                "transform": [{"filter": {"param": "param_61"}}],
+                "transform": [{"filter": {"param": "param_1"}}],
                 "width": 800,
                 "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
                 "datasets": {
@@ -1536,7 +1427,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "height": 600,
                 "params": [
                 {
-                    "name": "param_64",
+                    "name": "param_2",
                     "select": {"type": "point", "fields": ["Sentimento"]},
                     "bind": {
                         "input": "radio",
@@ -1544,15 +1435,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         "labels": ["Positivo ", "Neutrale ", "Negativo ", "Tutto"],
                         "name": "Selettore sentimento 2023: "
                     }
-                },
-                {
-                    "name": "param_65",
-                    "select": {"type": "interval", "encodings": ["x", "y"]},
-                    "bind": "scales"
                 }
             ],
                 "title": "Sentimento sulle prime 30 parole di tweets inglesi nel 2023",
-                "transform": [{"filter": {"param": "param_64"}}],
+                "transform": [{"filter": {"param": "param_2"}}],
                 "width": 800,
                 "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
                 "datasets": {
@@ -1686,7 +1572,7 @@ const defaultTrigrams = {
         "mark": {"type": "bar"},
         "encoding": {
         "color": {"field": "Sentimento", "type": "quantitative"},
-        "opacity": {"condition": {"param": "param_7", "value": 1}, "value": 0.3},
+        "opacity": {"condition": {"param": "param_3", "value": 1}, "value": 0.3},
         "tooltip": [
             {"field": "Trigram", "title": "Trigramma", "type": "nominal"},
             {
@@ -1710,7 +1596,7 @@ const defaultTrigrams = {
         "height": 600,
         "params": [
         {
-            "name": "param_6",
+            "name": "param_2",
             "select": {"type": "point", "fields": ["MonthName"]},
             "bind": {
                 "input": "select",
@@ -1720,13 +1606,8 @@ const defaultTrigrams = {
             }
         },
         {
-            "name": "param_7",
+            "name": "param_3",
             "select": {"type": "point", "fields": ["Trigram", "Frequency"]}
-        },
-        {
-            "name": "param_8",
-            "select": {"type": "interval", "encodings": ["x", "y"]},
-            "bind": "scales"
         }
     ],
         "resolve": {"scale": {"y": "independent"}},
@@ -1734,7 +1615,7 @@ const defaultTrigrams = {
         "text": "Top Trigrammi sul periodo aprile-giugno 2023",
             "subtitle": "Dati relativi al dataset di Reddit"
     },
-        "transform": [{"filter": {"param": "param_6"}}],
+        "transform": [{"filter": {"param": "param_2"}}],
         "width": 800,
         "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
         "datasets": {
@@ -1974,15 +1855,15 @@ document.addEventListener('DOMContentLoaded', function() {
         // trigrammimensilireddit
         const spec = {
             "config": {
-            "view": {"continuousWidth": 300, "continuousHeight": 300},
-            "axisX": {"labelAlign": "left", "labelAngle": 45, "labelPadding": 15},
-            "legend": {"orient": "top-right"}
+                "view": {"continuousWidth": 300, "continuousHeight": 300},
+                "axisX": {"labelAlign": "left", "labelAngle": 45, "labelPadding": 15},
+                "legend": {"orient": "top-right"}
             },
-                "data": {"name": "data-4c4957fbea79566afd0e7e929d421aca"},
-                "mark": {"type": "bar"},
-                "encoding": {
+            "data": {"name": "data-4c4957fbea79566afd0e7e929d421aca"},
+            "mark": {"type": "bar"},
+            "encoding": {
                 "color": {"field": "Sentimento", "type": "quantitative"},
-                "opacity": {"condition": {"param": "param_7", "value": 1}, "value": 0.3},
+                "opacity": {"condition": {"param": "param_3", "value": 1}, "value": 0.3},
                 "tooltip": [
                     {"field": "Trigram", "title": "Trigramma", "type": "nominal"},
                     {
@@ -1991,22 +1872,22 @@ document.addEventListener('DOMContentLoaded', function() {
                         "type": "quantitative"
                     }
                 ],
-                    "x": {
+                "x": {
                     "field": "Trigram",
-                        "sort": "-y",
-                        "title": "Trigramma",
-                        "type": "nominal"
+                    "sort": "-y",
+                    "title": "Trigramma",
+                    "type": "nominal"
                 },
                 "y": {
                     "field": "Frequency",
-                        "title": "Frequenza registrata",
-                        "type": "quantitative"
+                    "title": "Frequenza registrata",
+                    "type": "quantitative"
                 }
             },
-                "height": 600,
-                "params": [
+            "height": 600,
+            "params": [
                 {
-                    "name": "param_6",
+                    "name": "param_2",
                     "select": {"type": "point", "fields": ["MonthName"]},
                     "bind": {
                         "input": "select",
@@ -2016,24 +1897,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 },
                 {
-                    "name": "param_7",
+                    "name": "param_3",
                     "select": {"type": "point", "fields": ["Trigram", "Frequency"]}
-                },
-                {
-                    "name": "param_8",
-                    "select": {"type": "interval", "encodings": ["x", "y"]},
-                    "bind": "scales"
                 }
             ],
-                "resolve": {"scale": {"y": "independent"}},
-                "title": {
+            "resolve": {"scale": {"y": "independent"}},
+            "title": {
                 "text": "Top Trigrammi sul periodo aprile-giugno 2023",
-                    "subtitle": "Dati relativi al dataset di Reddit"
+                "subtitle": "Dati relativi al dataset di Reddit"
             },
-                "transform": [{"filter": {"param": "param_6"}}],
-                "width": 800,
-                "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
-                "datasets": {
+            "transform": [{"filter": {"param": "param_2"}}],
+            "width": 800,
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+            "datasets": {
                 "data-4c4957fbea79566afd0e7e929d421aca": [
                     {
                         "Month": 4,
@@ -2281,11 +2157,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "color": {"field": "Sentimento", "type": "quantitative"},
                 "tooltip": [
                     {"field": "Trigram", "title": "Trigramma", "type": "nominal"},
-                    {
-                        "field": "Frequency",
-                        "title": "Frequenza assoluta",
-                        "type": "quantitative"
-                    }
+                    {"field": "Frequency", "title": "Frequenza", "type": "quantitative"}
                 ],
                     "x": {
                     "field": "Trigram",
@@ -2302,7 +2174,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "height": 600,
                 "params": [
                 {
-                    "name": "param_48",
+                    "name": "param_3",
                     "select": {"type": "point", "fields": ["MonthName"]},
                     "bind": {
                         "input": "select",
@@ -2334,13 +2206,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 },
                 {
-                    "name": "param_49",
+                    "name": "param_4",
                     "select": {"type": "point", "fields": ["Trigram", "Frequency"]}
-                },
-                {
-                    "name": "param_51",
-                    "select": {"type": "interval", "encodings": ["x", "y"]},
-                    "bind": "scales"
                 }
             ],
                 "resolve": {"scale": {"y": "independent"}},
@@ -2349,7 +2216,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "subtitle": "Dati relativi ai tweets in lingua italiana"
             },
                 "transform": [
-                {"filter": {"param": "param_48"}},
+                {"filter": {"param": "param_3"}},
                 {
                     "window": [{"op": "rank", "field": "row_number", "as": "rank"}],
                     "sort": [{"field": "Frequency", "order": "descending"}]
@@ -3096,11 +2963,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "color": {"field": "Sentimento", "type": "quantitative"},
                 "tooltip": [
                     {"field": "Trigram", "title": "Trigramma", "type": "nominal"},
-                    {
-                        "field": "Frequency",
-                        "title": "Frequenza assoluta",
-                        "type": "quantitative"
-                    }
+                    {"field": "Frequency", "title": "Frequenza", "type": "quantitative"}
                 ],
                     "x": {
                     "field": "Trigram",
@@ -3117,7 +2980,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "height": 600,
                 "params": [
                 {
-                    "name": "param_48",
+                    "name": "param_3",
                     "select": {"type": "point", "fields": ["MonthName"]},
                     "bind": {
                         "input": "select",
@@ -3149,13 +3012,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 },
                 {
-                    "name": "param_49",
+                    "name": "param_4",
                     "select": {"type": "point", "fields": ["Trigram", "Frequency"]}
-                },
-                {
-                    "name": "param_50",
-                    "select": {"type": "interval", "encodings": ["x", "y"]},
-                    "bind": "scales"
                 }
             ],
                 "resolve": {"scale": {"y": "independent"}},
@@ -3164,7 +3022,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "subtitle": "Dati relativi ai tweets in lingua inglese"
             },
                 "transform": [
-                {"filter": {"param": "param_48"}},
+                {"filter": {"param": "param_3"}},
                 {
                     "window": [{"op": "rank", "field": "row_number", "as": "rank"}],
                     "sort": [{"field": "Frequency", "order": "descending"}]
@@ -3834,7 +3692,7 @@ const topic = {
     "legend": {"orient": "right"},
     "title": {"fontSize": 16, "fontWeight": "bold"}
     },
-        "data": {"name": "data-d12e49509664dde5ecb1d08bf0dc2fc1"},
+        "data": {"name": "data-f027e5ae39f403aacf2a97a88f2ec608"},
         "mark": {"type": "bar", "opacity": 0.7},
         "encoding": {
         "color": {
@@ -3855,7 +3713,7 @@ const topic = {
         },
         "tooltip": [
             {"field": "Topic", "type": "nominal"},
-            {"field": "Sentiment", "type": "quantitative"},
+            {"field": "Sentimento", "type": "quantitative"},
             {"field": "Source", "type": "nominal"}
         ],
             "x": {
@@ -3864,11 +3722,11 @@ const topic = {
                 "title": "",
                 "type": "nominal"
         },
-        "y": {"field": "Sentiment", "title": "Sentimento", "type": "quantitative"}
+        "y": {"field": "Sentimento", "title": "Sentimento", "type": "quantitative"}
     },
         "params": [
         {
-            "name": "param_86",
+            "name": "param_5",
             "select": {"type": "point", "fields": ["Source"]},
             "bind": {
                 "input": "radio",
@@ -3876,255 +3734,250 @@ const topic = {
                 "labels": ["Vader", "TextBlob"],
                 "name": "Selettore libreria: "
             }
-        },
-        {
-            "name": "param_87",
-            "select": {"type": "interval", "encodings": ["x", "y"]},
-            "bind": "scales"
         }
     ],
         "title": "Analisi comparativa sui valori registrati nei dataset di Twitter e Reddit",
-        "transform": [{"filter": {"param": "param_86"}}],
+        "transform": [{"filter": {"param": "param_5"}}],
         "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
         "datasets": {
-        "data-d12e49509664dde5ecb1d08bf0dc2fc1": [
+        "data-f027e5ae39f403aacf2a97a88f2ec608": [
             {
                 "Topic": "browser",
-                "Sentiment": 0.12513816964285715,
+                "Sentimento": 0.12513816964285715,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "browser",
-                "Sentiment": 0.11306694293709998,
+                "Sentimento": 0.11306694293709998,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
                 "Topic": "google",
-                "Sentiment": 0.15539044259140472,
+                "Sentimento": 0.15539044259140472,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "google",
-                "Sentiment": 0.11700492095516343,
+                "Sentimento": 0.11700492095516343,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
                 "Topic": "church",
-                "Sentiment": 0.1497836363636364,
+                "Sentimento": 0.1497836363636364,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "church",
-                "Sentiment": 0.07403188627560638,
+                "Sentimento": 0.07403188627560638,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
                 "Topic": "microsoft",
-                "Sentiment": 0.1817045393858478,
+                "Sentimento": 0.1817045393858478,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "microsoft",
-                "Sentiment": 0.10643076350477886,
+                "Sentimento": 0.10643076350477886,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
                 "Topic": "learning",
-                "Sentiment": 0.2918083408720825,
+                "Sentimento": 0.2918083408720825,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "learning",
-                "Sentiment": 0.1548236830886573,
+                "Sentimento": 0.1548236830886573,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
                 "Topic": "school",
-                "Sentiment": 0.1661807980049875,
+                "Sentimento": 0.1661807980049875,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "school",
-                "Sentiment": 0.11240566313450323,
+                "Sentimento": 0.11240566313450323,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
                 "Topic": "cryptocurrencies",
-                "Sentiment": 0.07174561128526645,
+                "Sentimento": 0.07174561128526645,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "cryptocurrencies",
-                "Sentiment": 0.09055091361437247,
+                "Sentimento": 0.09055091361437247,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
                 "Topic": "ban",
-                "Sentiment": -0.05126939411098528,
+                "Sentimento": -0.05126939411098528,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "ban",
-                "Sentiment": 0.0967781465357166,
+                "Sentimento": 0.0967781465357166,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
                 "Topic": "italy ban",
-                "Sentiment": -0.401575,
+                "Sentimento": -0.401575,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "italy ban",
-                "Sentiment": 0.16375,
+                "Sentimento": 0.16375,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
                 "Topic": "privacy",
-                "Sentiment": -0.10222243958573075,
+                "Sentimento": -0.10222243958573075,
                 "Source": "Vader",
                 "social": "Twitter"
             },
             {
                 "Topic": "privacy",
-                "Sentiment": 0.09206016730178328,
+                "Sentimento": 0.09206016730178328,
                 "Source": "TextBlob",
                 "social": "Twitter"
             },
             {
                 "Topic": "browser",
-                "Sentiment": 0.21027664670658683,
+                "Sentimento": 0.21027664670658683,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "browser",
-                "Sentiment": 0.09446546841898104,
+                "Sentimento": 0.09446546841898104,
                 "Source": "TextBlob",
                 "social": "Reddit"
             },
             {
                 "Topic": "google",
-                "Sentiment": 0.24002482517482515,
+                "Sentimento": 0.24002482517482515,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "google",
-                "Sentiment": 0.08747736593722892,
+                "Sentimento": 0.08747736593722892,
                 "Source": "TextBlob",
                 "social": "Reddit"
             },
             {
                 "Topic": "church",
-                "Sentiment": 0.14810882352941174,
+                "Sentimento": 0.14810882352941174,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "church",
-                "Sentiment": 0.06989789738214161,
+                "Sentimento": 0.06989789738214161,
                 "Source": "TextBlob",
                 "social": "Reddit"
             },
             {
                 "Topic": "microsoft",
-                "Sentiment": 0.03791739130434783,
+                "Sentimento": 0.03791739130434783,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "microsoft",
-                "Sentiment": 0.08387802850930105,
+                "Sentimento": 0.08387802850930105,
                 "Source": "TextBlob",
                 "social": "Reddit"
             },
             {
                 "Topic": "learning",
-                "Sentiment": 0.3745450372208437,
+                "Sentimento": 0.3745450372208437,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "learning",
-                "Sentiment": 0.09229668671780765,
+                "Sentimento": 0.09229668671780765,
                 "Source": "TextBlob",
                 "social": "Reddit"
             },
             {
                 "Topic": "school",
-                "Sentiment": 0.15754870340356564,
+                "Sentimento": 0.15754870340356564,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "school",
-                "Sentiment": 0.0692709223923041,
+                "Sentimento": 0.0692709223923041,
                 "Source": "TextBlob",
                 "social": "Reddit"
             },
             {
                 "Topic": "cryptocurrencies",
-                "Sentiment": 0.6024499999999999,
+                "Sentimento": 0.6024499999999999,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "cryptocurrencies",
-                "Sentiment": 0.1721897546897547,
+                "Sentimento": 0.1721897546897547,
                 "Source": "TextBlob",
                 "social": "Reddit"
             },
             {
                 "Topic": "ban",
-                "Sentiment": 0.0648280701754386,
+                "Sentimento": 0.0648280701754386,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "ban",
-                "Sentiment": 0.06086591154350151,
+                "Sentimento": 0.06086591154350151,
                 "Source": "TextBlob",
                 "social": "Reddit"
             },
             {
                 "Topic": "italy ban",
-                "Sentiment": null,
+                "Sentimento": null,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "italy ban",
-                "Sentiment": null,
+                "Sentimento": null,
                 "Source": "TextBlob",
                 "social": "Reddit"
             },
             {
                 "Topic": "privacy",
-                "Sentiment": 0.3657619354838709,
+                "Sentimento": 0.3657619354838709,
                 "Source": "Vader",
                 "social": "Reddit"
             },
             {
                 "Topic": "privacy",
-                "Sentiment": 0.09730854053364278,
+                "Sentimento": 0.09730854053364278,
                 "Source": "TextBlob",
                 "social": "Reddit"
             }
