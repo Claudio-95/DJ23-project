@@ -6,7 +6,9 @@ body, h1, h2, h3, h4, h5{
 h1 {
     text-align: center;
 }
-
+button:active{
+    color:#75AB9E!important;
+}
 
 p, #reddit_future_use, #reddit_use {
     font-size: large;
