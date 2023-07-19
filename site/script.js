@@ -160,6 +160,9 @@ vegaEmbed('#graphics-container-sentiment', defaultSentiment, defaultEmbedOptions
 document.addEventListener('DOMContentLoaded', function() {
     // Funzioni di gestione degli eventi per i pulsanti
     graphics1BtnSentiment.addEventListener('click', function() {
+        graphics2BtnSentiment.classList.remove('buttonActive');
+        graphics1BtnSentiment.classList.add('buttonActive');
+        graphics3BtnSentiment.classList.remove('buttonActive');
         // Crea il grafico Vega-Lite direttamente nel tuo script JavaScript
         // chartSentimentING_reddit
         const spec = {
@@ -274,6 +277,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     graphics2BtnSentiment.addEventListener('click', function() {
+        graphics2BtnSentiment.classList.add('buttonActive');
+        graphics1BtnSentiment.classList.remove('buttonActive');
+        graphics3BtnSentiment.classList.remove('buttonActive');
         // chartITsentiment
         const spec = {
             "config": {
@@ -384,6 +390,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     graphics3BtnSentiment.addEventListener('click', function() {
+        graphics2BtnSentiment.classList.remove('buttonActive');
+        graphics1BtnSentiment.classList.remove('buttonActive');
+        graphics3BtnSentiment.classList.add('buttonActive');
         // chartSentimentING
         const spec = {
             "config": {
