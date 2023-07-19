@@ -14,6 +14,7 @@ button {
 }
 button:active, button:focus{
     background-color:#75AB9E!important;
+    color: white;
 }
 
 .buttonActive{
