@@ -761,6 +761,9 @@ vegaEmbed('#graphics-container-words', defaultWords, defaultEmbedOptionsWords).t
 
 document.addEventListener('DOMContentLoaded', function() {
     graphics1BtnWords.addEventListener('click', function() {
+        graphics2BtnWords.classList.remove('buttonActive');
+        graphics1BtnWords.classList.add('buttonActive');
+        graphics3BtnWords.classList.remove('buttonActive');
         // wordsfreq_allmonths
         const spec = {
             "config": {
@@ -986,6 +989,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     graphics2BtnWords.addEventListener('click', function() {
+        graphics2BtnWords.classList.add('buttonActive');
+        graphics1BtnWords.classList.remove('buttonActive');
+        graphics3BtnWords.classList.remove('buttonActive');
         // chart-wordsfrequency-2022-ita
         const spec = {
             "config": {
@@ -1323,6 +1329,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     graphics3BtnWords.addEventListener('click', function() {
+        graphics2BtnWords.classList.remove('buttonActive');
+        graphics1BtnWords.classList.remove('buttonActive');
+        graphics3BtnWords.classList.add('buttonActive');
         // chart-wordsfrequency-2022
         const spec = {
             "config": {
@@ -1959,6 +1968,9 @@ vegaEmbed('#graphics-container-trigrams', defaultTrigrams, defaultEmbedOptionsTr
 
 document.addEventListener('DOMContentLoaded', function() {
     graphics1BtnTrigrams.addEventListener('click', function() {
+        graphics1BtnTrigrams.classList.add('buttonActive');
+        graphics2BtnTrigrams.classList.remove('buttonActive');
+        graphics3BtnTrigrams.classList.remove('buttonActive');
         // trigrammimensilireddit
         const spec = {
             "config": {
@@ -2253,6 +2265,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     graphics2BtnTrigrams.addEventListener('click', function() {
+        graphics1BtnTrigrams.classList.remove('buttonActive');
+        graphics2BtnTrigrams.classList.add('buttonActive');
+        graphics3BtnTrigrams.classList.remove('buttonActive');
         // trigrammimensilitwitterIT
         const spec = {
             "config": {
@@ -3065,6 +3080,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     graphics3BtnTrigrams.addEventListener('click', function() {
+        graphics1BtnTrigrams.classList.remove('buttonActive');
+        graphics2BtnTrigrams.classList.remove('buttonActive');
+        graphics3BtnTrigrams.classList.add('buttonActive');
         // trigrammimensilitwitter
         const spec = {
             "config": {
