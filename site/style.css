@@ -6,8 +6,13 @@ body, h1, h2, h3, h4, h5{
 h1 {
     text-align: center;
 }
-
-
+button:active{
+    color:#75AB9E!important;
+}
+.buttonActive{
+    background-color: #75AB9E!important;
+    color: white!important;
+}
 p, #reddit_future_use, #reddit_use {
     font-size: large;
     font-size: 18px;
@@ -260,6 +265,11 @@ div.w3-third img{
 
 .graphics-btn-container{
     margin-bottom: 10px;
+}
+
+#graphics-container-words2 {
+    display: none;
+    padding-top: 10px;
 }
 
 /* Stile per grafici importato da codice di Giorgia*/
