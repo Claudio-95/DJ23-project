@@ -200,13 +200,13 @@
       Per Reddit è stata presa in considerazione solo la lingua inglese, mentre per Twitter sia l'italiano che l'inglese.
       </p>
       <p>
-      Tramite i pulsuanti è possibile esplorare rispettivamente:
-      <ul>
-        <li>L'andamento trimestrale nel dataset proveniente dai commenti su Reddit (relativo al periodo marzo 2023 - maggio 2023)</li>
-        <li>L'andamento del sentimento nel dataset di tweets in lingua inglese (relativo al periodo settembre 2022 - giugno 2022</li>
-        <li>L'andamento del sentimento nel dataset di tweets in lingua italiana (relativo al periodo settembre 2022 - giugno 2023)</li>
-      </ul>
-    </p>
+        Tramite i pulsuanti è possibile esplorare rispettivamente:
+      </p>
+        <ul>
+          <li>L'andamento trimestrale nel dataset proveniente dai commenti su Reddit (relativo al periodo marzo 2023 - maggio 2023)</li>
+          <li>L'andamento del sentimento nel dataset di tweets in lingua inglese (relativo al periodo settembre 2022 - giugno 2022</li>
+          <li>L'andamento del sentimento nel dataset di tweets in lingua italiana (relativo al periodo settembre 2022 - giugno 2023)</li>
+        </ul>
 
 
       <div class="graphics-btn-container">
@@ -216,14 +216,15 @@
       </div>
       <div id="graphics-container-sentiment" class="chartContainer"></div>
 
+      <p>Dall'osservazione dell'andamento delle curve possiamo notare come il sentimento verso ChatGPT sia complessivamente positivo, con l'eccezione del grafico per il dataset italiano che incorpora numerose etichette con valore neutro.</p>
+      <p>Il grafico costruito sui post di Reddit presenta un picco nella fase di aprile 2023, mentre quello per Twitter.com presenta il proprio nel periodo di gennaio/febbraio 2023, seguito da un'assottigliamento della curva procedendo verso la fase maggio/giugno 2023.</p>
+
+
     </div>
-   
-    <p>Dall'osservazione dell'andamento delle curve possiamo notare come il sentimento verso ChatGPT sia complessivamente positivo, con l'eccezione del grafico per il dataset italiano che incorpora numerose etichette con valore neutro.</p>
-    <p>Il grafico costruito sui post di Reddit presenta un picco nella fase di aprile 2023, mentre quello per Twitter.com presenta il proprio nel periodo di gennaio/febbraio 2023, seguito da un'assottigliamento della curva procedendo verso la fase maggio/giugno 2023.</p>
     <div>
 
     </div>
-      
+
   </div>
 
   <!-- Utilizzi section -->
@@ -348,7 +349,7 @@
         <h2 id="sez10">Argomenti più discussi</h2>
         <p>
           Il grafico seguente è un confronto tra topics nei dataset di <strong>Twitter</strong> e <strong>Reddit</strong>, calcolati con l'utilizzo di NLTK Vader e TextBLob.
-          Interessante osservare come NLTK Vader registri una sostanziale differenza di sentimento sul topic della <i>privacy</i> e del <i>ban</i> tra i due social network, con una netta oscillazione tra valori positivi e negativi. 
+          Interessante osservare come NLTK Vader registri una sostanziale differenza di sentimento sul topic della <i>privacy</i> e del <i>ban</i> tra i due social network, con una netta oscillazione tra valori positivi e negativi.
         </p>
         <div id="topic-container" class="chartContainer"></div>
       </div>
@@ -475,6 +476,7 @@
         <p>
           Il grafico mostra la distribuzione dei <i>trigrammi</i> più frequenti nell'arco dei mesi.
           Per ogni social è possibile avere:
+        </p>
           <ul>
             <li>
               una visione complessiva dei trigrammi più frequenti
@@ -483,7 +485,6 @@
               una visione dettagliata relativa al mese selezionato
             </li>
           </ul>
-        </p>
         <p>Il gradiente di colore indica la distribuzione del sentimento rispetto al <i>trigramma</i>, l'intensità di colore aumenta all'aumentare del valore di positività, diminuisce viceversa.</p>
       </div>
         <button id="graphics1-btn-trigrams">Reddit</button>
@@ -492,39 +493,38 @@
       </div>
 
       <div id="graphics-container-trigrams" class="chartContainer"></div>
-      
+
       <div>
-        <h3>Cosa ci dicono i trigrammi estratti dai tre datasets</h3>
         <p>
-          Nel dataset di Twitter in inglese compaiono i <i>trigrammi</i> "banned italy privacy" e "google code red", che si riferiscono verosimilmente alle <a href="  https://www.forbes.com/sites/davidphelan/2023/01/23/how-chatgpt-suddenly-became-googles-code-red-prompting-return-of-page-and-brin/" target="_blank"> preoccupazioni suscitate dall'introduzione di ChatGPT</a> 
-          sia a livello sociale che economico. Il <i>trigramma</i> "Wharton mba exam", 
-          invece, riguarda un esperimento condotto da un professore della <i>University of Pennsylvania’s Wharton School</i>: 
-          il <strong>Chatbot GPT-3</strong> è stato in grado di 
-          <a href="https://knowledge.wharton.upenn.edu/podcast/wharton-business-daily-podcast/chatgpt-passed-an-mba-exam-whats-next/" target="_blank"> superare l'esame finale</a> 
-          per il Master in <i>Business Administration</i> (MBA). 
-          I <i>trigrammi</i> "launch poe way" e "quora launches poe" rimandano all'uscita di Poe, 
-          un software che consente alle persone di porre domande, 
-          ottenere risposte istantanee e intrattenere conversazioni con diversi chatbot potenziati dall’intelligenza 
-          artificiale, su Quora, una piattaforma forum dove gli utenti possono pubblicare domande e 
-          risposte su qualunque argomento. Inizialmente Poe era disponibile per iOS e per desktop, 
-          poi sono state introdotte le <i>subscriptions</i>, che forniscono agli utenti paganti 
-          l’accesso a bot basati su due modelli linguistici: GPT-4 di OpenAI e Claude+ di Anthropic. 
-          I <i>trigrammi</i> "100 milliion users", "100 million monthly" e "monthly active users" 
-          si riferiscono al numero strabiliante 
+          Nel dataset di Twitter in inglese compaiono i <i>trigrammi</i> "banned italy privacy" e "google code red", che si riferiscono verosimilmente alle <a href="  https://www.forbes.com/sites/davidphelan/2023/01/23/how-chatgpt-suddenly-became-googles-code-red-prompting-return-of-page-and-brin/" target="_blank"> preoccupazioni suscitate dall'introduzione di ChatGPT</a>
+          sia a livello sociale che economico. Il <i>trigramma</i> "Wharton mba exam",
+          invece, riguarda un esperimento condotto da un professore della <i>University of Pennsylvania’s Wharton School</i>:
+          il <strong>Chatbot GPT-3</strong> è stato in grado di
+          <a href="https://knowledge.wharton.upenn.edu/podcast/wharton-business-daily-podcast/chatgpt-passed-an-mba-exam-whats-next/" target="_blank"> superare l'esame finale</a>
+          per il Master in <i>Business Administration</i> (MBA).
+          I <i>trigrammi</i> "launch poe way" e "quora launches poe" rimandano all'uscita di Poe,
+          un software che consente alle persone di porre domande,
+          ottenere risposte istantanee e intrattenere conversazioni con diversi chatbot potenziati dall’intelligenza
+          artificiale, su Quora, una piattaforma forum dove gli utenti possono pubblicare domande e
+          risposte su qualunque argomento. Inizialmente Poe era disponibile per iOS e per desktop,
+          poi sono state introdotte le <i>subscriptions</i>, che forniscono agli utenti paganti
+          l’accesso a bot basati su due modelli linguistici: GPT-4 di OpenAI e Claude+ di Anthropic.
+          I <i>trigrammi</i> "100 milliion users", "100 million monthly" e "monthly active users"
+          si riferiscono al numero strabiliante
           di utenti raggiunto da ChatGPT in breve tempo; "plugin accessing website", "browser plugin accessing" e "web browser plugin"
-          rimandano alle estensioni del chatbot per navigare sul web, 
+          rimandano alle estensioni del chatbot per navigare sul web,
           in modo da ottenere informazioni più aggiornate e ampliare le potenzialità dello strumento.
         </p>
         <p>
           Dall'analisi dei <i>trigrammi</i> in lingua italiana si può notare che la distribuzione si articola su alcuni argomenti ben definiti, in particolare troviamo tematiche relative allo "scambio di conoscenze", all'emersione di una nuova tecnologia che viene definita come "intelligenza". Tra i trigrammi dal valore negativo si segnalano "inizio fine google" (dicembre 2022), relativo alla questione del rimpiazzo dei tradizionali motori di ricerca da parte di ChatGPT, ma anche "ruba credenziali social" (Febbraio 2023), un trigramma che compare proprio antecedentemente all'imposizione del ban del garante della privacy. Relativamente al confronto tra Google e Chat GPT si trovano anche i trigrammi "bard risposta google" ed "ecco bard risposta" (entrambi di Giugno 2023) che segnalano l'uscita del nuovo ChatBot sviluppato dall'azienda statunitense.
         </p>
         <p>
-          Per quanto riguarda i post su Reddit, compaiono <i>smart robot response</i>, <i>response automatic</i>, <i>good sense humo</i>, <i>automatic tldr shorter</i> e <i>smart robot summary</i>, trigrammi che si riferiscono probabilmente alle capcità di ChatGPT di rispondere alle richieste degli utenti e a sintetizzare testi lunghi. <i>Black mirror episode</i>" è verosimilmente legato alla sensazione di sublime stupore che ChatGPT suscita nelle persone che ne fanno uso, ma ricercando su web è stato possibile scoprire una <a href="https://www.wired.it/article/chatgpt-black-mirror-charlie-brooker-episodio-esperimento/" target="_blank">notizia interessante</a>: 
-          Charlie Broker, il creatore della serie tv <i>Black Mirror</i>, ha dichiarato in <a href="https://www.empireonline.com/tv/news/charlie-brooker-chatgpt-black-mirror-episode-exclusive-image/" target="_blank">un'intervista al magazine britannico Empire</a>di aver “giocherellato un po' con ChatGPT" mentre scriveva la sesta stagione della serie, uscita il 15 giugno su Netflix.
-          “La prima cosa che ho fatto è digitare ‘genera un episodio di Black Mirror' e se n'è uscito con qualcosa che a prima vista era anche plausibile, ma poi era una m*rda”, ha dichiarato Brooker. “Quello che ha fatto è stato cercare le sinossi degli episodi passati e in qualche modo appiccicarli insieme”. 
+          Per quanto riguarda i post su Reddit, compaiono <i>smart robot response</i>, <i>response automatic</i>, <i>good sense humo</i>, <i>automatic tldr shorter</i> e <i>smart robot summary</i>, trigrammi che si riferiscono probabilmente alle capcità di ChatGPT di rispondere alle richieste degli utenti e a sintetizzare testi lunghi. <i>Black mirror episode</i>" è verosimilmente legato alla sensazione di sublime stupore che ChatGPT suscita nelle persone che ne fanno uso, ma ricercando su web è stato possibile scoprire una <a href="https://www.wired.it/article/chatgpt-black-mirror-charlie-brooker-episodio-esperimento/" target="_blank">notizia interessante</a>:
+          Charlie Broker, il creatore della serie tv <i>Black Mirror</i>, ha dichiarato in <a href="https://www.empireonline.com/tv/news/charlie-brooker-chatgpt-black-mirror-episode-exclusive-image/" target="_blank">un'intervista al magazine britannico Empire</a> di aver “giocherellato un po' con ChatGPT" mentre scriveva la sesta stagione della serie, uscita il 15 giugno su Netflix.
+          “La prima cosa che ho fatto è digitare ‘genera un episodio di Black Mirror' e se n'è uscito con qualcosa che a prima vista era anche plausibile, ma poi era una m*rda”, ha dichiarato Brooker. “Quello che ha fatto è stato cercare le sinossi degli episodi passati e in qualche modo appiccicarli insieme”.
           Lo sceneggiatore ammette che il risultato dell'intelligenza artificiale conteneva anche delle buone idee, ma che in fondo risultavano sostanzialmente derivative: “Sono consapevole di aver scritto molti episodi in cui qualcuno realizza: 'Oh, ho sempre vissuto dentro un computer'. Quindi ho pensato: voglio buttar via qualsiasi cosa significhi fare un episodio di <i>Black Mirror</i>. Non ha senso avere una serie antologica se non puoi infrangere le tue stesse regole. È stato una specie di acqua fredda in faccia".
       </p>
-      </div>  
+      </div>
     </div>
   </div>
 
@@ -570,7 +570,7 @@
       <p>
         A quanto pare i LLMs sembrano sviluppare centinaia di capacità non previste - dai calcoli matematici alla produzione di testi e di codici, fino al riconoscimento dei titoli di film tramite emoji (come in un esperimento condotto dal team di Dyer).<br>
         I modelli linguistici odierni sono stati dimensionati principalmente in base a tre fattori: quantità di calcolo, numero di parametri e dimensione del set di dati di addestramento. Un'abilità è considerata "emergente" se non è presente nei modelli più piccoli ma lo è in quelli più grandi. In generale, si può considerare l'emergere di nuove proprietà come una funzione di molte variabili correlate, la scala in cui si osserva per la prima volta l'emergere di un'abilità dipende da una serie di fattori e non è una proprietà immutabile, le prestazioni sembrano migliorare notevolmente oltre un certo ordine di grandezza dei parametri.
-        “I fenomeni complessi possono essere ricondotti a una semplice legge probabilistica, nel caso di un language model si tratta di predire la prossima parola" ha dichiarato il professor Giuseppe Attardi in <a href= "https://www.youtube.com/watch?v=ej5lEP1bmdQ" target="_blank">un'intervista online</a> in cui ci si interroga sullo sviluppo delle AI. 
+        “I fenomeni complessi possono essere ricondotti a una semplice legge probabilistica, nel caso di un language model si tratta di predire la prossima parola" ha dichiarato il professor Giuseppe Attardi in <a href= "https://www.youtube.com/watch?v=ej5lEP1bmdQ" target="_blank">un'intervista online</a> in cui ci si interroga sullo sviluppo delle AI.
       </p>
       <p>
         "Emerge un comportamento sorprendente perché la nostra mente non è capace di capire un sistema complesso. GPT 4 ha superato una trentina di test per ammissione - a medicina, giurisprudenza, scienze infermieristiche, li supera tutti.
