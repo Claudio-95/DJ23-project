@@ -6,9 +6,17 @@ body, h1, h2, h3, h4, h5{
 h1 {
     text-align: center;
 }
-button:active{
-    color:#75AB9E!important;
+
+button {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 1.5%;
 }
+button:active, button:focus{
+    background-color:#75AB9E!important;
+    color: white;
+}
+
 .buttonActive{
     background-color: #75AB9E!important;
     color: white!important;
@@ -158,9 +166,6 @@ div.w3-main{
     opacity: 1;
 }
 
-button {
-    border-radius: 5px;
-}
 
 #mySidebar{
     z-index: 3;
@@ -300,11 +305,6 @@ div.w3-third img{
 
 ul {
     font-size: 18px;
-}
-
-button {
-    cursor: pointer;
-    border-radius: 5px;
 }
 
 .visualization {
