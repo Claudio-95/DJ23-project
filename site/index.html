@@ -196,8 +196,8 @@
         Tramite i pulsanti è possibile visualizzare rispettivamente:
       </p>
         <ul>
-          <li>L'andamento del sentimento dei commenti su Reddit sul periodo maggio 2023 - giugno 2023)</li>
-          <li>L'andamento del sentimento dei tweets in lingua inglese relativo al periodo settembre 2022 - giugno 2022</li>
+          <li>L'andamento del sentimento dei commenti su Reddit sul periodo maggio 2023 - giugno 2023</li>
+          <li>L'andamento del sentimento dei tweets in lingua inglese relativo al periodo settembre 2022 - giugno 2023</li>
           <li>L'andamento del sentimento dei tweets in lingua italiana relativo al periodo settembre 2022 - giugno 2023</li>
         </ul>
 
@@ -209,8 +209,8 @@
       </div>
       <div id="graphics-container-sentiment" class="chartContainer"></div>
 
-      <p>Dall'osservazione dell'andamento delle curve possiamo notare come il sentimento verso ChatGPT sia complessivamente positivo, con l'eccezione del grafico per il dataset italiano che incorpora numerose etichette con valore neutro.</p>
-      <p>Il grafico costruito sui post di Reddit presenta un picco nella fase di aprile 2023, mentre quello per Twitter.com presenta il proprio nel periodo di gennaio/febbraio 2023, seguito da un'assottigliamento della curva procedendo verso la fase maggio/giugno 2023.</p>
+      <p>Dall'osservazione dell'andamento delle curve possiamo notare come il sentimento verso ChatGPT sia complessivamente positivo, con l'eccezione del grafico per il dataset italiano che incorpora numerose etichette con valore neutro. Bisogna precisare che probabilmente quest'ultimo risultato è dovuto a un malfunzionamento delle librerie di analisi del sentimento.</p>
+      <p>Il grafico costruito sui post di Reddit presenta un picco nella fase di aprile 2023, mentre quello per Twitter.com presenta il proprio nel periodo di gennaio/febbraio 2023, seguito da un'assottigliamento della curva procedendo verso maggio e giugno 2023.</p>
 
 
     </div>
@@ -330,19 +330,19 @@
         Inoltre, su Reddit si discute anche dei possibili usi futuri dello strumento, con relative implicazioni positive e negative per la società. In particolare, tra gli argomenti più dibattuti ci sono:
       </p>
         <ul id="reddit_future_use">
-          <li>casi di fake news generate da ChatGPT e che egli stesso ha dichiarato come fatti reali. Molti commenti discutono della mancanza di consapevolezza da parte degli utenti su cosa sia e come debba essere usato ChatGPT, alcuni sostengono che venga usato impropriamente come motore di ricerca e che i contenuti generati dovrebbero essere sempre compresi e riscritti dagli utenti, in quanto le IA non hanno ancora raggiunto un'intelligenza tale da poterci fare totalmente affidamento;</li>
+          <li>casi di fake news generate da ChatGPT e che egli stesso ha dichiarato come fatti reali. Molti commenti discutono della mancanza di consapevolezza da parte degli utenti su cosa sia e come debba essere usato ChatGPT, alcuni sostengono che venga usato impropriamente come motore di ricerca e che i contenuti generati dovrebbero essere sempre compresi e riscritti dagli utenti, in quanto le AI non hanno ancora raggiunto un'intelligenza tale da poterci fare totalmente affidamento;</li>
           <li>il caso di un assistente avvocato che, per lo svolgimento della professione, si affida anche a ChatGPT e questo da alcuni utenti non viene visto di buon occhio;</li>
-          <li>qualche utente che pensa che ChatGPT possa finire come il Watson di IBM, il quale ha avuto un primo periodo di visibilità per poi sparire nel dimenticatoio. Inoltre, si parla anche della possibilità che ChatGPT venga rimpiazzato da IA con meno blocchi morali e che il settore sarà enormemente diverso tra due anni;</li>
+          <li>qualche utente che pensa che ChatGPT possa finire come il Watson di IBM, il quale ha avuto un primo periodo di visibilità per poi sparire nel dimenticatoio. Inoltre, si parla anche della possibilità che ChatGPT venga rimpiazzato da AI con meno blocchi morali e che il settore sarà enormemente diverso tra due anni;</li>
           <li>presunta incoerenza da parte di alcuni insegnanti nel bandire l'uso di Wikipedia per poi permettere quello di ChatGPT. La critica principale risiede nel fatto che entrambi richiedano verifiche da parte dell'utente sulla veridicità dei contenuti;</li>
-          <li>la sostituzione di determinati lavori, in particolare si parla dei fisioterapisti e del fatto che andrebbero sostituiti solamente quelli ritenuti meno bravi degli altri;</li>
-          <li>la possibilità che, specialmente negli Stati in cui il sistema sanitario è a pagamento, le IA siano più efficienti degli umani nel diagnosticare malattie ai pazienti e nel controllare, ed eventualmente negare, l'idoneità degli stessi al trattamento sanitario;</li>
-          <li>il rischio di sostituzione di intere aziende tramite l'uso di IA.</li>
+          <li>la sostituzione di determinati lavori, in particolare si parla dei fisioterapisti e del fatto che andrebbero sostituiti solamente quelli ritenuti "meno bravi degli altri";</li>
+          <li>la possibilità che, specialmente negli Stati in cui il sistema sanitario è a pagamento, le IA siano più efficienti degli esseri umani nel diagnosticare malattie ai pazienti e nel controllare, ed eventualmente negare, l'idoneità degli stessi al trattamento sanitario;</li>
+          <li>il rischio di sostituzione di intere aziende tramite l'uso di AI.</li>
         </ul>
       <div id="topic-modeling">
         <h2 id="sez10">Argomenti più discussi</h2>
         <p>
-          Il grafico seguente è un confronto tra topics nei dataset di <strong>Twitter</strong> e <strong>Reddit</strong>, calcolati con l'utilizzo di NLTK Vader e TextBLob.
-          Interessante osservare come NLTK Vader registri una sostanziale differenza di sentimento sul topic della <i>privacy</i> e del <i>ban</i> tra i due social network, con una netta oscillazione tra valori positivi e negativi.
+          Il grafico seguente è un confronto tra argomenti nei dati raccolti da <strong>Twitter</strong> e <strong>Reddit</strong>, tramite l'utilizzo delle librerie Python NLTK Vader e TextBLob.
+          Si può notare come NLTK Vader registri una sostanziale differenza di sentimento sull'argomento della <i>privacy</i>, delle <i>criptovalute</i> e del <i>ban</i> in Italia a opera dell'AGCOM tra i due social network, con una netta oscillazione tra valori positivi e negativi.
         </p>
         <div id="topic-container" class="chartContainer"></div>
       </div>
@@ -382,7 +382,7 @@
         <h2 id="sez11">Parole più frequenti</h2>
         <p>
           Il grafico seguente mostra la distribuzione delle trenta parole con maggiore ricorrenza nei tre dataset per ciascuna categoria di sentimento.
-          Ciascun cerchio è relativo ad una parola, il colore ne indica la percezione secondo il <i>sentiment analyser</i>, mentre l'altezza ne riporta la frequenza assoluta.
+          Ciascun cerchio è relativo a una parola, il colore ne indica la percezione secondo lo strumento di analisi, mentre l'altezza ne riporta la frequenza assoluta.
         </p>
         <button id="graphics1-btn-words">Reddit</button>
         <button id="graphics2-btn-words">Twitter.it</button>
