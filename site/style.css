@@ -27,7 +27,6 @@ p, #reddit_future_use, #reddit_use {
     line-height: 1.7;
     margin-bottom: 36px;
     letter-spacing: 0.35px;
-    /*color: #2D2D30;*/
  }
 body.w3-light-grey w3-content{
     max-width: 1600px;
@@ -42,7 +41,6 @@ div.w3-main{
     font-weight: 700;
     font-size: 2rem;
     line-height: 2.25rem;
-    /*color: #2D2D2D; */
     margin: 0 auto;
     padding-bottom: 1rem;
 }
@@ -90,11 +88,9 @@ div.w3-main{
 }
 .scritta {
     display: inline-block;
-    /*color: #000000;*/
     line-height: 1.5rem;
     max-width: 165px;
     vertical-align: middle;
-    /*width: 90%;*/
     font-family: 'Belanosima', sans-serif;
 }
 .css-nx0d73-TocLine {
@@ -119,7 +115,6 @@ div.w3-main{
 }
 .scritta-menu {
     display: inline-block;
-    /*color: #000000;*/
     line-height: 1.5rem;
     max-width: 165px;
     vertical-align: middle;
@@ -202,10 +197,6 @@ div.w3-row-padding{
     margin: 0 -16px;
 }
 
-/*div.w3-content{
-    max-width: 600px;
-}*/
-
 div.w3-content w3-justify{
     max-width: 600px;
 }
@@ -251,7 +242,6 @@ div.w3-third img{
 
 #intelligenza, #storia, #utilizzi{
     background-color: #F1F1F1!important;
-    /*color: #616161!important;*/
 }
 
 #sentiment, #trends {
