@@ -1,6 +1,5 @@
 body, h1, h2, h3, h4, h5{
     font-family: "Raleway", sans-serif;
-
 }
 
 h1 {
@@ -62,7 +61,7 @@ div.w3-main{
     text-decoration: none;
 }
 .pallino {
-    background-color:#75AB9E; /*#E5FC56*/
+    background-color:#75AB9E; 
     border: 2px solid #fff;
     border-radius: 18px;
     display: inline-block;
