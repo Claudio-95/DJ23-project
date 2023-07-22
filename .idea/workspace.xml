@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2a03d57d-34b8-49e6-9d6c-6fd92161e97a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DJ23-project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Appunti progetto.rtf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Journalism - Appunti per progetto.rtfd.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Journalism - Trascrizioni video .rtfd.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fonti progetto.odt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/bar_chart-hashtag-datasetEN (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/bar_chart-hashtag-datasetIT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/bigrams-frequency-inglese-giusto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/bigrams-frequency-inglese-positivi(1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/bigrams-frequency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/pie_nltksentiment-complete-ENG-MARTINA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/pie_nltksentiment-complete-Martina.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/pie_nltksentiment-complete-datasetGiorgia-INGLESE (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/pie_nltksentiment-complete-datasetGiorgia-ITALIANO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/pie_nltksentiment-complete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/pie_nltksentiment.claudio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/pie_textblob-complete-ENG-MARTINA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/pie_textblobsentiment-complete-Martina.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/pie_textblobsentiment-complete-twitterGiorgia-INGLESE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/pie_textblobsentiment-complete-twitterGiorgia-ITALIANO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/pie_textblobsentiment-complete-twitterGiorgia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/pie_textblobsentiment-complete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/pie_textblobsentiment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/reddit_sentiment_time_analysis.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/reddit_topic_modeling.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Charts/twitter_sentiment_time_analysis.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Data-Journalism-chatgpt-tweets-sentiment-analysis-Martina.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/2022-medium-stories-TOWARDsDATASCIENCE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/2023-medium-stories-TOWARDsDATASCIENCE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/chatGPT-13maggio-18maggio.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/chatGPT-19maggio-20maggio.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/chatGPT-1aprile-30aprile-eng.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/chatGPT-21maggio-26maggio.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/chatGPT-27febbraio-29marzo-conKeywords.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/chatGPT-27febbraio-29marzo.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/chatGPT-27maggio-29maggio.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/chatGPT-30aprile-30maggio-eng.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/chatgpt_dal_2-11-22_a_31-03-23.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/chatgpt_dal_2-11-22_a_31-03-23langEN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/chatgpt_reddit - Complete.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/chatgpt_reddit.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/datasetEN.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/datasetIT.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/dataset_italianoEinglese-UPDATED_2023-6-16.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/dataset_italianoEinglese_martina.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/df-italiano.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/dfITEN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/engData-danovAmarz_2023-6-15.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/engDf_2023-6-15.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/finalDf-updated_2023-6-15.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Dataset/italianDATA-danovAmarz_2023-6-15.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Reddit_scraping - Complete.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Sentiment analysis - Complete-Martina-datasetGiorgia-Corretto.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Sentiment analysis - Complete-Martina-datasetGiorgia.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Sentiment analysis - Complete.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Sentiment analysis - CompleteENG-Martina-datasetGiorgia-con prove.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Sentiment analysis-Ngrams-Claudio-Martina.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Sentiment analysis.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Sentiment_Analysis_Complete_ridef.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/Untitled.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/altair_reddit.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/analisiTemporali (1).ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/chatgpt-tweets-sentiment-analysis-Data-Journalism-ripulito.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/chatgpt-tweets-sentiment-analysis-numLike-M-OK-ENG.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/chatgpt-tweets-sentiment-analysis-numLike-M-OK-ITA.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/dataAnalysis" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/engITdf_2023-6-15.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/graficiAltair (4).ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/graficiAltair (5).ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/ngrams.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/sistemazioneDF.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/snscrapeTOUSE.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/visualization.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook/visualization.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/backup_css_personalized/file1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/backup_css_personalized/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/backup_css_personalized/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/comparativeAnalysis_twitter_reddit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/comparativeAnalysis_twitter_reddit.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/file1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/grafici.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/WordcloudENG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/WordcloudITA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/dall-e1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/dall-e10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/dall-e11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/dall-e12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/dall-e13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/dall-e14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/dall-e15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/dall-e2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/dall-e3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/dall-e4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/dall-e5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/dall-e6png.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/dall-e7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/dall-e8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/dall-e9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/robot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/index copia.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/index-Sminchiato.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/parallax.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/reddit_altair_charts/chartSentimentING_reddit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/reddit_altair_charts/chartSentimentING_reddit.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/reddit_altair_charts/trigrammimensilireddit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/reddit_altair_charts/trigrammimensilireddit.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/reddit_altair_charts/wordsfreq_allmonths.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/reddit_altair_charts/wordsfreq_allmonths.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/twitter_altair_charts/chart-wordsfrequency-2022-ita.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/twitter_altair_charts/chart-wordsfrequency-2022-ita.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/twitter_altair_charts/chart-wordsfrequency-2022.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/twitter_altair_charts/chart-wordsfrequency-2022.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/twitter_altair_charts/chart-wordsfrequency-2023-ita.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/twitter_altair_charts/chart-wordsfrequency-2023-ita.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/twitter_altair_charts/chart-wordsfrequency-2023.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/twitter_altair_charts/chart-wordsfrequency-2023.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/twitter_altair_charts/chartITsentiment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/twitter_altair_charts/chartITsentiment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/twitter_altair_charts/chartSentimentING.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/twitter_altair_charts/chartSentimentING.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/twitter_altair_charts/trigrammimensilitwitter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/twitter_altair_charts/trigrammimensilitwitter.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/twitter_altair_charts/trigrammimensilitwitterIT.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/twitter_altair_charts/trigrammimensilitwitterIT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_old/chartSentimentING_twitter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_old/chartSentimentING_twitter.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_old/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_old/provaDataJournalism.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_old/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_old/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_old/trigrammimensilitwitter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_old/trigrammimensilitwitter.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_old/trigrammimensilitwitterIT.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_old/trigrammimensilitwitterIT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_old/wordsfreq_2022_2023_ita.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_old/wordsfreq_2022_2023_ita.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_old/wordsfreq_2022_2023_upd.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_old/wordsfreq_2022_2023_upd.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2SvjRr95eTD5r0TcRdmMGCqkp9o" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2a03d57d-34b8-49e6-9d6c-6fd92161e97a" name="Changes" comment="" />
+      <created>1690033945995</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690033945995</updated>
+      <workItem from="1690033948326" duration="27000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
